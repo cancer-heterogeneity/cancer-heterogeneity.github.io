@@ -18,7 +18,11 @@ This interdisciplinary challenge will be dedicated to the quantification of intr
 - **Francisco Avila Cobos** from Ghent University, Gand, Belgium
 - **Jerome Cros** from AP-HP, Paris, France
 
- 
+### Organizers
+
+- Yuna Blum & Florent Petitprez (Programme CIT, LNCC, Paris, France)
+- Magali Richard & Alexis Arnaud (CNRS, UGA, Grenoble, France)
+
 ### Scientific challenge
 
 Successful treatment of cancer is still a challenge and this is partly due to a wide heterogeneity of cancer composition across patient population.
