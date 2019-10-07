@@ -1,5 +1,27 @@
 ---
-title: "Welcome to my website!"
+title: "Welcome to our website on Cancer Heterogeneity!"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
 ---
 
-You're up and running!
+## HADACA project
+
+[Join our next challenge](data_challenges.html)
+
+Data challenges about computional methods to quantify cancer heterogeneity
+
+## COMETH project
+
+[Follow our benchmarking project](benchmarking.html)
+
+Benchmarking platform of computional methods to quantify cancer heterogeneity
+
+## Misc about cancer heterogeneity
+
+Want to know more about cancer heterogeneity, data challenge organisation and benchmarking of computation methods for biology? 
+
+[Have a look at our scientific publication and blog posts](blog.html)
+
+![](pictures/fundings.png)
