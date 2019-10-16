@@ -1,5 +1,5 @@
 ---
-title: "Bencharking"
+title: "Benchmarking"
 output:
   html_document:
     includes:

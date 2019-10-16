@@ -1,0 +1,58 @@
+---
+title: "Data Challenges 2019: Program"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+  
+### Program (provisionnal)
+
+#### Monday November 25
+
+- Arrival of the participants
+- 19h30-20h30 : Dinner
+- 20h30-21h30 : Introduction to the Data Challenge
+
+#### Tuesday November 26
+
+- 09:00 to 09:45 : Invited speaker: J. Cros.
+- 09:45 to 10:30 : Invited speaker: F. Avila Cobos
+- 10:30 to 11:00 : Break
+- 11:00 to 11:45 : Invited speaker: M. Scherer
+- 11:45 to 12:30 : Introduction to challenge #1
+- 12:30 to 14:00 : Lunch
+- 14:00 to 16:00 : Challenge #1
+- 16:00 to 16:30 : Break
+- 17:00 to 18:30 : Challenge #1
+- 18:30 to 20:00 : Poster session / Wine & Cheese
+- 20:00 to 21:30 : Dinner
+
+#### Wednesday November 27
+
+- 09:00 to 10:00 : Debriefing on challenge #1
+- 10:00 to 10:30 : Introduction to challenge #2
+- 10:30 to 11:00 : Break
+- 11:00 to 12:00 : Challenge #2
+- 12:00 to 12:45 : Lunch
+- 13:00 to 17:00 : Free time in the mountain
+- 17:00 to 17:30 : Break
+- 17:30 to 20:00 : Challenge #2
+- 20:00 to 21:30 : Dinner (Grill-stone)
+
+#### Thursday November 28
+
+- 09:00 to 13:00 : Challenge #2
+- 10:30 to 11:00 : Break
+- 11:00 to 12:30 : Challenge #2
+- 12:30 to 14:00 : Lunch
+- 14:00 to 14:30 : Parallel sessions: Meeting report // Organize challenge in master cursus
+- 19:30 to 20:00 : Announcement of the challenge #2 results
+- 20:00 to 21:30 : Gala Dinner and cocktail party
+
+#### Friday November 29
+
+- 09:00 to 10:30 : Debriefing on challenge #2
+- 10:30 to 11:00 : Break
+- 11:00 to 12:00 : Challenge diffusion: How to organize your own health data challenge ?
+- 12:00 to 13:30 : Lunch

@@ -12,6 +12,12 @@ output:
 
 This interdisciplinary challenge will be dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on transcriptomic and methylation data.
 
+[PROGRAM](data_challenges_program.html)
+
+[TECHNICAL DETAILS AND FAQ](data_challenges_practicals.html)
+
+[WHERE AND WHEN?](data_challenges_where_when.html)
+
 ### Invited speakers
 
 - **Michael Scherer** from Max-Planck-Institut fur Informatik, Saarbrucken, Germany
@@ -21,7 +27,7 @@ This interdisciplinary challenge will be dedicated to the quantification of intr
 ### Organizers
 
 - Yuna Blum & Florent Petitprez (Programme CIT, LNCC, Paris, France)
-- Magali Richard & Alexis Arnaud (CNRS, UGA, Grenoble, France)
+- Magali Richard , Clémentine Décamps & Alexis Arnaud (CNRS, UGA, Grenoble, France)
 
 ### Scientific challenge
 
@@ -48,96 +54,8 @@ Participants should bring their personal laptops.
 
 Health data challenge is part of a program dedicated to innovation in education. The aim of this program is to provide (i) analytical frameworks to bridge the gap between large dataset and personalized medicine in disease treatments and (ii) innovative pedagogical methods to train students and health professionals to big data analysis in health science. Integrating a large amount of data from different sources and using this knowledge to better characterize specificities of each individual will provide significant opportunities to improve disease diagnosis and to adapt accordingly patients’ treatment and care.
 
-### Program (provisionnal)
 
-#### Monday November 25
 
-- Arrival of the participants
-- 19h30-20h30 : Dinner
-- 20h30-21h30 : Introduction to the Data Challenge
-
-#### Tuesday November 26
-
-- 09:00 to 09:45 : Invited speaker: J. Cros.
-- 09:45 to 10:30 : Invited speaker: F. Avila Cobos
-- 10:30 to 11:00 : Break
-- 11:00 to 11:45 : Invited speaker: M. Scherer
-- 11:45 to 12:30 : Introduction to challenge #1
-- 12:30 to 14:00 : Lunch
-- 14:00 to 16:00 : Challenge #1
-- 16:00 to 16:30 : Break
-- 17:00 to 18:30 : Challenge #1
-- 18:30 to 20:00 : Poster session / Wine & Cheese
-- 20:00 to 21:30 : Dinner
-
-#### Wednesday November 27
-
-- 09:00 to 10:00 : Debriefing on challenge #1
-- 10:00 to 10:30 : Introduction to challenge #2
-- 10:30 to 11:00 : Break
-- 11:00 to 12:00 : Challenge #2
-- 12:00 to 12:45 : Lunch
-- 13:00 to 17:00 : Free time in the mountain
-- 17:00 to 17:30 : Break
-- 17:30 to 20:00 : Challenge #2
-- 20:00 to 21:30 : Dinner (Grill-stone)
-
-#### Thursday November 28
-
-- 09:00 to 13:00 : Challenge #2
-- 10:30 to 11:00 : Break
-- 11:00 to 12:30 : Challenge #2
-- 12:30 to 14:00 : Lunch
-- 14:00 to 14:30 : Parallel sessions: Meeting report // Organize challenge in master cursus
-- 19:30 to 20:00 : Announcement of the challenge #2 results
-- 20:00 to 21:30 : Gala Dinner and cocktail party
-
-#### Friday November 29
-
-- 09:00 to 10:30 : Debriefing on challenge #2
-- 10:30 to 11:00 : Break
-- 11:00 to 12:00 : Challenge diffusion: How to organize your own health data challenge ?
-- 12:00 to 13:30 : Lunch
-
-### Where and when
-The challenge will take place during 5 days (November 25-29th, 2019) in Aussois, Vanoise, a charming small village in the Vanoise National Park (French Alps). It will end at 12pm on November 29th. If you want to leave Aussois after November 29th, you should spend the last night in another hotel nearby (e.g. hotel des mottets). The remote setting, along with the challenging program, were chosen to promote and enhance interactions between participants.
-
-How to come
-
-- Flight
-
-The closest airport is at Lyon Saint Exupery but you might also arrive in Paris. Then you should take the train from the airport to Modane. Check on the website of the SNCF for timetables and reservation.
-
-- Train
-
-The most convenient way to come to Aussois is to arrive by train at the railway station in Modane. Then, a bus shuttle will pick you up to go to the conference center (~15 minutes by bus). Please contact us if you need us to book the shuttle or if you want further information.
-You can check timetables on the SNCF website.
-
-- Car
-
-There is a freeway to Modane, which is located at 15-20 minutes of the conference center in Aussois.
-The tourist office provides additional information...
-
-### Registration
-
-Registration fees include attendance to the courses, food, bus from the station, housing, conference banquet, and the social event on Wednesday. The challenge is limited to 48 participants.
-Please register here
-You will receive a validation of your submission and your registration will be studied on file.
-You will receive a confirmation of your registration before October 10th.
-Rates:
-
-•    Early birds (before June 30th) :  Students 150 € / Faculty-Postdoc 250 € / Industry 400 €
-
-•    Normal (before September 12th) : Students 250 € / Faculty-Postdoc 450 € / Industry 600 €
-
-•    A supplement of 50 euros will be charged if you prefer to stay in a single room rather than in a double room
-Registration is free for the University of Grenoble Alpes' members.
-
-### How to pay
-
-•    By cash or credit card once you arrive at the conference center
-
-•    By purchase order
 
 ## Health Data Challenge (1st edition)
 

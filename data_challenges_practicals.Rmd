@@ -1,0 +1,42 @@
+---
+title: "Data Challenges 2019: Technical details"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+  
+## General information
+  
+  - You will participate to 2 consecutive challenges (of increasing complexity)
+
+- During challenges, each team will work on their personal laptops while developing their solutions (so don’t forget to bring your laptop!). They will then submit a code through a challenge platform called ‘codalab’. 
+
+- From there, the code will be executed on a remote docker on which we have installed the packages that you sent us.  
+
+- Ultimately, the Docker image will be used for the evaluation of the solutions (R code) that each team will submit on the codalab challenge platform. 
+
+- We would prefer everybody to use their personal environment to develop code, but we will make the Docker image available for those who want/need.
+
+## FAQ
+
+**What will be the size of the files on which we will work?**
+  
+  Max 1 or 2 Go.
+
+**Are we going to have a server type workspace?**
+  
+  We will make our Docker image availabe.
+
+**Will there be an access to a calculation server?**
+  
+  We do not provide access to a calculation server but you will be welcome to use your own ressources during the challenge.
+
+**Can I use Python?**
+  
+  When code execution will not be required, you will be able to submit your results generated using your favorite progamming language. However, at some specific steps of the challenge, we will ask participants to submit reprocible code (R mandatory). Don't worry, one of your teammates will probably very fluent in R!
+
+## Installed R packages installed on our docker image
+
+- RefFreeEWAS
+- ...

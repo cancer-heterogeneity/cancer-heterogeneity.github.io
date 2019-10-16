@@ -1,0 +1,52 @@
+---
+title: "Data Challenges 2019: Where and When?"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+  
+## Where and when
+
+The challenge will take place during 5 days (November 25-29th, 2019) in Aussois, Vanoise, a charming small village in the Vanoise National Park (French Alps). It will end at 12pm on November 29th. If you want to leave Aussois after November 29th, you should spend the last night in another hotel nearby (e.g. hotel des mottets). The remote setting, along with the challenging program, were chosen to promote and enhance interactions between participants.
+
+How to come
+
+- Flight
+
+The closest airport is at Lyon Saint Exupery but you might also arrive in Paris. Then you should take the train from the airport to Modane. Check on the website of the SNCF for timetables and reservation.
+
+### Train
+
+The most convenient way to come to Aussois is to arrive by train at the railway station in Modane. Then, a bus shuttle will pick you up to go to the conference center (~15 minutes by bus). Please contact us if you need us to book the shuttle or if you want further information.
+You can check timetables on the SNCF website.
+
+### Car
+
+There is a freeway to Modane, which is located at 15-20 minutes of the conference center in Aussois.
+The tourist office provides additional information...
+
+### Shuttle between Aussois and Modane
+
+ - Monday 25/11, at 7pm from Modane train station to Paul Langevin Center (Aussois)
+- Friday 29/11, at 11am from Paul Langevin Center to Modane
+- Friday 29/11, at 1.30pm from Paul Langevin Center to Modane
+
+
+## Registration
+
+Registration fees include attendance to the courses, food, bus from the station, housing, conference banquet, and the social event on Wednesday. 
+Please register here
+
+•    Early birds (before June 30th) :  Students 150 € / Faculty-Postdoc 250 € / Industry 400 €
+
+•    Normal : Students 250 € / Faculty-Postdoc 450 € / Industry 600 €
+
+•    A supplement of  54.25  euros will be charged if you prefer to stay in a single room rather than in a double room
+Registration is free for the University of Grenoble Alpes' members.
+
+## How to pay
+
+•    By cash or credit card once you arrive at the conference center
+
+•    By purchase order
