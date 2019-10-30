@@ -1,0 +1,19 @@
+---
+title: "Data Challenges 2019: TOOLS"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+Some tools that you can use (non-exhaustive)
+  
+### Methylome
+
+#### NMF
+
+[MeDeCom](https://github.com/lutsik/MeDeCom/blob/master/DESCRIPTION)
+1.	Lutsik, P. et al. MeDeCom: discovery and quantification of latent components of heterogeneous methylomes. Genome Biol. 18, 55 (2017).
+
+### Transcriptome
+

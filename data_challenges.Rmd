@@ -18,6 +18,8 @@ This interdisciplinary challenge will be dedicated to the quantification of intr
 
 [WHERE AND WHEN?](data_challenges_where_when.html)
 
+[DECONVOLUTION TOOLS](data_challenges_tools.html)
+
 ### Invited speakers
 
 - **Michael Scherer** from Max-Planck-Institut fur Informatik, Saarbrucken, Germany
