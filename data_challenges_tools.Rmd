@@ -10,12 +10,56 @@ Some tools that you can use (non-exhaustive)
   
 ### Methylome
 
-#### NMF
+##### *Reference*
+[https://github.com/lutsik/CellTypeInferenceMethods](https://github.com/lutsik/CellTypeInferenceMethods)
 
-[MeDeCom](https://github.com/lutsik/MeDeCom/blob/master/DESCRIPTION)
-1.	Lutsik, P. et al. MeDeCom: discovery and quantification of latent components of heterogeneous methylomes. Genome Biol. 18, 55 (2017).
 
 ### Transcriptome
 
-[Decoder](https://github.com/laurapeng/decoder)
+#### Unsupervised 
 
+[DeconICA](https://urszulaczerwinska.github.io/DeconICA/) 
+Czerwinska et al. **[ICA]** 
+
+[Decoder](https://github.com/laurapeng/decoder) 
+Peng et al 2019, Nature communications. **[NMF + NNLS]**
+
+[deconf](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-27)
+Repsilber et al., 2010, BMC bioinformatics. **[Random Forest + NNLS]**
+
+#### Semi-supervised 
+
+[Deblender](https://github.com/kondim1983/Deblender/)
+Dimitrakopoulou et al 2018, Bioinformatics. **[NMF]**(MATLAB) 
+
+[WISP](https://cit-bioinfo.github.io/WISP/)
+Blum et al 2019, Nature communications. **[NNLS]**
+
+[DSA](https://github.com/zhandong/DSA)
+Zhong et al., 2013, BMC bioinformatics. **[NNLS]**
+
+#### Supervised 
+
+[DeconvSeq](https://github.com/rosedu1/deconvSeq)
+Du et al 2019 Bioinformatics. **[GLM]**
+
+[LRCDE](https://github.com/ERGlass/lrcde.dev)
+Glass and Dozmorov, 2016, BMC bioinformatics. **[LM]**
+
+[MMAD](http://sourceforge.net/projects/mmad/)
+ Liebner et al 2014, Bioinformatics. **[Maximum likelihood/ Conjugate gradient]**(MATLAB)
+
+[DeconRNASeq](https://www.bioconductor.org/packages/release/bioc/html/DeconRNASeq.html) 
+Gong and Szustakowski, 2013, Bioinformatics. **[NNLS]**
+
+[MuSic](https://github.com/xuranw/MuSiC)
+Wang et al 2019, Nature communications. **[NNLS]**
+ 
+##### Toolbox R package
+ 
+[CellMix](web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix)
+Gaujoux and Seoighe, 2013, Bioinformatics. **[including DSA and deconf, NMF]**  
+
+
+##### *Reference*
+[Avila Cobos, F., Vandesompele, J., Mestdagh, P., & De Preter, K. (2018). Computational deconvolution of transcriptomics data from mixed cell populations. Bioinformatics, 34(11), 1969-1979.](https://academic.oup.com/bioinformatics/article/34/11/1969/4813737)
