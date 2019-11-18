@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -73,9 +74,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -89,7 +88,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -194,8 +192,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -252,20 +248,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -343,33 +336,50 @@ $(document).ready(function () {
 <p>Some tools that you can use (non-exhaustive)</p>
 <div id="methylome" class="section level3">
 <h3>Methylome</h3>
+<div id="unsupervised" class="section level4">
+<h4>Unsupervised</h4>
+<p><a href="https://cran.r-project.org/web/packages/RefFreeEWAS/index.html">RefFreeEWAS</a> Houseman et al, 2016, BMC bioinformatics, PMID 27358049 <strong>[NMF]</strong></p>
+<p><a href="https://github.com/lutsik/MeDeCom">MeDeCom</a> Lutsik et al, 2017, Genome Biology, PMID 28340624 <strong>[NMF]</strong></p>
+</div>
+<div id="semi-supervised" class="section level4">
+<h4>Semi-supervised</h4>
+<p><a href="https://github.com/BRL-BCM/EDec">EDec</a> Onuchic et al, 2017, Cell reports, PMID 27851969 <strong>[NMF]</strong></p>
+</div>
+<div id="supervised" class="section level4">
+<h4>Supervised</h4>
+<p><a href="https://github.com/sjczheng/EpiDISH">EpiDISH</a> Teschendorff et al, 2017, Epigenomics, PMID 28517979 <strong>[SVR, RPC or CP]</strong></p>
+<div id="toolbox-r-package" class="section level5">
+<h5>Toolbox R package</h5>
+<p><a href="https://bcm-uga.github.io/medepir/index.html">medepir</a> Decamps et al, 2019, In revision in BMC Bioinformatics, <strong>[pipeline for RefFree methods]</strong></p>
+</div>
 <div id="reference" class="section level5">
 <h5><em>Reference</em></h5>
-<p><a href="https://github.com/lutsik/CellTypeInferenceMethods" class="uri">https://github.com/lutsik/CellTypeInferenceMethods</a></p>
+<p><a href="https://github.com/lutsik/CellTypeInferenceMethods">https://github.com/lutsik/CellTypeInferenceMethods</a></p>
+</div>
 </div>
 </div>
 <div id="transcriptome" class="section level3">
 <h3>Transcriptome</h3>
-<div id="unsupervised" class="section level4">
+<div id="unsupervised-1" class="section level4">
 <h4>Unsupervised</h4>
 <p><a href="https://urszulaczerwinska.github.io/DeconICA/">DeconICA</a> Czerwinska et al. <strong>[ICA]</strong></p>
 <p><a href="https://github.com/laurapeng/decoder">Decoder</a> Peng et al 2019, Nature communications. <strong>[NMF + NNLS]</strong></p>
 <p><a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-11-27">deconf</a> Repsilber et al., 2010, BMC bioinformatics. <strong>[Random Forest + NNLS]</strong></p>
 </div>
-<div id="semi-supervised" class="section level4">
+<div id="semi-supervised-1" class="section level4">
 <h4>Semi-supervised</h4>
 <p><a href="https://github.com/kondim1983/Deblender/">Deblender</a> Dimitrakopoulou et al 2018, Bioinformatics. <strong>[NMF]</strong>(MATLAB)</p>
 <p><a href="https://cit-bioinfo.github.io/WISP/">WISP</a> Blum et al 2019, Nature communications. <strong>[NNLS]</strong></p>
 <p><a href="https://github.com/zhandong/DSA">DSA</a> Zhong et al., 2013, BMC bioinformatics. <strong>[NNLS]</strong></p>
 </div>
-<div id="supervised" class="section level4">
+<div id="supervised-1" class="section level4">
 <h4>Supervised</h4>
 <p><a href="https://github.com/rosedu1/deconvSeq">DeconvSeq</a> Du et al 2019 Bioinformatics. <strong>[GLM]</strong></p>
 <p><a href="https://github.com/ERGlass/lrcde.dev">LRCDE</a> Glass and Dozmorov, 2016, BMC bioinformatics. <strong>[LM]</strong></p>
 <p><a href="http://sourceforge.net/projects/mmad/">MMAD</a> Liebner et al 2014, Bioinformatics. <strong>[Maximum likelihood/ Conjugate gradient]</strong>(MATLAB)</p>
 <p><a href="https://www.bioconductor.org/packages/release/bioc/html/DeconRNASeq.html">DeconRNASeq</a> Gong and Szustakowski, 2013, Bioinformatics. <strong>[NNLS]</strong></p>
 <p><a href="https://github.com/xuranw/MuSiC">MuSic</a> Wang et al 2019, Nature communications. <strong>[NNLS]</strong></p>
-<div id="toolbox-r-package" class="section level5">
+<div id="toolbox-r-package-1" class="section level5">
 <h5>Toolbox R package</h5>
 <p><a href="web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix">CellMix</a> Gaujoux and Seoighe, 2013, Bioinformatics. <strong>[including DSA and deconf, NMF]</strong></p>
 </div>
@@ -397,6 +407,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

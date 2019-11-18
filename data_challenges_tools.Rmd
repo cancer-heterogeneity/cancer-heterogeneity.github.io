@@ -10,6 +10,34 @@ Some tools that you can use (non-exhaustive)
   
 ### Methylome
 
+#### Unsupervised 
+
+[RefFreeEWAS](https://cran.r-project.org/web/packages/RefFreeEWAS/index.html) 
+Houseman et al, 2016, BMC bioinformatics, PMID 27358049 **[NMF]** 
+
+[MeDeCom](https://github.com/lutsik/MeDeCom) 
+Lutsik et al, 2017, Genome Biology, PMID 28340624 **[NMF]** 
+
+
+#### Semi-supervised 
+
+[EDec](https://github.com/BRL-BCM/EDec) 
+Onuchic et al, 2017, Cell reports, PMID 27851969 **[NMF]** 
+
+
+#### Supervised 
+
+
+[EpiDISH](https://github.com/sjczheng/EpiDISH) 
+Teschendorff et al, 2017, Epigenomics, PMID 28517979 **[SVR, RPC or CP]** 
+
+
+##### Toolbox R package
+
+ 
+[medepir](https://bcm-uga.github.io/medepir/index.html)
+Decamps et al, 2019, In revision in BMC Bioinformatics,  **[pipeline for RefFree methods]**  
+
 ##### *Reference*
 [https://github.com/lutsik/CellTypeInferenceMethods](https://github.com/lutsik/CellTypeInferenceMethods)
 
