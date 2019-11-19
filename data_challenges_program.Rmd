@@ -12,7 +12,8 @@ output:
 
 - Arrival of the participants
 - 19h30-20h30 : Dinner
-- 20h30-21h30 : Introduction to the Data Challenge
+- 20h30-21h00 : Introduction to the Data Challenge (Y. Blum & M. Richard)
+- 21h00-21h20 : Introduction to pedogogic evaluation of the Data Challenge (M. Krabbe)
 
 #### Tuesday November 26
 
@@ -46,7 +47,7 @@ output:
 - 10:30 to 11:00 : Break
 - 11:00 to 12:30 : Challenge #2
 - 12:30 to 14:00 : Lunch
-- 14:00 to 14:30 : Parallel sessions: Meeting report // Organize challenge in master cursus
+- 14:00 to 18:00 : Parallel sessions: Meeting report & feedback on pedagogy
 - 19:30 to 20:00 : Announcement of the challenge #2 results
 - 20:00 to 21:30 : Gala Dinner and cocktail party
 
