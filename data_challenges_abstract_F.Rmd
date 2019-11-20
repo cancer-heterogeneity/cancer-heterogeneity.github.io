@@ -1,0 +1,18 @@
+---
+title: "Abstract"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![**Francisco Avila Cobos**, Ghent University, Gand, Belgium](pictures/Francisco_Cobos.png)
+
+## Comprehensive benchmarking of computational deconvolution of transcriptomics data
+  
+Many computational methods to infer cell type proportions from bulk transcriptomics data have been developed. Attempts comparing these methods revealed that the choice of reference signatures is far more important than the method itself. However, a thorough evaluation of the combined impact of data transformation, pre-processing and methodology on the results is still lacking.
+
+Using single-cell RNA-sequencing (scRNA-seq) data from human pancreas and peripheral blood mononuclear cells, we artificially generated hundreds of pseudo-bulk mixtures with varying number of cells and cell types in known proportions, allowing the evaluation of the combined impact on the deconvolution results. We compared the results using data in linear scale and common data transformations that stabilize the variance combined with different downstream normalization strategies. 
+
+Along with methods to perform deconvolution of bulk RNA-seq data we also included several methods specifically designed to infer the cell type composition of bulk data using scRNA-seq data as reference. Moreover, since most methods require an additional reference matrix containing cell-type specific expression values, we assessed the effect of removing cell types from the reference that were actually present in the mixtures. Further in-depth analyses are currently ongoing.
+
+

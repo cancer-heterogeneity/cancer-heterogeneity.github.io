@@ -23,8 +23,9 @@ This interdisciplinary challenge will be dedicated to the quantification of intr
 ### Invited speakers
 
 - **Michael Scherer** from Max-Planck-Institut fur Informatik, Saarbrucken, Germany
-- **Francisco Avila Cobos** from Ghent University, Gand, Belgium
-- **Jerome Cros** from AP-HP, Paris, France
+  [[Abstract]](data_challenges_abtract_M.html)
+- **Francisco Avila Cobos** from Ghent University, Gand, Belgium [[Abstract]](data_challenges_abstract_F.html)
+- **Jerome Cros** from AP-HP, Paris, France [[Abstract]](data_challenges_abstract_J.html)
 
 ### Organizers
 

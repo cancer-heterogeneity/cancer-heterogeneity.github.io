@@ -1,0 +1,13 @@
+---
+title: "Abstract"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![**Michael Scherer**, Max-Planck-Institut für Informatik, Saarbrucken, Germany](pictures/Michael_Sherer.png)
+
+## Deconvolution of complex DNA methylomes - a systematic protocol
+  
+Epigenomic profiling enables unique insights into human development and diseases, yet analysis of bulk samples remains the only feasible option for studying complex tissues and organs in large patient cohorts, masking the signatures of important cell populations. DNA methylomes are highly cell type-specific, enabling recovery of hidden components using advanced computational methods without the need of reference profiles using methods such as *MeDeCom*, *RefFreeCellMix*, or *EDec*. In this talk, we present a three-stage protocol for reference-free deconvolution of DNA methylomes, starting from data preprocessing, confounder adjustment and feature selection, through deconvolution with multiple parameters, down to guided biological inference and validation of deconvolution results. In an application to lung cancer methylomes from TCGA, we show components linked to stromal, and tumor-infiltrating immune cells, and associations with clinical parameters.
+
