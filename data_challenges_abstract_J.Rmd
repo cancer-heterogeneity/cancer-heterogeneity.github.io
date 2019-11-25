@@ -11,4 +11,4 @@ output:
   
 Pancreatic adenocarcinoma has one of the worst prognosis and is predicted to be the second leading cause of death by cancer in 2025. This is mostly due to late stage diagnosis and the resistance to therapies. Recent high throughput molecular studies have uncovered the interpatient heterogeneity, mostly at the epigenetic and transcriptomic levels but the intra-tumor heterogeneity has yet to be fully explored. In this course, we will discuss (i) the different types of diagnostic samples and their respective limits together with the process of tumor sample preparation and how it might affect molecular analyses, (ii) the importance of the timing of tumor sampling regarding the development of predictive signatures, (iii) the multi-level tumor heterogeneity of pancreatic adenocarcinoma (histologic/genomic/epigenomic/transcriptomic/metabolomic … ) and how it might impact clinical care.
 
-
+[Slides(PDF)](presentation/Heterogeneite ADKP v2 HADACA.pdf)
