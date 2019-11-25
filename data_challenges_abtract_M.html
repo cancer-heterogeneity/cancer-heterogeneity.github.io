@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -73,9 +74,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -89,7 +88,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -194,8 +192,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -252,20 +248,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -347,6 +340,7 @@ $(document).ready(function () {
 <div id="deconvolution-of-complex-dna-methylomes---a-systematic-protocol" class="section level2">
 <h2>Deconvolution of complex DNA methylomes - a systematic protocol</h2>
 <p>Epigenomic profiling enables unique insights into human development and diseases, yet analysis of bulk samples remains the only feasible option for studying complex tissues and organs in large patient cohorts, masking the signatures of important cell populations. DNA methylomes are highly cell type-specific, enabling recovery of hidden components using advanced computational methods without the need of reference profiles using methods such as <em>MeDeCom</em>, <em>RefFreeCellMix</em>, or <em>EDec</em>. In this talk, we present a three-stage protocol for reference-free deconvolution of DNA methylomes, starting from data preprocessing, confounder adjustment and feature selection, through deconvolution with multiple parameters, down to guided biological inference and validation of deconvolution results. In an application to lung cancer methylomes from TCGA, we show components linked to stromal, and tumor-infiltrating immune cells, and associations with clinical parameters.</p>
+<p><a href="presentation/MeDeCom_Michael_Scherer.pdf">Slides(PDF)</a></p>
 </div>
 
 
@@ -366,6 +360,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
