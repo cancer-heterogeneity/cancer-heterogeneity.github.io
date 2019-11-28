@@ -1,0 +1,34 @@
+---
+title: "Data Challenges 2019: PRESENTATIONS AND RESTITUTION"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+Please find the presentations of the week
+
+  
+#### Organizing team
+
+[Day_0](presentation/2019_hadaca_day0.pdf)
+
+[Day_1](presentation/2019_hadaca_day1-1.pdf)
+
+[Day_2](presentation/2019_hadaca_day2.pdf)
+
+[Results challenge RNA #1](presentation/competition_results_-_Phase_1_-_rna.pdf)
+
+[Results challenge MET #1](presentation/competition_results_-_Phase_1_-_met.pdf)
+
+#### Challengers
+
+[Restitutions challenge #1](presentation/PDFsam_merge.pdf)
+
+#### Speakers
+
+[Slides Jerome Cros](presentation/Heterogeneite ADKP v2 HADACA.pdf)
+
+[Slides Francisco Avila Cobos](presentation/HADACA2019_Francisco_AvilaCobosPDF.pdf)
+
+[Slides Michael Scherer](presentation/MeDeCom_Michael_Scherer.pdf)
