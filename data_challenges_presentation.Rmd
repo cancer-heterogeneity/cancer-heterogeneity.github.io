@@ -17,6 +17,8 @@ Please find the presentations of the week
 
 [Day_2](presentation/2019_hadaca_day2.pdf)
 
+[Day_3](presentation/meeting_report.pdf)
+
 [Results challenge RNA #1](presentation/competition_results_-_Phase_1_-_rna.pdf)
 
 [Results challenge MET #1](presentation/competition_results_-_Phase_1_-_met.pdf)
