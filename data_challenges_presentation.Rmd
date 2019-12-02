@@ -19,13 +19,23 @@ Please find the presentations of the week
 
 [Day_3](presentation/meeting_report.pdf)
 
-[Results challenge RNA #1](presentation/competition_results_-_Phase_1_-_rna.pdf)
+[Day_4](presentation/2019_hadaca_day4.pdf)
 
-[Results challenge MET #1](presentation/competition_results_-_Phase_1_-_met.pdf)
+[Results challenge #1 RNA](presentation/competition_results_-_Phase_1_-_rna.pdf)
+
+[Results challenge #1 MET](presentation/competition_results_-_Phase_1_-_met.pdf)
+
+[Results challenge #2 phase 1](presentation/competition_results_-_Phase_2.pdf)
+
+[Results challenge #2 phase 2](presentation/competition_results_-_Phase_4.pdf)
+
+[Tutorial: How to organize challenges on Codalab?](presentation/presentation_Codalab_bundle-1.pdf)
 
 #### Challengers
 
-[Restitutions challenge #1](presentation/PDFsam_merge.pdf)
+[Summary / Feedbacks on challenge #1](presentation/PDFsam_merge.pdf)
+
+[Summary / Feedbacks on challenge #2](presentation/summary_cha2.pdf)
 
 #### Speakers
 
