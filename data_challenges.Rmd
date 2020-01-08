@@ -6,6 +6,7 @@ output:
       in_header: cover.html
 ---
 
+
 ## Health Data Challenge (2nd edition): Matrix factorization and deconvolution methods to quantify tumor heterogeneity in cancer research
 
 *from November 25, 2019 to November 29, 2019*
@@ -61,8 +62,10 @@ Health data challenge is part of a program dedicated to innovation in education.
 
 
 
-
 ## Health Data Challenge (1st edition)
 
 
 ![Health data challenge 1st edition, in 2018, at Aussois ski ressort, 40 participants](pictures/first_edition.png)
+
+![](pictures/EIT Health logo landscape.png)
+![](pictures/EIT logo.png)
