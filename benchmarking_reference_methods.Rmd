@@ -17,6 +17,7 @@ For a detail of each method, please read the paragraphs below.
 t = read.csv2("table_methods.csv", head=T, row.names = 1,  sep = ",")
 knitr::kable(t, align = 'c')
 ```
+
 `Time 1 A` is the time to run the method one time, `Time 10 A` is the time to run the method on all the simulation dataset of DeconBench [[XX link]] 
 
 
