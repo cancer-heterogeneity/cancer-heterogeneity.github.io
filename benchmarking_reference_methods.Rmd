@@ -14,9 +14,11 @@ For a detail of each method, please read the paragraphs below.
 
 
 ```{r, echo = F}
-t = read.csv2("table_methods.csv", sep = ",")
-knitr::kable(t)
+t = read.csv2("table_methods.csv", head=T, row.names = 1,  sep = ",")
+knitr::kable(t, align = 'c')
 ```
+`Time 1 A` is the time to run the method one time, `Time 10 A` is the time to run the method on all the simulation dataset of DeconBench [[XX link]] 
+
 
 ##Detail of the methods
 
@@ -35,10 +37,10 @@ For the ICA-based deconvolution step, the function deconica::run_fastica is run 
 * The method **DNAm_wICA (m_WIC)** analyzes DNA methylation data. It does not provide feature selection. The deconvolution step is based on ICA, similarly to what was described for the second step of RNA_wICA, but applied on the DNA methylation matrix.
 
 
-* The method **DNAm_EDec (m_EDC)**, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [ref]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [ref] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter. 
+* The method **DNAm_EDec (m_EDC)**, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter. 
 
 
-* The method **DNAm_MeDeCom (m_MDC)**, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [ref]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.
+* The method **DNAm_MeDeCom (m_MDC)**, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.
 
 
 * The method **both_wICA (b_WIC)** combines the input of both transcriptomics and DNA methylation. It has no feature selection step. The deconvolution is in two steps, one on each data type. The transcriptomics and DNA methylation are separately deconvoluted with the same deconvolution step as in r_WIC and m_WIC respectively. Finally, the mean of both deconvolution matrices is computed as the final method output. To compute the average, the cell types of the both deconvolution matrices are matched by iteration. The cell types of the methylation result matrix are reordered 1,000 times, and the one that best correlates with the transcriptomic result matrix is kept. 
@@ -48,3 +50,14 @@ For the ICA-based deconvolution step, the function deconica::run_fastica is run 
 
 
 * Finally, the method **both_meanwNMFMeDeCom (b_MEA)**, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.
+
+
+
+
+[1] Decamps, C., Privé, F., Bacher, R. et al. Guidelines for cell-type heterogeneity quantification based on a comparative analysis of reference-free DNA methylation deconvolution software. BMC Bioinformatics. 2020;21, 16. 
+
+
+[2] Onuchic V, Hartmaier RJ, Boone DN, Samuels ML, Patel RY, White WM, et al. Epigenomic Deconvolution of breast tumors reveals metabolic coupling between constituent cell types. Cell Rep. 2016;17:2075–86.
+
+[3] Lutsik P, Slawski M, Gasparoni G, Vedeneev N, Hein M, Walter J. MeDeCom: discovery and quantification of latent components of heterogeneous methylomes. Genome Biol. BioMed Central. 2017;18:55.
+
