@@ -340,105 +340,105 @@ $(document).ready(function () {
 <table>
 <thead>
 <tr class="header">
-<th align="left">Name</th>
-<th align="left">RNA_wICA</th>
-<th align="left">RNA_wNMF</th>
-<th align="left">DNAm_Edec</th>
-<th align="left">DNAm_MeDeCom</th>
-<th align="left">DNAm_wICA</th>
-<th align="left">both_wICA</th>
-<th align="left">both_wNMFMeDeCom</th>
-<th align="left">both_meanwNMFMeDeCom</th>
+<th></th>
+<th align="center">RNA_wICA</th>
+<th align="center">RNA_wNMF</th>
+<th align="center">DNAm_Edec</th>
+<th align="center">DNAm_MeDeCom</th>
+<th align="center">DNAm_wICA</th>
+<th align="center">both_wICA</th>
+<th align="center">both_wNMFMeDeCom</th>
+<th align="center">both_meanwNMFMeDeCom</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Acronym</td>
-<td align="left">r_WIC</td>
-<td align="left">r_WNM</td>
-<td align="left">m_EDC</td>
-<td align="left">m_MDC</td>
-<td align="left">m_WIC</td>
-<td align="left">b_WIC</td>
-<td align="left">b_COM</td>
-<td align="left">b_MEA</td>
+<td><strong>Data type</strong></td>
+<td align="center">RNA</td>
+<td align="center">RNA</td>
+<td align="center">DNAm</td>
+<td align="center">DNAm</td>
+<td align="center">DNAm</td>
+<td align="center">both</td>
+<td align="center">both</td>
+<td align="center">both</td>
 </tr>
 <tr class="even">
-<td align="left">Data type</td>
-<td align="left">RNA</td>
-<td align="left">RNA</td>
-<td align="left">DNAm</td>
-<td align="left">DNAm</td>
-<td align="left">DNAm</td>
-<td align="left">both</td>
-<td align="left">both</td>
-<td align="left">both</td>
+<td><strong>FS DNAm</strong></td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">Var &gt; 0.02</td>
+<td align="center">Var &gt; 0.02</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">Var &gt; 0.02</td>
+<td align="center">Var &gt; 0.02</td>
 </tr>
 <tr class="odd">
-<td align="left">FS DNAm</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">Var &gt; 0.02</td>
-<td align="left">Var &gt; 0.02</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">Var &gt; 0.02</td>
-<td align="left">Var &gt; 0.02</td>
+<td><strong>FS RNA</strong></td>
+<td align="center">ICA, most important genes of most stable components, removing of duplicated genes</td>
+<td align="center">ICA, most important genes of most stable components, not removing of duplicated genes</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">ICA, most important genes of most stable components, not removing of duplicated genes</td>
+<td align="center">ICA, most important genes of most stable components, not removing of duplicated genes</td>
 </tr>
 <tr class="even">
-<td align="left">FS RNA</td>
-<td align="left">ICA, most important genes of most stable components, removing of duplicated genes</td>
-<td align="left">ICA, most important genes of most stable components, not removing of duplicated genes</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">ICA, most important genes of most stable components, not removing of duplicated genes</td>
-<td align="left">ICA, most important genes of most stable components, not removing of duplicated genes</td>
+<td><strong>Deconvolution DNAm</strong></td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center">Edec</td>
+<td align="center">MeDeCom</td>
+<td align="center">ICA weighted on 30 most important genes</td>
+<td align="center">ICA weighted on 30 most important genes</td>
+<td align="center">MeDeCom with the A matrix computed on RNA as startA parameter</td>
+<td align="center">MeDeCom</td>
 </tr>
 <tr class="odd">
-<td align="left">Deconvolution DNAm</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left">Edec</td>
-<td align="left">MeDeCom</td>
-<td align="left">ICA weighted on 30 most important genes</td>
-<td align="left">ICA weighted on 30 most important genes</td>
-<td align="left">MeDeCom with the A matrix computed on RNA as startA parameter</td>
-<td align="left">MeDeCom</td>
+<td><strong>Deconvolution RNA</strong></td>
+<td align="center">ICA weighted on 30 most important genes</td>
+<td align="center">NMF with snmf/r method</td>
+<td align="center">/</td>
+<td align="center">/</td>
+<td align="center"></td>
+<td align="center">ICA weighted on 30 most important genes</td>
+<td align="center">NMF with snmf/r method</td>
+<td align="center">NMF with snmf/r method</td>
 </tr>
 <tr class="even">
-<td align="left">Deconvolution RNA</td>
-<td align="left">ICA weighted on 30 most important genes</td>
-<td align="left">NMF with snmf/r method</td>
-<td align="left">/</td>
-<td align="left">/</td>
-<td align="left"></td>
-<td align="left">ICA weighted on 30 most important genes</td>
-<td align="left">NMF with snmf/r method</td>
-<td align="left">NMF with snmf/r method</td>
+<td><strong>Time 10 A</strong></td>
+<td align="center">~10mn</td>
+<td align="center">~20mn</td>
+<td align="center">~3h</td>
+<td align="center">~17h</td>
+<td align="center">~10mn</td>
+<td align="center">~10mn</td>
+<td align="center">~17h</td>
+<td align="center">~17h30</td>
 </tr>
 <tr class="odd">
-<td align="left">Time 10 A</td>
-<td align="left">~10mn</td>
-<td align="left">~20mn</td>
-<td align="left">~3h</td>
-<td align="left">~17h</td>
-<td align="left">~10mn</td>
-<td align="left">~10mn</td>
-<td align="left">~17h</td>
-<td align="left">~17h30</td>
+<td><strong>Time 1 A</strong></td>
+<td align="center">~1mn</td>
+<td align="center">~2mn</td>
+<td align="center">~20mn</td>
+<td align="center">~1h40</td>
+<td align="center">~1mn</td>
+<td align="center">~1mn</td>
+<td align="center">~1h40</td>
+<td align="center">~1h45</td>
 </tr>
 <tr class="even">
-<td align="left">Time 1 A</td>
-<td align="left">~1mn</td>
-<td align="left">~2mn</td>
-<td align="left">~20mn</td>
-<td align="left">~1h40</td>
-<td align="left">~1mn</td>
-<td align="left">~1mn</td>
-<td align="left">~1h40</td>
-<td align="left">~1h45</td>
+<td><code>Time 1 A</code> is the time to</td>
+<td align="center">run the method one time, <code>Time 10 A</code> is the time to run the method on all the simula</td>
+<td align="center">tion dataset of DeconBench [[XX link]]</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
@@ -450,12 +450,15 @@ $(document).ready(function () {
 <li><p>The method <strong>RNA_wICA (r_WIC)</strong> relies on transcriptomic data and uses Independent Component Analysis (ICA) for both feature selection and deconvolution. It relies on the use of the functions “runICA” and “getGenesICA” by P. Nazarov (sablab.net/scripts/LibICA.r) and the deconica R package. For the ICA-based feature selection, the function “runICA” is run for the first time with the parameters ncomp = 10 and ntry = 50. Then, the function “getGenesICA” selects top-contributing genes with a FDR of 0.2, the feature selection is done on these contributing genes belonging to a component having an average stability greater than 0.8. Finally, duplicated genes are removed. For the ICA-based deconvolution step, the function deconica::run_fastica is run with parameters overdecompose = FALSE and n.comp = 5, remaining parameters set to default. The 30 most important genes of each ICA components are extracted by the function deconica::generate_markers with the parameter return = “gene.ranked”. These genes are used to weight the components score with the function deconica::get_scores, with the log counts of the ICA as “df” parameter, the list of 30 genes as “markers.list” parameter, and the parameter summary = “weighted.mean”. Finally, the proportions are extracted with the function deconica::stacked_proportions_plot on the transpose.</p></li>
 <li><p>The method <strong>RNA_wNMF (r_WNM)</strong>, using transcriptomic data, is in two steps. The first step uses ICA to perform a feature selection as described for RNA_wICA, although duplicated genes are kept. This step, therefore, allows a gene which contributes to several components to be present several times in the data. The deconvolution is based on Non-negative Matrix Factorization (NMF) called by the NMF::nmf function, with the parameter method = “snmf/r”.</p></li>
 <li><p>The method <strong>DNAm_wICA (m_WIC)</strong> analyzes DNA methylation data. It does not provide feature selection. The deconvolution step is based on ICA, similarly to what was described for the second step of RNA_wICA, but applied on the DNA methylation matrix.</p></li>
-<li><p>The method <strong>DNAm_EDec (m_EDC)</strong>, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [ref]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [ref] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter.</p></li>
-<li><p>The method <strong>DNAm_MeDeCom (m_MDC)</strong>, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [ref]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.</p></li>
+<li><p>The method <strong>DNAm_EDec (m_EDC)</strong>, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter.</p></li>
+<li><p>The method <strong>DNAm_MeDeCom (m_MDC)</strong>, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.</p></li>
 <li><p>The method <strong>both_wICA (b_WIC)</strong> combines the input of both transcriptomics and DNA methylation. It has no feature selection step. The deconvolution is in two steps, one on each data type. The transcriptomics and DNA methylation are separately deconvoluted with the same deconvolution step as in r_WIC and m_WIC respectively. Finally, the mean of both deconvolution matrices is computed as the final method output. To compute the average, the cell types of the both deconvolution matrices are matched by iteration. The cell types of the methylation result matrix are reordered 1,000 times, and the one that best correlates with the transcriptomic result matrix is kept.</p></li>
 <li><p>The method <strong>both_wNMFMeDeCom (b_COM)</strong>, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of probes with a variance higher than 0.02. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA.</p></li>
 <li><p>Finally, the method <strong>both_meanwNMFMeDeCom (b_MEA)</strong>, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.</p></li>
 </ul>
+<p>[1] Decamps, C., Privé, F., Bacher, R. et al. Guidelines for cell-type heterogeneity quantification based on a comparative analysis of reference-free DNA methylation deconvolution software. BMC Bioinformatics. 2020;21, 16.</p>
+<p>[2] Onuchic V, Hartmaier RJ, Boone DN, Samuels ML, Patel RY, White WM, et al. Epigenomic Deconvolution of breast tumors reveals metabolic coupling between constituent cell types. Cell Rep. 2016;17:2075–86.</p>
+<p>[3] Lutsik P, Slawski M, Gasparoni G, Vedeneev N, Hein M, Walter J. MeDeCom: discovery and quantification of latent components of heterogeneous methylomes. Genome Biol. BioMed Central. 2017;18:55.</p>
 </div>
 
 
