@@ -1,8 +1,8 @@
 Name,RNA_wICA,RNA_wNMF,DNAm_Edec,DNAm_MeDeCom,DNAm_wICA,both_wICA,both_wNMFMeDeCom,both_meanwNMFMeDeCom
 **Data type**,RNA,RNA,DNAm,DNAm,DNAm,both,both,both
-FS DNAm,/,/,Var > 0.02,Var > 0.02,/,/,Var > 0.02,Var > 0.02
-FS RNA,"ICA, most important genes of most stable components, removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes",/,/,/,/,"ICA, most important genes of most stable components, not removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes"
-Deconvolution DNAm,/,/,Edec,MeDeCom,ICA weighted on 30 most important genes,ICA weighted on 30 most important genes,MeDeCom with the A matrix computed on RNA as startA parameter,MeDeCom
-Deconvolution RNA,ICA weighted on 30 most important genes,NMF with snmf/r method,/,/,,ICA weighted on 30 most important genes,NMF with snmf/r method,NMF with snmf/r method
-Time 10 A,~10mn,~20mn,~3h,~17h,~10mn,~10mn,~17h,~17h30
-Time 1 A,~1mn,~2mn,~20mn,~1h40,~1mn,~1mn,~1h40,~1h45
+**FS DNAm**,/,/,Var > 0.02,Var > 0.02,/,/,Var > 0.02,Var > 0.02
+**FS RNA**,"ICA, most important genes of most stable components, removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes",/,/,/,/,"ICA, most important genes of most stable components, not removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes"
+**Deconvolution DNAm**,/,/,Edec,MeDeCom,ICA weighted on 30 most important genes,ICA weighted on 30 most important genes,MeDeCom with the A matrix computed on RNA as startA parameter,MeDeCom
+**Deconvolution RNA**,ICA weighted on 30 most important genes,NMF with snmf/r method,/,/,,ICA weighted on 30 most important genes,NMF with snmf/r method,NMF with snmf/r method
+**Time 10 A**,~10mn,~20mn,~3h,~17h,~10mn,~10mn,~17h,~17h30
+**Time 1 A**,~1mn,~2mn,~20mn,~1h40,~1mn,~1mn,~1h40,~1h45
