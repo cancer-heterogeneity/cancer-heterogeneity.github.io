@@ -1,0 +1,50 @@
+---
+title: "Reference methods"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+##Table
+
+This table is a overview of all the methods and their specificity. 
+
+For a detail of each method, please read the paragraphs below.
+
+
+```{r, echo = F}
+t = read.csv2("table_methods.csv", sep = ",")
+knitr::kable(t)
+```
+
+##Detail of the methods
+
+
+
+Eight methods have been included in the benchmark as reference to be compared with the accuracy of new methods.
+
+
+* The method **RNA_wICA (r_WIC)** relies on transcriptomic data and uses Independent Component Analysis (ICA) for both feature selection and deconvolution. It relies on the use of the functions “runICA” and “getGenesICA” by P. Nazarov (sablab.net/scripts/LibICA.r) and the deconica R package. For the ICA-based feature selection, the function “runICA” is run for the first time with the parameters ncomp = 10 and ntry = 50. Then, the function “getGenesICA” selects top-contributing genes with a FDR of 0.2, the feature selection is done on these contributing genes belonging to a component having an average stability greater than 0.8. Finally, duplicated genes are removed. 
+For the ICA-based deconvolution step, the function deconica::run_fastica is run with parameters overdecompose = FALSE and n.comp = 5, remaining parameters set to default. The 30 most important genes of each ICA components are extracted by the function deconica::generate_markers with the parameter return = "gene.ranked". These genes are used to weight the components score with the function deconica::get_scores, with the log counts of the ICA as “df” parameter, the list of 30 genes as “markers.list” parameter, and the parameter summary = "weighted.mean". Finally, the proportions are extracted with the function deconica::stacked_proportions_plot on the transpose. 
+
+
+* The method **RNA_wNMF (r_WNM)**, using transcriptomic data, is in two steps. The first step uses ICA to perform a feature selection as described for RNA_wICA, although duplicated genes are kept. This step, therefore, allows a gene which contributes to several components to be present several times in the data. The deconvolution is based on Non-negative Matrix Factorization (NMF) called by the NMF::nmf function, with the parameter method = "snmf/r". 
+
+
+* The method **DNAm_wICA (m_WIC)** analyzes DNA methylation data. It does not provide feature selection. The deconvolution step is based on ICA, similarly to what was described for the second step of RNA_wICA, but applied on the DNA methylation matrix.
+
+
+* The method **DNAm_EDec (m_EDC)**, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [ref]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [ref] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter. 
+
+
+* The method **DNAm_MeDeCom (m_MDC)**, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [ref]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.
+
+
+* The method **both_wICA (b_WIC)** combines the input of both transcriptomics and DNA methylation. It has no feature selection step. The deconvolution is in two steps, one on each data type. The transcriptomics and DNA methylation are separately deconvoluted with the same deconvolution step as in r_WIC and m_WIC respectively. Finally, the mean of both deconvolution matrices is computed as the final method output. To compute the average, the cell types of the both deconvolution matrices are matched by iteration. The cell types of the methylation result matrix are reordered 1,000 times, and the one that best correlates with the transcriptomic result matrix is kept. 
+
+
+* The method **both_wNMFMeDeCom (b_COM)**, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of probes with a variance higher than 0.02. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA. 
+
+
+* Finally, the method **both_meanwNMFMeDeCom (b_MEA)**, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.
