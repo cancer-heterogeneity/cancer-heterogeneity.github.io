@@ -10,7 +10,7 @@ navbar:
     - text: "Data Challenges"
       icon: fa-universal-access 
       href: data_challenges.html
-    - text: "Benchmarking"
+    - text: "Deconbench"
       icon: fa-code-fork
       href: benchmarking.html
     - text: "Blog"
