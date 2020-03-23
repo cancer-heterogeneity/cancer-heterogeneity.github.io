@@ -1,15 +1,23 @@
 ---
-title: "Benchmarking"
+title: "Deconbench"
 output:
   html_document:
     includes:
       in_header: cover.html
 ---
 
-TO COME 
+
+##Usable methods 
+
+DECONbench is designed to execute methods developed in R environment, using a docker image provided [here](https://hub.docker.com/r/a2alexis/codalab2019). 
+
+A list of R packages installed on the docker image is provided [here]( https://gricad-gitlab.univ-grenoble-alpes.fr/codalab/docker-recipes/tree/master/Hadaca_2019) (more can be installed upon request).
+
+
+
 
 
 ##Reference methods
 
-
-[Detail of references methods](benchmarking_reference_methods.html)
+The 6 reference methods are detailed on 
+[this page](benchmarking_reference_methods.html).
