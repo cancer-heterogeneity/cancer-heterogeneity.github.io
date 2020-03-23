@@ -50,7 +50,7 @@ For the ICA-based deconvolution step, the function deconica::run_fastica is run 
 * The method **both_wNMFMeDeCom (b_COM)**, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of probes with a variance higher than 0.02. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA. 
 
 
-* Finally, the method **both_meanwNMFMeDeCom (b_MEA)**, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.
+* The method **both_meanwNMFMeDeCom (b_MEA)**, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.
 
 
 
