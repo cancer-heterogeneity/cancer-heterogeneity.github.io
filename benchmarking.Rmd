@@ -19,5 +19,5 @@ A list of R packages installed on the docker image is provided [here]( https://g
 
 ##Reference methods
 
-The 6 reference methods are detailed on 
+The 8 reference methods are detailed on 
 [this page](benchmarking_reference_methods.html).
