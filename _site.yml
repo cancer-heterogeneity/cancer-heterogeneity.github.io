@@ -12,7 +12,7 @@ navbar:
       href: data_challenges.html
     - text: "Deconbench"
       icon: fa-code-fork
-      href: benchmarking.html
+      href: deconbench.html
     - text: "Blog"
       icon: fa-rss
       href: https://cancer-heterogeneity.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
