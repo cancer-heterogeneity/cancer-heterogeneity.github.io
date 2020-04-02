@@ -333,14 +333,46 @@ $(document).ready(function () {
 </div>
 
 
-<div id="usable-methods" class="section level2">
-<h2>Usable methods</h2>
+<div id="r-environment" class="section level2">
+<h2>R environment</h2>
 <p>DECONbench is designed to execute methods developed in R environment, using a docker image provided <a href="https://hub.docker.com/r/a2alexis/codalab2019">here</a>.</p>
 <p>A list of R packages installed on the docker image is provided <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/codalab/docker-recipes/tree/master/Hadaca_2019">here</a> (more can be installed upon request).</p>
+<p><br></p>
 </div>
-<div id="reference-methods" class="section level2">
-<h2>Reference methods</h2>
+<div id="supplementary-information" class="section level2">
+<h2>Supplementary information</h2>
+<p><br></p>
+<div id="reference-methods" class="section level3">
+<h3>Reference methods</h3>
 <p>The 8 reference methods are detailed on <a href="benchmarking_reference_methods.html">this page</a>.</p>
+<p><br></p>
+</div>
+<div id="benchmark-dataset-construction" class="section level3">
+<h3>Benchmark dataset construction</h3>
+<div class="figure">
+<img src="pictures/supp_fig1.png" alt="Referred as Supplementary Figure 1 in the paper." />
+<p class="caption">Referred as Supplementary Figure 1 in the paper.</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>5 different cell populations present in pancreatic tumors were considered.</li>
+<li>Raw transcriptome and methylome profiles of these different cell populations were extracted from various sources (PDX model, tissues or isolated cells).</li>
+<li>Raw cell type profile matrices were preprocessed (Normalization, signal transformation, sample aggregation) to avoid any batch effect.</li>
+<li>In silico Dirichlet distribution have been used based on realistic proportions defined by the anatomopathologist expertise (J. Cros).</li>
+<li>Paired methylome and transcriptome of in silico mixtures from pancreatic tumors were obtained by considering D = T A, with T the cell-type profiles (5 cell types, M features) and A the cell-type proportion per patient (30 patients, 5 cell types) common between both omics.</li>
+</ol>
+<p><br></p>
+</div>
+<div id="deconbench-graphical-outputs" class="section level3">
+<h3>DECONBench graphical outputs</h3>
+<div class="figure">
+<img src="pictures/supp_fig2.png" alt="Referred as Supplementary Figure 2 in the paper." />
+<p class="caption">Referred as Supplementary Figure 2 in the paper.</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li>Boxplots of the Mean Absolute Errors (MAE) of the estimations of the A matrices (i.e. proportion matrices) obtained for each method that uses the transcriptome only (yellow), the methylome only (blue) or both omics (green). Boxplots of the reference methods and other existing methods are shown in grey, whereas the user’s method is shown in red.</li>
+<li>Heatmaps of each A-matrix estimate are generated. The cell populations are in rows and the samples in columns.</li>
+</ol>
+</div>
 </div>
 
 
