@@ -10,7 +10,7 @@ output:
 
 ##Deconbench plateform
 
-Deconbench is available on Codalab [here]( https://competitions.codalab.org/competitions/23660?secret_key=d3af365e-44f5-41e5-9d6c-bd44dec321fa). 
+Deconbench will be available on Codalab [here]( https://competitions.codalab.org/competitions/23660). 
 
 <br> 
 
