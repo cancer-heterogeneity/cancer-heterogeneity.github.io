@@ -1,0 +1,43 @@
+---
+title: "Abstract"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+## HADACA Consortium (2nd Edition)
+ 
+### Authors  
+Nicolas Alcala<sup>6</sup>, Alexis Arnaud<sup>2</sup>, Francisco Avila Cobos<sup>7</sup>, Luciana Batista<sup>8</sup>, Anne-Françoise Batto<sup>9</sup>, Yuna Blum<sup>3</sup>, Florent Chuffart<sup>10</sup>, Jérôme Cros<sup>5</sup>, Clémentine Decamps<sup>1</sup>, Lara Dirian<sup>11</sup>, Daria Doncevic<sup>12</sup>, Ghislain Durif<sup>13</sup>, Silvia Yahel Bahena Hernandez<sup>14</sup>, Milan Jakobi<sup>10</sup>, Rémy Jardillier<sup>15</sup>, Marine Jeanmougin<sup>16</sup>, Pau Jedynak<sup>10</sup>, Basile Jumentier<sup>1</sup>, Aliaksandra Kakoichankava<sup>17</sup>, Maria Kondili<sup>18</sup>, Jing Liu<sup>19</sup>, Tiago Maie<sup>20</sup>, Jules Marécaille<sup>11</sup>, Jane Merlevede<sup>21</sup>, Maxime Meylan<sup>3,22</sup>, Petr Nazarov<sup>23</sup>, Kapil Newar<sup>1</sup>, Karl Nyrén<sup>14</sup>, Florent Petitprez<sup>3</sup>, Claudio Novella Rausell<sup>14</sup>, Magali Richard<sup>1</sup>, Michael Scherer<sup>24</sup>, Nicolas Sompairac<sup>21</sup>, Katharina Waury<sup>14</sup>, Ting Xie<sup>25</sup> & Markella-Achilleia Zacharouli<sup>14</sup>
+
+### Affiliations 
+
+<sup>1</sup> Laboratory TIMC-IMAG, UMR 5525, Univ. Grenoble Alpes, CNRS, Grenoble, France.  
+<sup>2</sup> Data Institute, Univ. Grenoble Alpes, Grenoble,
+France.  
+<sup>3</sup> Programme Cartes d’Identité des Tumeurs (CIT), Ligue Nationale Contre le Cancer, Paris, France.  
+<sup>4</sup> INSERM U1068 CRCM, Marseille, France.   
+<sup>5</sup> Beaujon Hospital, Dpt of Pathology - Univ. Paris-INSERM U1149; Clichy, France.  
+<sup>6</sup> Section of Genetics, International Agency for Research on Cancer (IARC-WHO), Lyon, France  
+<sup>7</sup> Center  for  Medical  Genetics  Ghent,  Department  of  Biomolecular  Medicine,  Ghent University,  Ghent,  Belgium.  
+<sup>8</sup> Innate Pharma, Marseille, France  
+<sup>9</sup> Equipe Cancer et Immunité- INSERM Centre de Recherche des Cordeliers, Paris, France  
+<sup>10</sup> Institute for Advanced Biosciences, CNRS UMR 5309, Inserm, U1209, Univ. Grenoble Alpes, F-38700 Grenoble, France  
+<sup>11</sup> Verteego, Paris, France  
+<sup>12</sup> Health Data Science Unit, BioQuant Center and Medical Faculty Heidelberg  
+<sup>13</sup> Université de Montpellier, CNRS, IMAG UMR 5149, Montpellier, France
+<sup>14</sup> Uppsala University, SE-751 05, Uppsala, Sweden  
+<sup>15</sup> University Grenoble Alpes, CEA, INSERM, IRIG, Biology of Cancer Infection UMR_S 1036, 38000 Grenoble, France & University Grenoble Alpes, CNRS, Grenoble INP, GIPSA-lab, Institute of Engineering University Grenoble Alpes, 38000 Grenoble, France  
+<sup>16</sup> Department of Molecular Oncology, Institute for Cancer Research, Oslo University Hospital, The Norwegian Radium Hospital - Oslo, Norway  
+<sup>17</sup> Vitebsk State Medical University & NatiVita, Vitebsk, Belarus  
+<sup>18</sup> Centre de Recherche de St.Antoine,Paris, AP-HP  
+<sup>19</sup> Institut Curie, PSL Research University, Sorbonne Universités, UPMC Université Paris 06, CNRS, UMR144, Equipe Labellisée Ligue contre le Cancer, 75005 Paris, France  
+<sup>20</sup> Institute for Computational Genomics, Joint Research Center for Computational Biomedicine, RWTH Aachen University Medical School, Aachen, Germany  
+<sup>21</sup> Institut Curie, PSL Research University, Mines Paris Tech, Inserm, U900, F−75005, Paris, France  
+<sup>22</sup> INSERM U1138 Centre de Recherche des Cordeliers, France  
+<sup>23</sup> Quantitative Biology Unit, Luxembourg Institute of Health, L-1445 Strassen, Luxembourg  
+<sup>24</sup> Department of Genetics/Epigenetics, Saarland University, Saarbrücken, Germany  
+<sup>25</sup> Centre de Recherche en Cancérologie de Toulouse, Inserm  UMR  1037, F-31037, Toulouse, France  
+
+

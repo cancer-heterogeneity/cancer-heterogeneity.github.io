@@ -10,7 +10,8 @@ output:
 
 [Challenge information (2nd edition)](data_challenges.html)
 
-Data challenges about computional methods to quantify cancer heterogeneity
+Data challenges about computional methods to quantify cancer heterogeneity.
+[HADACA Consortium](data_challenges_HADACAconsortium.html)
 
 ## COMETH project
 
