@@ -8,7 +8,7 @@ output:
 
 ## HADACA project
 
-[Join our next challenge](data_challenges.html)
+[Challenge information (2nd edition)](data_challenges.html)
 
 Data challenges about computional methods to quantify cancer heterogeneity
 
