@@ -11,7 +11,7 @@ output:
 
 *from November 25, 2019 to November 29, 2019*
 
-This interdisciplinary challenge will be dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on transcriptomic and methylation data.
+This interdisciplinary challenge is dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on transcriptomic and methylation data.
 
 [PROGRAM](data_challenges_program.html)
 
