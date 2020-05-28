@@ -1,0 +1,1 @@
+command: Rscript $program/program.R $input $output

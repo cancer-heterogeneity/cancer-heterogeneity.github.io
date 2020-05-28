@@ -15,14 +15,17 @@ Data challenges about computional methods to quantify cancer heterogeneity.
 
 ## COMETH project
 
-[Follow our benchmarking project](deconbench.html)
+[Follow our project](cometh.html)
 
-Benchmarking platform of computional methods to quantify cancer heterogeneity
+Benchmarking platform of computional methods to quantify cancer heterogeneity.  
+[Deconbench](deconbench.html): our first benchmarking platform 
 
 ## Misc about cancer heterogeneity
 
 Want to know more about cancer heterogeneity, data challenge organisation and benchmarking of computation methods for biology? 
 
-[Have a look at our scientific publication and blog posts](blog.html)
+[Have a look at our scientific publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-3307-2)
+[and blog posts](https://cancer-heterogeneity.github.io/blog/)  
 
-![](pictures/fundings.png)
+
+![](pictures/fundings2.png)

@@ -10,6 +10,9 @@ navbar:
     - text: "Data Challenges"
       icon: fa-universal-access 
       href: data_challenges.html
+    - text: "Cometh"
+      icon: fa-cogs
+      href: cometh.html
     - text: "Deconbench"
       icon: fa-code-fork
       href: deconbench.html
@@ -17,9 +20,9 @@ navbar:
       icon: fa-rss
       href: https://cancer-heterogeneity.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
-    - text: "Contact me"
+    - text: "Contact us"
       icon: fa-envelope-o
-      href: mailto:magali.richard@univ-grenoble-alpes.fr                    # CHANGE HERE 
+      href: mailto:magali.richard@univ-grenoble-alpes.fr, yuna.blum@ligue-cancer.net                   # CHANGE HERE 
     - text: "GitHub"
       icon: fa-github
       href: https://github.com/cancer-heterogeneity       # CHANGE HERE 

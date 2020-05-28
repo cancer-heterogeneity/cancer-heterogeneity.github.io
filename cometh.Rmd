@@ -1,0 +1,48 @@
+---
+title: "COMETH project"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+
+## COMETH – COmputational METhods in Health
+![](pictures/eit.png)
+
+**European project funded by EIT Health**
+
+### Objectives
+
+This program intends to elaborate an innovative benchmarking platform dedicated to big data analysis  in health. As a proof of concept, our project will generate a benchmarking framework applied to the quantification of cell heterogeneity in cancer. The program will contribute to test of new tools and to the  training of health data scientists to reproducible and collaborative science. It will provide a digital  platform containing online updated methods and dataset so that new methods could be easily  benchmarked on well-defined datasets and compared to the existing state of the art. Health data  scientists will be invited to contribute to the platform by submitting their own datasets and computational methods.
+
+
+### European coordinators 
+
+![](pictures/cometh_network.png)
+
+
+
+**Other partners:**
+
+Nuria Calves - University Grenoble Alpes / EIT Health project manager  
+Alexis Arnaud - University Grenoble Alpes / Computer science engineer  
+Yasmina Kermezli - University Grenoble Alpes / Postdoc Bioinformatics  
+Ashwini Sharma - University Heidelberg / Postdoc Bioinformatics  
+Mira Ayadi - French league against cancer / Operational director of the CIT research program  
+Florent Petitprez - French league against cancer / Researcher Bioinformatics  
+Zhengying Liu - INRIA / PhD Student  
+Anne-Catherine Letournel - INRIA / Computer science engineer  
+Adrien Pavao - INRIA / Data Scientist  
+Zhen Xu - 4paradigm / Machine learning Engineer  
+Eric Frichot - Meteor / Data Scientist  
+Catherine Wallez - Meteor / Data Scientist
+
+
+
+
+
+
+
+![](pictures/fundings2.png)
+
