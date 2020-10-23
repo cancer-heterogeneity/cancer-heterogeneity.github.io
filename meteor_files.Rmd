@@ -1,0 +1,28 @@
+---
+title: "Meteor files"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+
+## Summary tables 
+[Meteor_csv_files.xlsx](meteor_files/Meteor_csv_files.xlsx) 
+
+-	[reference_dataset_description.csv](meteor_files/reference_dataset_description.csv)  
+-	[algorithm_description.csv](meteor_files/algorithm_description.csv)
+-	[combinaison_dataset_algorithm.csv](meteor_files/combinaison_dataset_algorithm.csv)
+-	[omic_type.csv](meteor_files/omic_type.csv)
+-	[cancer_type.csv](meteor_files/cancer_type.csv) 
+
+
+## Dataset Factsheets
+[dataset_factsheet_456.html](meteor_files/dataset_factsheet_456.html)
+
+## Algorithm Factsheets
+[algorithm_factsheet_312.html](meteor_files/algorithm_factsheet_312.html)
+
+## Algorithm source code
+[algorithm_312.r](meteor_files/algorithm_312.r)
+

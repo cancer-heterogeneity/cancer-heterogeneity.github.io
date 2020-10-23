@@ -1,0 +1,4 @@
+﻿dataset_id,codabench_id,type_of_query,omic_type,cancer_type,cohort_size,normalized,Log_transformed,Sample_type,Technology,Patients metadata,Ground Truth,number_of_cell_types,comments
+DT#1,456,All cell types,Transcriptome,Pancreatic adenocarcinoma,30,Yes,Yes,Mixed + in silico mixture,Bulk sequencing,No,simulation,5,First release
+DT#2,315,All cell types,Methylome,Pancreatic adenocarcinoma,30,Yes,NA,Mixed + in silico mixture,Bulk array,No,simulation,5,First release
+DT#3,315,Immune cell types,Transcriptome,Lung adenocarcinoma,12,Yes,Yes,Mixed + in silico mixture,Bulk array,No,simulation,6,First release
