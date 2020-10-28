@@ -26,6 +26,10 @@ output:
 - [dataset_factsheet_DT1.html](meteor_files/dataset_factsheet_DT1.html)
 - [dataset_factsheet_DT2.html](meteor_files/dataset_factsheet_DT2.html)
 - [dataset_factsheet_DT3.html](meteor_files/dataset_factsheet_DT3.html)
+- [dataset_factsheet_DT4.html](meteor_files/dataset_factsheet_DT4.html)
+- [dataset_factsheet_DT5.html](meteor_files/dataset_factsheet_DT5.html)
+- [dataset_factsheet_DT7.html](meteor_files/dataset_factsheet_DT7.html)
+- [dataset_factsheet_DT8.html](meteor_files/dataset_factsheet_DT8.html)
 
 ## Algorithm Factsheets
 
