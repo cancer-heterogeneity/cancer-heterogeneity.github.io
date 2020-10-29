@@ -1,0 +1,28 @@
+{
+    "Results - Single Phase with Multiple Task(270)": {
+        "magrichardtest": {
+            "MT#3 DNAm_wICA(449)-MAE_mean": "0.1227662711",
+            "MT#3 DNAm_wICA(449)-MAE (sd)": "0.0006647971",
+            "MT#3 DNAm_wICA(449)-Time": "0.0000000000",
+            "MT#4 DNAm_EDec(450)-MAE_mean": "0.0896822435",
+            "MT#4 DNAm_EDec(450)-MAE (sd)": "0.0278287610",
+            "MT#4 DNAm_EDec(450)-Time": "0.0000000000"
+        },
+        "Yuna.Blum@ligue-cancer.net": {
+            "MT#3 DNAm_wICA(449)-MAE_mean": "0.1227662711",
+            "MT#3 DNAm_wICA(449)-MAE (sd)": "0.0006647971",
+            "MT#3 DNAm_wICA(449)-Time": "0.0000000000",
+            "MT#4 DNAm_EDec(450)-MAE_mean": "0.0896822435",
+            "MT#4 DNAm_EDec(450)-MAE (sd)": "0.0278287610",
+            "MT#4 DNAm_EDec(450)-Time": "0.0000000000"
+        },
+        "DT1": {
+            "MT#3 DNAm_wICA(449)-MAE_mean": "0.1227662711",
+            "MT#3 DNAm_wICA(449)-MAE (sd)": "0.0006647971",
+            "MT#3 DNAm_wICA(449)-Time": "0.0000000000",
+            "MT#4 DNAm_EDec(450)-MAE_mean": "0.0896822435",
+            "MT#4 DNAm_EDec(450)-MAE (sd)": "0.0278287610",
+            "MT#4 DNAm_EDec(450)-Time": "0.0000000000"
+        }
+    }
+}

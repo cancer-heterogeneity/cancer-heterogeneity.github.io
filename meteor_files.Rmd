@@ -6,13 +6,16 @@ output:
       in_header: cover.html
 ---
 
+## Codabench competition
+
+- [competition_reference.csv](meteor_files/competition_reference.csv)
 
 ## Leaderboard
 
--	[inverted competition leaderboard](meteor_files/Results_Single Phase with Multiple Task_251.csv)  
+-	[results.json](meteor_files/results.json)  
 
 ## Summary tables 
-[Meteor_csv_files.xlsx](meteor_files/Meteor_csv_files.xlsx) 
+
 
 -	[reference_dataset_description.csv](meteor_files/reference_dataset_description.csv)  
 -	[algorithm_description.csv](meteor_files/algorithm_description.csv)
@@ -30,16 +33,18 @@ output:
 - [dataset_factsheet_DT5.html](meteor_files/dataset_factsheet_DT5.html)
 - [dataset_factsheet_DT7.html](meteor_files/dataset_factsheet_DT7.html)
 - [dataset_factsheet_DT8.html](meteor_files/dataset_factsheet_DT8.html)
+- [dataset_factsheet_magrichardtest.html](meteor_files/dataset_factsheet_magrichardtest.html)
+- [dataset_factsheet_Yuna.Blum@ligue-cancer.net.html](meteor_fdataset_factsheet_Yuna.Blum@ligue-cancer.net.html)
 
 ## Algorithm Factsheets
 
-- [algorithm_factsheet_MT1.html](meteor_files/algorithm_factsheet_MT1.html)
+- [algorithm_factsheet_MT#3.html](meteor_files/algorithm_factsheet_MT#3.html)
+- [algorithm_factsheet_MT#4.html](meteor_files/algorithm_factsheet_MT#4.html)
 
 ## Algorithm source code
 
-- [algorithm_312.r](meteor_files/algorithm_312.r)
+- [algorithm_449.R](meteor_files/algorithm_449.R)
+- [algorithm_450.R](meteor_files/algorithm_440.R)
 
-## All files
 
-- [Compressed (.zip) files](meteor_files/all_file.zip)
 
