@@ -1,3 +1,3 @@
-﻿algorithm_id;codabench_id;algorithm_details;type_of_query;omic_type;cancer_type;Technology
-MT#3;449;DNAm_wICA (m_WIC);All cell types;Methylome;All;Bulk array
-MT#4;450;DNAm_EDec (m_EDC);All cell types;Methylome;All;Bulk array
+﻿algorithm_id;codabench_id;reference_based;algorithm_details;type_of_query;omic_type;cancer_type;Technology
+MT#3;449;No;DNAm_wICA (m_WIC);All cell types;Methylome;All;Bulk array
+MT#4;450;No;DNAm_EDec (m_EDC);All cell types;Methylome;All;Bulk array
