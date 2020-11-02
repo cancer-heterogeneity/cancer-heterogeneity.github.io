@@ -66,5 +66,10 @@ output:
 - [algorithm_MT4.R](meteor_files/algorithm_MT4.R)
 - [algorithm_MT5.R](meteor_files/algorithm_MT5.R)
 - [algorithm_MT6.R](meteor_files/algorithm_MT6.R)
-
-
+- [algorithm_MT7.R](meteor_files/algorithm_MT7.R)
+- [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
+- [algorithm_MT9.R](meteor_files/algorithm_MT9.R)
+- [algorithm_MT10.R](meteor_files/algorithm_MT10.R)
+- [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
+- [algorithm_MT12.R](meteor_files/algorithm_MT12.R)
+- [algorithm_MT13.R](meteor_files/algorithm_MT13.R)
