@@ -1,5 +1,5 @@
 program <-
-  function(D_matrix, k=NULL) {
+  function(D_matrix, k=5) {
     ##
     ## YOUR CODE BEGINS HERE
     ##
@@ -12,7 +12,6 @@ program <-
     ## we compute the estimation of A for the data set :
     A_matrix <- NULL
     if ( !is.null(x = D_matrix) ) {
-      ## temporary hack : we keep only the 10 000 first lines in order to save time for the baseline
       D_met <- D_matrix
       ICA_deconv = deconica::run_fastica(D_met, gene.names = row.names(D_met),
                                          overdecompose = FALSE,
@@ -33,18 +32,14 @@ program <-
       tmp_met = deconica::stacked_proportions_plot(t(ICA_5_scores_weighted))
       print("After problematic DeconICA function")
       A_met = matrix(tmp_met$data$value, nrow = 5, ncol = 30)
-      
-      
-      
       A_matrix <- A_met
       T_matrix <- ICA_deconv$S
-      remove(list = "res")
     }
     
     ##
     ## YOUR CODE ENDS HERE
     ##
     
-    return( list(A_matrix = A_matrix,T_matrix = T_matrix) )
+    return(list(A_matrix = A_matrix,T_matrix = T_matrix))
     
   }

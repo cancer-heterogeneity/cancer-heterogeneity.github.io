@@ -11,7 +11,8 @@ program <-
       devtools:::install_github(repo = "lutsik/MeDeCom")
     }
     library(package = "parallel")
-    
+    library(package = "MeDeCom")
+
     
     ## we compute the estimation of A for the data set :
     A_matrix <- NULL

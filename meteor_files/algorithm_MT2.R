@@ -1,5 +1,5 @@
 program <-
-  function(D_matrix, k=NULL) {
+  function(D_matrix, k=5) {
     ##
     ## YOUR CODE BEGINS HERE
     ##
