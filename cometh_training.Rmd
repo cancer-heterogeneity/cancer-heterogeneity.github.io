@@ -1,0 +1,126 @@
+---
+title: "COMETH Training course"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+<br>
+
+***
+## Winter course   &nbsp;  <font size="5"><span style="color: darkblue;">15-16 Feb.2021, ONLINE</span></font>  
+
+
+ 
+<font size="4">This 2-day course aims to train clinicians to the use of cutting edge computational methods to quantify tumor heterogeneity through a dedicated user-friendly web interface.</font>
+&nbsp; 
+  
+
+<form action="https://www.sciencesconf.org/">
+<input type="submit" id="search" value="🎓 Register now"  style="height:50px; width:150px" />
+</form>
+
+  
+&nbsp; 
+
+![](pictures/posterCOMETH.png){width=40%}
+
+
+
+***
+
+## Course Format
+
+<font size="4"> 2-day online sessions with general lectures and practical training. </font> 
+
+General lectures will cover:  
+
+&nbsp; • Introduction to cancer heterogeneity 
+
+&nbsp; • Introduction to computational methods  
+
+&nbsp; • Interpretation and visualization of the results   
+
+
+<font size="4"><span style="color: darkblue;">DETAILED PROGRAM HERE</span></font>
+
+
+<br> 
+
+***
+## Target Group
+
+&nbsp; • Clinicians 
+
+&nbsp; • Anatomopathologist  
+
+&nbsp; • Bioinformaticians 
+
+
+<font size="4"><span style="color: red;">Limited to 30 participants.</span></font>
+
+<br>
+
+***
+
+## Registration
+ 
+<font size="4"><span style="color: red;">Registration deadline: 17 dec.2020</span></font>  
+
+ 
+Registration fees:  
+
+
+
+<form action="https://www.sciencesconf.org/">
+<input type="submit" value="🎓Register now" />
+</form>
+
+
+
+***
+
+## Teachers 
+
+<div class = "row">
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/carl.png){width=50%}
+
+**Carl Hermann**,  
+Assistant-professor, Medical Faculty University Heidelberg   
+[Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+</center>
+</div>
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/ashwin.png){width=50%}
+
+**Ashwini Sharma**,  
+Research scientist
+Medical Faculty University Heidelberg, Germany  
+ [Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+
+</center>
+</div>
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/magali.png){width=50%}
+
+**Magali Richard**,  
+Research scientist,   
+Uni. Grenoble Alpes, France  
+ [Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+
+</center>
+
+
+</div>
+</div>
