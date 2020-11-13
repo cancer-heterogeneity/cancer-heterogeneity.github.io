@@ -13,7 +13,7 @@ output:
 
 
  
-<font size="4">This 2-day course aims to train clinicians to the use of cutting edge computational methods to quantify tumor heterogeneity through a dedicated user-friendly web interface.</font>
+<font size="4">This 2-day online course aims to train clinicians to the use of cutting edge computational methods to quantify tumor heterogeneity through a dedicated user-friendly web interface.</font>
 &nbsp; 
   
 
@@ -124,3 +124,5 @@ Uni. Grenoble Alpes, France
 
 </div>
 </div>
+
+![](pictures/fundings2.png)

@@ -12,7 +12,15 @@ output:
 
 **European project funded by EIT Health**
 
-### Objectives
+<br>
+<font size="5"><span style="color: red;">COMETH Winter course is coming soon!</span>  [PROGRAM & DETAILS](cometh_training.html)
+</font> 
+
+<br>
+
+
+
+### Objectives of COMETH
 
 COMETH is a program dedicated to big data integration in Health. This program targets the current critical need to evaluate novel computational methods and to apply them directly on real health datasets, daily faced by health data scientist and health professionals. As a proof of concept, our project will generate a benchmarking framework and apply it to the quantification of cell heterogeneity in cancer, though our design will lend itself to a variety of other applications. We will provide a digital platform containing statistical methods to be benchmarked and datasets developed by health data scientists, and a web application dedicated to the direct use of these methods on novel clinical datasets provided by health professionals. A 2-day course on the use of the web application will be organised for health professionals.
 
