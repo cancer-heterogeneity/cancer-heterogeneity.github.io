@@ -1,0 +1,15 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/yuna.png){width=10%}  
+<br>
+**Yuna Blum** is a research scientist at the Tumor Identity Card Program (CIT program) at the Ligue Contre le Cancer in Paris.
+She holds a PhD in genetics and applied statistics. After a year as an Associate Professor in the Department of Applied Statistics at Agrocampus Ouest in France, she pursued her research on high-throughput molecular data integration in metabolic diseases at the University of California, Los Angeles.  She joined the CIT team in 2015, where she leads projects in cancer genomics and provides methodological developments for a better understanding of intra-tumor heterogeneity. 
+
+
+[Website](http://www.yuna-blum.com)
+

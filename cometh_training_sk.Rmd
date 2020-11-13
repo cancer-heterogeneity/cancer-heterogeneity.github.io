@@ -1,0 +1,13 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/slim.png){width=10%}  
+<br>
+**Dr. Slim Karkar** graduated both in Physics and Biostatistics in Paris University, then defended his Ph.D. in neuroimaging at University of Strasbourg.
+His research involves development of statistical tools for classification on large scale data, such as protein similarity networks in evolutionary genomics, mixtures of forensic DNA samples or integration of heterogeneous data in Imaging-Genetics cohorts.
+He recently joined the BCM team in Grenoble to develop statistical frameworks for -omics data to quantify tumor heterogeneity.
+

@@ -42,8 +42,8 @@ General lectures will cover:
 
 &nbsp; • Interpretation and visualization of the results   
 
+[<font size="4"><span style="color: darkblue;">DOWNLOAD THE PROGRAM</span></font>](pictures/COMETH_program.pdf)
 
-<font size="4"><span style="color: darkblue;">DETAILED PROGRAM HERE</span></font>
 
 
 <br> 
@@ -81,31 +81,67 @@ Registration fees:
 
 ***
 
-## Teachers 
+## Trainers 
+
+
 
 <div class = "row">
   
 <div class = "col-md-4">
 <br><br>
 <center>
-![](pictures/carl.png){width=50%}
+![](pictures/yuna.png){width=50%}
 
-**Carl Hermann**,  
-Assistant-professor, Medical Faculty University Heidelberg   
-[Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+**Yuna Blum**    
+Research scientist,   
+Ligue Contre le Cancer
+Paris, France  
+[Read more](cometh_training_yb.html) 
 </center>
 </div>
   
 <div class = "col-md-4">
 <br><br>
 <center>
-![](pictures/ashwin.png){width=50%}
+![](pictures/jerome.png){width=50%}
 
-**Ashwini Sharma**,  
-Research scientist
-Medical Faculty University Heidelberg, Germany  
- [Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+**Jérôme Cros**    
+Clinician  
+APHP, Paris, France  
+[Read more](cometh_training_jc.html) 
 
+</center>
+</div>
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/carl.png){width=50%}
+
+**Carl Herrmann**    
+Assistant-professor,   
+Medical Faculty Heidelberg, Germany   
+[Read more](cometh_training_ch.html) 
+
+</center>
+
+
+</div>
+</div>
+
+
+
+<div class = "row">
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/slim.png){width=50%}
+
+**Sim Karkar**    
+Research scientist,  
+Uni. Grenoble Alpes, France  
+[Read more](cometh_training_sk.html) 
 </center>
 </div>
   
@@ -114,15 +150,38 @@ Medical Faculty University Heidelberg, Germany
 <center>
 ![](pictures/magali.png){width=50%}
 
-**Magali Richard**,  
+
+**Magali Richard**   
 Research scientist,   
 Uni. Grenoble Alpes, France  
- [Read more](https://getbootstrap.com/docs/4.0/layout/grid/) 
+ [Read more](cometh_training_mr.html) 
+
+</center>
+</div>
+  
+<div class = "col-md-4">
+<br><br>
+<center>
+![](pictures/ashwin.png){width=50%}
+
+**Ashwini Sharma**   
+Research scientist,  
+Medical Faculty Heidelberg, Germany  
+ [Read more](cometh_training_as.html) 
 
 </center>
 
 
 </div>
 </div>
+
+<br>
+
+<font size="4"> **Technical support** </font> 
+
+**Clémentine Decamps**, Phd Student, Uni. Grenoble Alpes, France   
+**Yasmina Kermezli**, Postdoctoral fellow, Uni. Grenoble Alpes, France
+
+<br>
 
 ![](pictures/fundings2.png)

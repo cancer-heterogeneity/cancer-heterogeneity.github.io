@@ -1,0 +1,10 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/magali.png){width=10%}  
+<br>
+**Magali Richard** is a CNRS research associate in computational genetics at the TIMC-IMAG laboratory, Grenoble, France. She is an expert in tumour heterogeneity quantification using different types of omic data.

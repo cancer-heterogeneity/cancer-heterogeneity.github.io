@@ -1,0 +1,13 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/jerome.png){width=10%}  
+<br>
+**Jérôme Cros** is a clinician,  MCU-PH at APHP - Hopital Beaujon - Université Paris 7 INSERM U1149.
+
+[website](http://hupnvs.aphp.fr/dhunity/dr-jerome-cros/)
+

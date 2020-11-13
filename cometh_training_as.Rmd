@@ -1,0 +1,13 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/ashwin.png){width=10%}  
+<br>
+**Ashwini Sharma** is a Computational Biology scientist working at the Health Data Science Unit, Medical Faculty Heidelberg, Germany. He applies integrative genomics based approaches using various statistical and computational methods towards understanding tumour biology.  
+
+[Github](https://ashwini-kr-sharma.github.io/)
+

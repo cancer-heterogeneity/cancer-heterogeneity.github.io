@@ -1,0 +1,13 @@
+---
+title: "COMETH training"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+![](pictures/carl.png){width=10%}  
+<br>
+**Carl Herrmann** is a theoretical physicist and engineer by training. After a PhD in 1999 in supergravity and superstring theory in Marseille, France and postdocs in Italy and Germany, he decided to move to more grounded areas of science, and started working as a bioinformatician as assistant-professor at the University of Marseille in 2003. He moved in 2012 to Germany, as a visiting scientist at EMBL first, then as assistant-professor at the University Heidelberg and DKFZ. He is currently heading a group on Biomedical Genomics within the Health Data Science Unit at the Medical Faculty. His areas of interest are regulatory genomics, in particular in cancer, as well as the development of computational methods to integrate multi-omics datasets to uncover regulatory alterations in disease. Part of his group is also working on applications of machine-learning approaches applied to patient data to reach a better stratification of disease cohorts and uncover mechanisms of disease comorbidities. 
+
+[Website](www.hdsu.org)
+
