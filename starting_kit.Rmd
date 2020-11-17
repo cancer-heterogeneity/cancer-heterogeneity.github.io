@@ -12,7 +12,8 @@ output:
 
 Each tumor composition is different from a patient to another: different type of cell populations might be present in various proportions 
 
-![Cancer heterogeneity illustration. Each tumor is a mix of different cell populations in various proportions.](fig/tumor_heterogeneity.png). 
+![Cancer heterogeneity illustration. Each tumor is a mix of different cell populations in various proportions.](fig/tumor_heterogeneity.png).
+
 Each tumor is a mix of different cell populations in various proportions.
 Advanced microdissection techniques to isolate a population of interest from heterogeneous clinical tissue samples are not feasible in daily practice. An alternative is to rely on computational deconvolution methods that infer cell-type composition from mixed (=”bulk”) samples.
 
@@ -42,14 +43,16 @@ We first based our selection on the outcome of our [HADACA data challenge](https
 We selected the five best methods among all the ones collectively discovered and implemented during the challenge, that predictde the real cell proportions with the highest accuracy (i.e. lowest Mean Absolute Error between the estimate and the ground truth).
 
  These methods consist in different strategies : 
-•	Omics type : transcriptome or methylome
-•	Feature selections: variance based or ICA based
-•	Deconvolution algorithms: Edec, Medecom, snmf, ICA
+ 
+- Omics type : transcriptome or methylome
+- Feature selections: variance based or ICA based
+- Deconvolution algorithms: Edec, Medecom, snmf, ICA
 
 In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria :
-•	Associated publication: method published in a high-impact journal and highly cited (relative to the year of publication)
-•	Year of publication: the most recent methods have been prioritized
-•	Implementation: preference for the R language (R software is free and open access)
+
+-	Associated publication: method published in a high-impact journal and highly cited (relative to the year of publication)
+-	Year of publication: the most recent methods have been prioritized
+-	Implementation: preference for the R language (R software is free and open access)
 
 ## Selection of 13 reference methods
 
