@@ -1,0 +1,191 @@
+---
+title: "Starting kit"
+date: "`r Sys.Date( )`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    number_sections: true
+---
+
+# Overview: Scientific and clinical context
+
+Each tumor composition is different from a patient to another: different type of cell populations might be present in various proportions 
+
+![Cancer heterogeneity illustration. Each tumor is a mix of different cell populations in various proportions.](fig/tumor_heterogeneity.png). 
+Each tumor is a mix of different cell populations in various proportions.
+Advanced microdissection techniques to isolate a population of interest from heterogeneous clinical tissue samples are not feasible in daily practice. An alternative is to rely on computational deconvolution methods that infer cell-type composition from mixed (=”bulk”) samples.
+
+This variable composition might be associated to difference in treatment response as well as distinct prognosis as shown by our team and others (Blum et al 2019, Nature Communication). It is therefore a high priority to describe as best as possible this “intra tumor” heterogeneity to better predict the more appropriate clinical care for each patient and go even further in personalized medicine.
+
+**The goal of the cometh web application** is to quantify tumor heterogeneity within clinical cancer omic samples (how many cell types are present? In which proportion?).
+
+# Computational methods
+
+Computational methods identify an **estimate of the cell type proportion matrix**, given the predicted number of **K** cell types. 
+
+This computational method consists in solving a “convolution” equation to estimate the matrix $A$ (here of cell type proportions) of size $KxN$, with $K$ the putative number of cell populations and N the number of samples :
+
+![Statistical model of cancer heterogeneity: “convolution” equation to estimate the matrix A of proportions.](fig/deconvolution.png). 
+ 
+where $D$ (size $MxN$) represents the molecular data of bulk mixed samples, with $M$ the number of molecular features (genes for example) and $T$ (size $MxK$) the molecular profiles of the cell types. 
+
+In our context, a deconvolution method will enable to deconvolve a molecular measurement of a tumor sample into its different cellular components and to quantify their proportions.
+
+## The different types of deconvolution methods
+
+Two types of deconvolution approaches have been proposed in the literature: either "reference-based" using profiles of known cell types and numbers of populations, or " reference-free" using, for example, non-negative matrix factorization (NMF) or independent component analysis (ICA). In addition, different types of molecular data can be extracted from biological material and used as a surrogate for in silico deconvolution. Most existing methods use either DNA methylation or gene expression data as a molecular indicator. The combination of different omics types to assess tumor heterogeneity has been poorly studied until now, which will be made possible by our innovative benchmarking platform.
+
+## Criteria used for the selection
+
+We first based our selection on the outcome of our [HADACA data challenge](https://tinyurl.com/hadaca2019),  gathering a consortium of more than thirty international [experts](https://cancer-heterogeneity.github.io/data_challenges_HADACAconsortium.html) in the field.
+We selected the five best methods among all the ones collectively discovered and implemented during the challenge, that predictde the real cell proportions with the highest accuracy (i.e. lowest Mean Absolute Error between the estimate and the ground truth).
+
+ These methods consist in different strategies : 
+•	Omics type : transcriptome or methylome
+•	Feature selections: variance based or ICA based
+•	Deconvolution algorithms: Edec, Medecom, snmf, ICA
+
+In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria :
+•	Associated publication: method published in a high-impact journal and highly cited (relative to the year of publication)
+•	Year of publication: the most recent methods have been prioritized
+•	Implementation: preference for the R language (R software is free and open access)
+
+## Selection of 13 reference methods
+
+We ended up with 13 reference methods including both reference-free and reference-based methods and dealing with transcriptome or methylome data. 
+
+![Table describing the characteristics of each deconvolution method.](fig/methods.png). 
+
+# Evaluation of methods performances
+
+## Reference datasets
+
+Computational methods are evaluated on a set of reference benchmark datasets. We generated 8 benchmarks datasets enabling a comprehensive evaluation of the methods.
+
+![Benchmark datasets](fig/dataset.png). 
+
+We assume a reference dataset is composed of :
+
+- a data_test **D**  matrix composed of omic value for $N$ samples, for $M$ given features (genes, methylation probes...). 
+- a data_solution **A**  matrix composed of proportion value for $N$ samples, for $K$ cell types given features (genes, methylation probes...). 
+
+For instance:
+
+```{r echo=FALSE}
+test_data_met = readRDS("data/test_data_met.rds")
+test_data_rna =  readRDS("data/test_data_rna.rds")
+```
+
+```{r results="verbatim", echo=TRUE}
+dim(test_data_met)
+dim(test_data_rna)
+head(test_data_met)
+head(test_data_rna)
+```
+
+```{r echo=FALSE}
+test_solution = readRDS("data/test_solution.rds")
+```
+
+```{r results="verbatim", echo=TRUE}
+dim(test_solution)
+head(test_solution)
+```
+
+## Scoring metrics
+
+The discriminating metrics are computed on the A matrix. The rank of each method correspond to the mean rank of each method based on several metric evaluating the accuracy of the methods :
+
+- **mean absolute error** between the estimate and the groundtruth.
+- **root mean square error** between the estimate and the groundtruth.
+- **kendall correlation** between the estimate and the groundtruth.
+- **spearman correlation** between the estimate and the groundtruth.
+
+## Benchmark leaderboard
+
+All evaluation of the methods are accessible through the benchmark leaderboard located on the codabench benchmark platform.
+
+# Clinician datasets
+
+At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading to COMETH web app, you should first check your dataset format using the following guidelines.
+
+
+## Dataset format
+
+Your dataset (corresponding to matrix $D$ in our model) should be in .csv format, with ',' as separators.
+
+```{r echo=FALSE}
+DT_file_name = "data/dataset_clinician.csv"
+DT_clinician = read.table(DT_file_name, sep =";", header=TRUE, row.names = 1)
+
+```
+
+You can test that your dataset is at the correct format by using the following R script
+
+```{r echo=FALSE}
+dim(DT_clinician)
+head(DT_clinician)
+rownames(DT_clinician)[1:10]
+colnames(DT_clinician)[1:10]
+```
+
+
+## Data normalisation
+
+Your dataset should be normalized.
+
+### Gene expression data
+
+For gene expression data, we suggest the following normalization strategy:
+
+- micro-array : 
+- RNA-seq : DESeq, EdegR, transcripts per million (TPM)...
+
+You can test the normalisation of your data using the following R script:
+
+```{r echo=FALSE}
+
+```
+
+
+
+### Methylation data
+
+For methylation array, we suggest the following normalization strategy:
+
+- lummiR
+
+You can test the normalisation of your data using the following R script:
+
+```{r echo=FALSE}
+
+```
+
+
+## Data transformation
+
+Your dataset can be at linear scale of transformed. Please check the transformation (if any that was applied to your data)
+
+### Gene expression data
+
+Pseudo log transformation (log2+1) is a transformation often applied to expression data. You can test the transformation of your data using the following R script
+
+```{r echo=FALSE}
+
+```
+
+### Methylation data
+
+Methylation data are usually beta-values or m-values. You can test the transformation of your data using the following R script
+
+```{r echo=FALSE}
+
+```
+
+# Clinician dataset metadata
+
+Along with your omic dataset, we ask you to specify the cancer type related to your data (to be chosen within the [TCGA references](https://gdc.cancer.gov/resources-tcga-users/tcga-code-tables/tcga-study-abbreviations)) and to estimate the number of cell types $K$ of your data. 
+
+Please be prepared to fill this information on the COMETH web application.
+
