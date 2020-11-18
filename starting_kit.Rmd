@@ -127,7 +127,7 @@ DT_clinician = read.table(DT_file_name, sep =";", header=TRUE, row.names = 1)
 You can test that your dataset is at the correct format by using the following R script
 
 ```{r echo=TRUE}
-print(sprintf("Your transcriptome data has %d samples (columns) of %d probes (rows)",
+print(sprintf("Your transcriptome data has %d samples (columns) of %d genes/probes (rows)",
               ncol(DT_clinician),nrow(DT_clinician)))
 head(DT_clinician[,1:min(4,ncol(DT_clinician))])
 ```

@@ -485,9 +485,9 @@ $(document).ready(function () {
 <pre class="r"><code>DT_file_name = &quot;data/dataset_clinician.csv&quot;
 DT_clinician = read.table(DT_file_name, sep =&quot;;&quot;, header=TRUE, row.names = 1)</code></pre>
 <p>You can test that your dataset is at the correct format by using the following R script</p>
-<pre class="r"><code>print(sprintf(&quot;Your transcriptome data has %d samples (columns) of %d probes (rows)&quot;,
+<pre class="r"><code>print(sprintf(&quot;Your transcriptome data has %d samples (columns) of %d genes/probes (rows)&quot;,
               ncol(DT_clinician),nrow(DT_clinician)))</code></pre>
-<pre><code>## [1] &quot;Your transcriptome data has 12 samples (columns) of 23520 probes (rows)&quot;</code></pre>
+<pre><code>## [1] &quot;Your transcriptome data has 12 samples (columns) of 23520 genes/probes (rows)&quot;</code></pre>
 <pre class="r"><code>head(DT_clinician[,1:min(4,ncol(DT_clinician))])</code></pre>
 <pre><code>##          GSM1570043 GSM1570044 GSM1570045 GSM1570046
 ## A1BG       5.084187   5.352647   5.346210   5.430234
