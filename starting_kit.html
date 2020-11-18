@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2020-11-17" />
+<meta name="date" content="2020-11-18" />
 
 <title>Starting kit</title>
 
@@ -346,7 +346,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Starting kit</h1>
-<h4 class="date">2020-11-17</h4>
+<h4 class="date">2020-11-18</h4>
 
 </div>
 
@@ -395,7 +395,7 @@ $(document).ready(function () {
 <p>In our context, a deconvolution method will enable to deconvolve a molecular measurement of a tumor sample into its different cellular components and to quantify their proportions.</p>
 <div id="the-different-types-of-deconvolution-methods" class="section level2">
 <h2><span class="header-section-number">2.1</span> The different types of deconvolution methods</h2>
-<p>Two types of deconvolution approaches have been proposed in the literature: either “reference-based” using profiles of known cell types and numbers of populations, or &quot; reference-free&quot; using, for example, non-negative matrix factorization (NMF) or independent component analysis (ICA). In addition, different types of molecular data can be extracted from biological material and used as a surrogate for in silico deconvolution. Most existing methods use either DNA methylation or gene expression data as a molecular indicator. The combination of different omics types to assess tumor heterogeneity has been poorly studied until now, which will be made possible by our innovative benchmarking platform.</p>
+<p>Two types of deconvolution approaches have been proposed in the literature: either “reference-based” using profiles of known cell types and numbers of populations, or " reference-free" using, for example, non-negative matrix factorization (NMF) or independent component analysis (ICA). In addition, different types of molecular data can be extracted from biological material and used as a surrogate for in silico deconvolution. Most existing methods use either DNA methylation or gene expression data as a molecular indicator. The combination of different omics types to assess tumor heterogeneity has been poorly studied until now, which will be made possible by our innovative benchmarking platform.</p>
 </div>
 <div id="criteria-used-for-the-selection" class="section level2">
 <h2><span class="header-section-number">2.2</span> Criteria used for the selection</h2>
@@ -481,27 +481,21 @@ $(document).ready(function () {
 <p>At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading to COMETH web app, you should first check your dataset format using the following guidelines.</p>
 <div id="dataset-format" class="section level2">
 <h2><span class="header-section-number">4.1</span> Dataset format</h2>
-<p>Your dataset (corresponding to matrix <span class="math inline">\(D\)</span> in our model) should be in .csv format, with ‘,’ as separators.</p>
+<p>Your dataset (corresponding to matrix <span class="math inline">\(D\)</span> in our model) should be in .csv format, with ‘;’ as separators.</p>
+<pre class="r"><code>DT_file_name = &quot;data/dataset_clinician.csv&quot;
+DT_clinician = read.table(DT_file_name, sep =&quot;;&quot;, header=TRUE, row.names = 1)</code></pre>
 <p>You can test that your dataset is at the correct format by using the following R script</p>
-<pre><code>## [1] 23520    12</code></pre>
-<pre><code>##          GSM1570043 GSM1570044 GSM1570045 GSM1570046 GSM1570047 GSM1570048
-## A1BG       5.084187   5.352647   5.346210   5.430234   4.956454   5.471105
-## A1BG-AS1   6.863607   6.819322   7.042982   7.240511   6.917173   7.086863
-## A1CF       4.933038   5.190533   4.959159   4.860161   4.751924   4.971453
-## A2M        6.778452   6.774715   7.446837   7.433180   6.912307   7.693453
-## A2M-AS1    4.731402   5.027431   7.492709   6.547286   6.105185   8.543221
-## A2ML1      3.727863   3.928135   3.958703   3.853147   3.899408   3.933711
-##          GSM1570049 GSM1570050 GSM1570051 GSM1570052 GSM1570053 GSM1570054
-## A1BG       5.423390   5.370812   5.389699   5.137030   5.482315   5.590401
-## A1BG-AS1   7.416353   6.914668   7.316233   6.923462   7.408751   6.827904
-## A1CF       4.929879   5.137878   5.167974   4.752416   4.873504   4.862491
-## A2M        7.885499   7.656422   7.441954   7.413562   7.956523   7.326424
-## A2M-AS1    7.802663   7.199931   7.228113   7.563453   8.684296   6.406970
-## A2ML1      3.724185   4.010013   3.875754   3.843415   3.883716   3.927925</code></pre>
-<pre><code>##  [1] &quot;A1BG&quot;     &quot;A1BG-AS1&quot; &quot;A1CF&quot;     &quot;A2M&quot;      &quot;A2M-AS1&quot;  &quot;A2ML1&quot;   
-##  [7] &quot;A2MP1&quot;    &quot;A4GALT&quot;   &quot;A4GNT&quot;    &quot;AA06&quot;</code></pre>
-<pre><code>##  [1] &quot;GSM1570043&quot; &quot;GSM1570044&quot; &quot;GSM1570045&quot; &quot;GSM1570046&quot; &quot;GSM1570047&quot;
-##  [6] &quot;GSM1570048&quot; &quot;GSM1570049&quot; &quot;GSM1570050&quot; &quot;GSM1570051&quot; &quot;GSM1570052&quot;</code></pre>
+<pre class="r"><code>print(sprintf(&quot;Your transcriptome data has %d samples (columns) of %d probes (rows)&quot;,
+              ncol(DT_clinician),nrow(DT_clinician)))</code></pre>
+<pre><code>## [1] &quot;Your transcriptome data has 12 samples (columns) of 23520 probes (rows)&quot;</code></pre>
+<pre class="r"><code>head(DT_clinician[,1:min(4,ncol(DT_clinician))])</code></pre>
+<pre><code>##          GSM1570043 GSM1570044 GSM1570045 GSM1570046
+## A1BG       5.084187   5.352647   5.346210   5.430234
+## A1BG-AS1   6.863607   6.819322   7.042982   7.240511
+## A1CF       4.933038   5.190533   4.959159   4.860161
+## A2M        6.778452   6.774715   7.446837   7.433180
+## A2M-AS1    4.731402   5.027431   7.492709   6.547286
+## A2ML1      3.727863   3.928135   3.958703   3.853147</code></pre>
 </div>
 <div id="data-normalisation" class="section level2">
 <h2><span class="header-section-number">4.2</span> Data normalisation</h2>
@@ -510,18 +504,18 @@ $(document).ready(function () {
 <h3><span class="header-section-number">4.2.1</span> Gene expression data</h3>
 <p>For gene expression data, we suggest the following normalization strategy:</p>
 <ul>
-<li>micro-array :</li>
+<li>micro-array : rma from “affy”package in R</li>
 <li>RNA-seq : DESeq, EdegR, transcripts per million (TPM)…</li>
 </ul>
-<p>You can test the normalisation of your data using the following R script:</p>
+<p>You can test the normalization of your data using the following R script:</p>
 </div>
 <div id="methylation-data" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Methylation data</h3>
 <p>For methylation array, we suggest the following normalization strategy:</p>
 <ul>
-<li>lummiR</li>
+<li>lumiMethylN from “lumi”package in R</li>
 </ul>
-<p>You can test the normalisation of your data using the following R script:</p>
+<p>You can test the normalization of your data using the following R script:</p>
 </div>
 </div>
 <div id="data-transformation" class="section level2">
@@ -530,6 +524,17 @@ $(document).ready(function () {
 <div id="gene-expression-data-1" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Gene expression data</h3>
 <p>Pseudo log transformation (log2+1) is a transformation often applied to expression data. You can test the transformation of your data using the following R script</p>
+<pre class="r"><code>logcounts &lt;- log2(DT_clinician + 1 )
+plot(DT_clinician[,1], DT_clinician[,2], cex=.1)</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre class="r"><code>plot(logcounts[,1], logcounts[,2], cex=.1)</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<pre class="r"><code>pc &lt;- prcomp( t( DT_clinician ) )
+plot(pc$x[,1], pc$x[,2])</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
+<pre class="r"><code>pc &lt;- prcomp( t( logcounts ) )
+plot(pc$x[,1], pc$x[,2])</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-4.png" width="672" /></p>
 </div>
 <div id="methylation-data-1" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Methylation data</h3>

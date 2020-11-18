@@ -116,9 +116,9 @@ At this point, we assume you have a dataset on which you would like to perform t
 
 ## Dataset format
 
-Your dataset (corresponding to matrix $D$ in our model) should be in .csv format, with ',' as separators.
+Your dataset (corresponding to matrix $D$ in our model) should be in .csv format, with ';' as separators.
 
-```{r echo=FALSE}
+```{r echo=TRUE}
 DT_file_name = "data/dataset_clinician.csv"
 DT_clinician = read.table(DT_file_name, sep =";", header=TRUE, row.names = 1)
 
@@ -126,11 +126,10 @@ DT_clinician = read.table(DT_file_name, sep =";", header=TRUE, row.names = 1)
 
 You can test that your dataset is at the correct format by using the following R script
 
-```{r echo=FALSE}
-dim(DT_clinician)
-head(DT_clinician)
-rownames(DT_clinician)[1:10]
-colnames(DT_clinician)[1:10]
+```{r echo=TRUE}
+print(sprintf("Your transcriptome data has %d samples (columns) of %d probes (rows)",
+              ncol(DT_clinician),nrow(DT_clinician)))
+head(DT_clinician[,1:min(4,ncol(DT_clinician))])
 ```
 
 
@@ -142,10 +141,10 @@ Your dataset should be normalized.
 
 For gene expression data, we suggest the following normalization strategy:
 
-- micro-array : 
+- micro-array : rma from "affy"package in R
 - RNA-seq : DESeq, EdegR, transcripts per million (TPM)...
 
-You can test the normalisation of your data using the following R script:
+You can test the normalization of your data using the following R script:
 
 ```{r echo=FALSE}
 
@@ -157,9 +156,9 @@ You can test the normalisation of your data using the following R script:
 
 For methylation array, we suggest the following normalization strategy:
 
-- lummiR
+- lumiMethylN from "lumi"package in R
 
-You can test the normalisation of your data using the following R script:
+You can test the normalization of your data using the following R script:
 
 ```{r echo=FALSE}
 
@@ -174,8 +173,16 @@ Your dataset can be at linear scale of transformed. Please check the transformat
 
 Pseudo log transformation (log2+1) is a transformation often applied to expression data. You can test the transformation of your data using the following R script
 
-```{r echo=FALSE}
+```{r echo=TRUE}
+logcounts <- log2(DT_clinician + 1 )
+plot(DT_clinician[,1], DT_clinician[,2], cex=.1)
+plot(logcounts[,1], logcounts[,2], cex=.1)
 
+pc <- prcomp( t( DT_clinician ) )
+plot(pc$x[,1], pc$x[,2])
+
+pc <- prcomp( t( logcounts ) )
+plot(pc$x[,1], pc$x[,2])
 ```
 
 ### Methylation data
