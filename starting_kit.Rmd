@@ -137,59 +137,119 @@ head(DT_clinician[,1:min(4,ncol(DT_clinician))])
 
 Your dataset should be normalized.
 
-### Gene expression data
+Your data might need normalization, for example if you observed a lot of variance between the samples. 
 
-For gene expression data, we suggest the following normalization strategy:
-
-- micro-array : rma from "affy"package in R
-- RNA-seq : DESeq, EdegR, transcripts per million (TPM)...
-
-You can test the normalization of your data using the following R script:
-
-```{r echo=FALSE}
-
+You can check your data with the following code :
+```{r echo=TRUE}
+library(ggplot2) 
+cs=colSums(DT_clinician)
+F=(ecdf(cs))
+ggplot(data.frame(x=F(cs),y=cs), 
+       aes(x=x,y=y)) +   
+geom_point() +
+stat_smooth(formula = y ~ x,
+              method = lm, 
+              level=0.9973)
 ```
 
+### Gene expression data
+For gene expression data, we suggest the following normalization strategy:
 
+- micro-array : rma function from "affy"package in R
+- RNA-seq : DESeq, EdegR, transcripts per million (TPM)...
+
+In case ofconfounding factor such as batch effect, we refer you to
+estimateSizeFactors and sizeFactors functions of the "DESEq2" package
 
 ### Methylation data
 
 For methylation array, we suggest the following normalization strategy:
 
-- lumiMethylN from "lumi"package in R
+- lumiMethyN function from Illumina "lumi"package in R
 
-You can test the normalization of your data using the following R script:
-
-```{r echo=FALSE}
-
-```
 
 
 ## Data transformation
 
-Your dataset can be at linear scale of transformed. Please check the transformation (if any that was applied to your data)
+Your dataset can be at linear scale of transformed. 
+
+Please check the transformation (if any) that was applied to your data.
 
 ### Gene expression data
 
-Pseudo log transformation (log2+1) is a transformation often applied to expression data. You can test the transformation of your data using the following R script
+Pseudo log transformation (log2+1) is a transformation often applied to expression data. 
 
+It also enable to check for Poisson Noise in your data, an excess of variance in the low value range : 
+![Poisson Noise example](starting_kit_files/poisson_noise.png).
+
+
+You can test the transformation of your data using the following R script :
+
+
+```{r echo=FALSE}
+# Simulating raw count data
+DT_raw=round(2^(DT_clinician) -1) 
+```
 ```{r echo=TRUE}
-logcounts <- log2(DT_clinician + 1 )
-plot(DT_clinician[,1], DT_clinician[,2], cex=.1)
+#plotting 2 first samples in native space
+plot(DT_raw[,1], DT_raw[,2], cex=.1)
+
+# log transform 
+logcounts <- logcounts <- log2( DT_raw + 1 )
+#plotting 2 first samples in log space
 plot(logcounts[,1], logcounts[,2], cex=.1)
 
-pc <- prcomp( t( DT_clinician ) )
-plot(pc$x[,1], pc$x[,2])
+
+```
+
+Working in Log space can improve your analysis.   
+
+You can check with the following code : 
+
+```{r echo=TRUE}
+pc <- prcomp( t(DT_raw)  ) 
+
+#plotting 2 first components in native space
+#plot(pc$x[,1], pc$x[,2])
+s=summary(pc);
+#importance of 2 first components in native sapce
+s$importance[,1:2]
 
 pc <- prcomp( t( logcounts ) )
-plot(pc$x[,1], pc$x[,2])
+#plotting 2 first components in log space
+#plot(pc$x[,1], pc$x[,2])
+
+s=summary(pc);
+#importance of 2 first components in log space
+s$importance[,1:2]
+
 ```
 
 ### Methylation data
 
-Methylation data are usually beta-values or m-values. You can test the transformation of your data using the following R script
+Methylation data are usually beta-values or m-values. 
 
+M-values can be obtains with beta2m function from Illumina "lumi" package in R.
+
+you can use beta2m and m2beta functions of Illumina "lumi" package
+
+You can test the transformation of your data using the following R script
 ```{r echo=FALSE}
+# Simulating m-values
+DT_m=apply(DT_clinician,2,scale)*2
+```
+```{r echo=TRUE}
+
+#plotting 2 first samples of m-values
+plot(DT_m[,1], DT_m[,2], cex=.1)
+
+# m-values to beta-values
+betavals <- 2^DT_m/(2^DT_m + 1)
+
+#plotting 2 first samples of beta-values
+plot(betavals[,1], betavals[,2], cex=.1)
+
+
 
 ```
 

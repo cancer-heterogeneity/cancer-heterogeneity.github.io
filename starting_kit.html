@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2020-11-18" />
+<meta name="date" content="2020-11-19" />
 
 <title>Starting kit</title>
 
@@ -346,7 +346,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Starting kit</h1>
-<h4 class="date">2020-11-18</h4>
+<h4 class="date">2020-11-19</h4>
 
 </div>
 
@@ -500,45 +500,92 @@ DT_clinician = read.table(DT_file_name, sep =&quot;;&quot;, header=TRUE, row.nam
 <div id="data-normalisation" class="section level2">
 <h2><span class="header-section-number">4.2</span> Data normalisation</h2>
 <p>Your dataset should be normalized.</p>
+<p>Your data might need normalization, for example if you observed a lot of variance between the samples.</p>
+<p>You can check your data with the following code :</p>
+<pre class="r"><code>library(ggplot2) 
+cs=colSums(DT_clinician)
+F=(ecdf(cs))
+ggplot(data.frame(x=F(cs),y=cs), 
+       aes(x=x,y=y)) +   
+geom_point() +
+stat_smooth(formula = y ~ x,
+              method = lm, 
+              level=0.9973)</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <div id="gene-expression-data" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Gene expression data</h3>
 <p>For gene expression data, we suggest the following normalization strategy:</p>
 <ul>
-<li>micro-array : rma from “affy”package in R</li>
+<li>micro-array : rma function from “affy”package in R</li>
 <li>RNA-seq : DESeq, EdegR, transcripts per million (TPM)…</li>
 </ul>
-<p>You can test the normalization of your data using the following R script:</p>
+<p>In case ofconfounding factor such as batch effect, we refer you to estimateSizeFactors and sizeFactors functions of the “DESEq2” package</p>
 </div>
 <div id="methylation-data" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Methylation data</h3>
 <p>For methylation array, we suggest the following normalization strategy:</p>
 <ul>
-<li>lumiMethylN from “lumi”package in R</li>
+<li>lumiMethyN function from Illumina “lumi”package in R</li>
 </ul>
-<p>You can test the normalization of your data using the following R script:</p>
 </div>
 </div>
 <div id="data-transformation" class="section level2">
 <h2><span class="header-section-number">4.3</span> Data transformation</h2>
-<p>Your dataset can be at linear scale of transformed. Please check the transformation (if any that was applied to your data)</p>
+<p>Your dataset can be at linear scale of transformed.</p>
+<p>Please check the transformation (if any) that was applied to your data.</p>
 <div id="gene-expression-data-1" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Gene expression data</h3>
-<p>Pseudo log transformation (log2+1) is a transformation often applied to expression data. You can test the transformation of your data using the following R script</p>
-<pre class="r"><code>logcounts &lt;- log2(DT_clinician + 1 )
-plot(DT_clinician[,1], DT_clinician[,2], cex=.1)</code></pre>
+<p>Pseudo log transformation (log2+1) is a transformation often applied to expression data.</p>
+<p>It also enable to check for Poisson Noise in your data, an excess of variance in the low value range : <img src="starting_kit_files/poisson_noise.png" alt="Poisson Noise example" />.</p>
+<p>You can test the transformation of your data using the following R script :</p>
+<pre class="r"><code>#plotting 2 first samples in native space
+plot(DT_raw[,1], DT_raw[,2], cex=.1)</code></pre>
 <p><img src="starting_kit_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
-<pre class="r"><code>plot(logcounts[,1], logcounts[,2], cex=.1)</code></pre>
+<pre class="r"><code># log transform 
+logcounts &lt;- logcounts &lt;- log2( DT_raw + 1 )
+#plotting 2 first samples in log space
+plot(logcounts[,1], logcounts[,2], cex=.1)</code></pre>
 <p><img src="starting_kit_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
-<pre class="r"><code>pc &lt;- prcomp( t( DT_clinician ) )
-plot(pc$x[,1], pc$x[,2])</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-3.png" width="672" /></p>
+<p>Working in Log space can improve your analysis.</p>
+<p>You can check with the following code :</p>
+<pre class="r"><code>pc &lt;- prcomp( t(DT_raw)  ) 
+
+#plotting 2 first components in native space
+#plot(pc$x[,1], pc$x[,2])
+s=summary(pc);
+#importance of 2 first components in native sapce
+s$importance[,1:2]</code></pre>
+<pre><code>##                                PC1         PC2
+## Standard deviation     33454.55273 19059.14776
+## Proportion of Variance     0.62173     0.20179
+## Cumulative Proportion      0.62173     0.82352</code></pre>
 <pre class="r"><code>pc &lt;- prcomp( t( logcounts ) )
-plot(pc$x[,1], pc$x[,2])</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-4.png" width="672" /></p>
+#plotting 2 first components in log space
+#plot(pc$x[,1], pc$x[,2])
+
+s=summary(pc);
+#importance of 2 first components in log space
+s$importance[,1:2]</code></pre>
+<pre><code>##                             PC1      PC2
+## Standard deviation     64.35304 25.31055
+## Proportion of Variance  0.69843  0.10804
+## Cumulative Proportion   0.69843  0.80648</code></pre>
 </div>
 <div id="methylation-data-1" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Methylation data</h3>
-<p>Methylation data are usually beta-values or m-values. You can test the transformation of your data using the following R script</p>
+<p>Methylation data are usually beta-values or m-values.</p>
+<p>M-values can be obtains with beta2m function from Illumina “lumi” package in R.</p>
+<p>you can use beta2m and m2beta functions of Illumina “lumi” package</p>
+<p>You can test the transformation of your data using the following R script</p>
+<pre class="r"><code>#plotting 2 first samples of m-values
+plot(DT_m[,1], DT_m[,2], cex=.1)</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code># m-values to beta-values
+betavals &lt;- 2^DT_m/(2^DT_m + 1)
+
+#plotting 2 first samples of beta-values
+plot(betavals[,1], betavals[,2], cex=.1)</code></pre>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
 </div>
 </div>
 </div>
