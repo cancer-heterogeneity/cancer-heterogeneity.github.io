@@ -22,21 +22,10 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <div><img src="pictures/cover.png" width="100%" align="center"></div>
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -356,11 +345,14 @@ $(document).ready(function () {
 <div id="winter-course-15-16-feb.2021-online" class="section level2">
 <h2>Winter course   <font size="5"><span style="color: darkblue;">15-16 Feb.2021, ONLINE</span></font></h2>
 <p><font size="4">This 2-day online course aims to train clinicians to the use of cutting edge computational methods to quantify tumor heterogeneity through a dedicated user-friendly web interface.</font>  </p>
-<form action="https://www.sciencesconf.org/">
+<form action="https://comteh-winter21.sciencesconf.org/">
 <input type="submit" id="search" value="🎓 Register now"  style="height:50px; width:150px" />
 </form>
 <p> </p>
-<p><img src="pictures/posterCOMETH.png" style="width:40.0%" /></p>
+<div class="figure">
+<img src="pictures/posterCOMETH.png" style="width:40.0%" />
+
+</div>
 <hr />
 </div>
 <div id="course-format" class="section level2">
@@ -387,7 +379,7 @@ $(document).ready(function () {
 <h2>Registration</h2>
 <p><font size="4"><span style="color: red;">Registration deadline: 17 dec.2020</span></font></p>
 <p>Registration fees:</p>
-<form action="https://www.sciencesconf.org/">
+<form action="https://comteh-winter21.sciencesconf.org/">
 <input type="submit" value="🎓Register now" />
 </form>
 <hr />
@@ -398,7 +390,10 @@ $(document).ready(function () {
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/yuna.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/yuna.png" style="width:50.0%" />
+
+</div>
 <strong>Yuna Blum</strong><br />
 Research scientist,<br />
 Ligue Contre le Cancer Paris, France<br />
@@ -408,7 +403,10 @@ Ligue Contre le Cancer Paris, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/jerome.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/jerome.png" style="width:50.0%" />
+
+</div>
 <p><strong>Jérôme Cros</strong><br />
 Clinician<br />
 APHP, Paris, France<br />
@@ -418,7 +416,10 @@ APHP, Paris, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/Carl.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/Carl.png" style="width:50.0%" />
+
+</div>
 <p><strong>Carl Herrmann</strong><br />
 Assistant-professor,<br />
 Medical Faculty Heidelberg, Germany<br />
@@ -430,7 +431,10 @@ Medical Faculty Heidelberg, Germany<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/slim.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/slim.png" style="width:50.0%" />
+
+</div>
 <strong>Sim Karkar</strong><br />
 Research scientist,<br />
 Uni. Grenoble Alpes, France<br />
@@ -440,7 +444,10 @@ Uni. Grenoble Alpes, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/magali.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/magali.png" style="width:50.0%" />
+
+</div>
 <p><strong>Magali Richard</strong><br />
 Research scientist,<br />
 Uni. Grenoble Alpes, France<br />
@@ -450,7 +457,10 @@ Uni. Grenoble Alpes, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<p><img src="pictures/ashwin.png" style="width:50.0%" /></p>
+<div class="figure">
+<img src="pictures/ashwin.png" style="width:50.0%" />
+
+</div>
 <p><strong>Ashwini Sharma</strong><br />
 Research scientist,<br />
 Medical Faculty Heidelberg, Germany<br />
@@ -463,7 +473,10 @@ Medical Faculty Heidelberg, Germany<br />
 <p><strong>Clémentine Decamps</strong>, Phd Student, Uni. Grenoble Alpes, France<br />
 <strong>Yasmina Kermezli</strong>, Postdoctoral fellow, Uni. Grenoble Alpes, France</p>
 <p><br></p>
-<p><img src="pictures/fundings2.png" /></p>
+<div class="figure">
+<img src="pictures/fundings2.png" />
+
+</div>
 </div>
 
 
@@ -475,7 +488,7 @@ Medical Faculty Heidelberg, Germany<br />
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

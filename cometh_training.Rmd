@@ -17,7 +17,7 @@ output:
 &nbsp; 
   
 
-<form action="https://www.sciencesconf.org/">
+<form action="https://comteh-winter21.sciencesconf.org/">
 <input type="submit" id="search" value="🎓 Register now"  style="height:50px; width:150px" />
 </form>
 
@@ -73,7 +73,7 @@ Registration fees:
 
 
 
-<form action="https://www.sciencesconf.org/">
+<form action="https://comteh-winter21.sciencesconf.org/">
 <input type="submit" value="🎓Register now" />
 </form>
 
