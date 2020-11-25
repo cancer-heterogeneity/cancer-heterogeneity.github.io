@@ -8,3 +8,7 @@ output:
 ![](pictures/magali.png){width=10%}  
 <br>
 **Magali Richard** is a CNRS research associate in computational genetics at the TIMC-IMAG laboratory, Grenoble, France. She is an expert in tumour heterogeneity quantification using different types of omic data.
+
+After a PhD in genetics and neurobiology, she studied the genetic architecture of regulatory networks and organims adaptability in dynamic environment. Few years ago, she was recruited as a CNRS researcher in Grenoble. Her project is to contribute to the understanding of the fundamental mechanisms of living systems by proposing an interdisciplinary approach based on the statistical analysis of biological data. She is particularly interested in the following questions: How to quantify intra and inter-tumor heterogeneity? How to estimate (epi)genetic deregulations at the single individual level?
+
+[Website](http://membres-timc.imag.fr/Magali.Richard/)

@@ -51,11 +51,13 @@ General lectures will cover:
 ***
 ## Target Group
 
-&nbsp; • Clinicians 
+-
+ Cancer pathologists
 
-&nbsp; • Anatomopathologist  
+- Research scientists
 
-&nbsp; • Bioinformaticians 
+- Clinicians
+
 
 
 <font size="4"><span style="color: red;">Limited to 30 participants.</span></font>
@@ -138,7 +140,7 @@ Medical Faculty Heidelberg, Germany
 <center>
 ![](pictures/slim.png){width=50%}
 
-**Sim Karkar**    
+**Slim Karkar**    
 Research scientist,  
 Uni. Grenoble Alpes, France  
 [Read more](cometh_training_sk.html) 
