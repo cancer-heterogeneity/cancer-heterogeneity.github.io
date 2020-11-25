@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2020-11-19" />
+<meta name="date" content="2020-11-25" />
 
 <title>Starting kit</title>
 
@@ -23,19 +23,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -346,7 +335,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Starting kit</h1>
-<h4 class="date">2020-11-19</h4>
+<h4 class="date">2020-11-25</h4>
 
 </div>
 
@@ -359,7 +348,7 @@ $(document).ready(function () {
 <li><a href="#selection-of-13-reference-methods"><span class="toc-section-number">2.3</span> Selection of 13 reference methods</a></li>
 </ul></li>
 <li><a href="#evaluation-of-methods-performances"><span class="toc-section-number">3</span> Evaluation of methods performances</a><ul>
-<li><a href="#reference-datasets"><span class="toc-section-number">3.1</span> Reference datasets</a></li>
+<li><a href="#benchmark-datasets"><span class="toc-section-number">3.1</span> Benchmark datasets</a></li>
 <li><a href="#scoring-metrics"><span class="toc-section-number">3.2</span> Scoring metrics</a></li>
 <li><a href="#benchmark-leaderboard"><span class="toc-section-number">3.3</span> Benchmark leaderboard</a></li>
 </ul></li>
@@ -384,7 +373,7 @@ $(document).ready(function () {
 <p><img src="fig/tumor_heterogeneity.png" alt="Cancer heterogeneity illustration. Each tumor is a mix of different cell populations in various proportions." />.</p>
 <p>Each tumor is a mix of different cell populations in various proportions. Advanced microdissection techniques to isolate a population of interest from heterogeneous clinical tissue samples are not feasible in daily practice. An alternative is to rely on computational deconvolution methods that infer cell-type composition from mixed (=”bulk”) samples.</p>
 <p>This variable composition might be associated to difference in treatment response as well as distinct prognosis as shown by our team and others (Blum et al 2019, Nature Communication). It is therefore a high priority to describe as best as possible this “intra tumor” heterogeneity to better predict the more appropriate clinical care for each patient and go even further in personalized medicine.</p>
-<p><strong>The goal of the cometh web application</strong> is to quantify tumor heterogeneity within clinical cancer omic samples (how many cell types are present? In which proportion?).</p>
+<p><strong>The goal of the COMETH web application</strong> is to quantify tumor heterogeneity within clinical cancer omic samples (how many cell types are present? In which proportion?).</p>
 </div>
 <div id="computational-methods" class="section level1">
 <h1><span class="header-section-number">2</span> Computational methods</h1>
@@ -395,18 +384,18 @@ $(document).ready(function () {
 <p>In our context, a deconvolution method will enable to deconvolve a molecular measurement of a tumor sample into its different cellular components and to quantify their proportions.</p>
 <div id="the-different-types-of-deconvolution-methods" class="section level2">
 <h2><span class="header-section-number">2.1</span> The different types of deconvolution methods</h2>
-<p>Two types of deconvolution approaches have been proposed in the literature: either “reference-based” using profiles of known cell types and numbers of populations, or " reference-free" using, for example, non-negative matrix factorization (NMF) or independent component analysis (ICA). In addition, different types of molecular data can be extracted from biological material and used as a surrogate for in silico deconvolution. Most existing methods use either DNA methylation or gene expression data as a molecular indicator. The combination of different omics types to assess tumor heterogeneity has been poorly studied until now, which will be made possible by our innovative benchmarking platform.</p>
+<p>Two types of deconvolution approaches have been proposed in the literature: either &quot;reference-based&quot; using profiles of known cell types and numbers of populations, or &quot; reference-free&quot; using, for example, non-negative matrix factorization (NMF) or independent component analysis (ICA). In addition, different types of molecular data can be extracted from biological material and used as a surrogate for in silico deconvolution. Most existing methods use either DNA methylation or gene expression data as a molecular indicator. The combination of different omics types to assess tumor heterogeneity has been poorly studied until now, which will be made possible by our innovative benchmarking platform.</p>
 </div>
 <div id="criteria-used-for-the-selection" class="section level2">
 <h2><span class="header-section-number">2.2</span> Criteria used for the selection</h2>
-<p>We first based our selection on the outcome of our <a href="https://tinyurl.com/hadaca2019">HADACA data challenge</a>, gathering a consortium of more than thirty international <a href="https://cancer-heterogeneity.github.io/data_challenges_HADACAconsortium.html">experts</a> in the field. We selected the five best methods among all the ones collectively discovered and implemented during the challenge, that predictde the real cell proportions with the highest accuracy (i.e. lowest Mean Absolute Error between the estimate and the ground truth).</p>
-<p>These methods consist in different strategies :</p>
+<p>We first based our selection on the outcome of our <a href="https://tinyurl.com/hadaca2019">HADACA data challenge</a>, gathering a consortium of more than thirty international <a href="https://cancer-heterogeneity.github.io/data_challenges_HADACAconsortium.html">experts</a> in the field. We selected the five best methods among all the ones collectively discovered and implemented during the challenge, that predictde the real cell proportions with the highest accuracy (i.e. lowest Mean Absolute Error between the estimate and the ground truth).</p>
+<p>These methods consist in different strategies:</p>
 <ul>
 <li>Omics type : transcriptome or methylome</li>
 <li>Feature selections: variance based or ICA based</li>
 <li>Deconvolution algorithms: Edec, Medecom, snmf, ICA</li>
 </ul>
-<p>In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria :</p>
+<p>In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria:</p>
 <ul>
 <li>Associated publication: method published in a high-impact journal and highly cited (relative to the year of publication)</li>
 <li>Year of publication: the most recent methods have been prioritized</li>
@@ -421,49 +410,14 @@ $(document).ready(function () {
 </div>
 <div id="evaluation-of-methods-performances" class="section level1">
 <h1><span class="header-section-number">3</span> Evaluation of methods performances</h1>
-<div id="reference-datasets" class="section level2">
-<h2><span class="header-section-number">3.1</span> Reference datasets</h2>
-<p>Computational methods are evaluated on a set of reference benchmark datasets. We generated 8 benchmarks datasets enabling a comprehensive evaluation of the methods.</p>
+<div id="benchmark-datasets" class="section level2">
+<h2><span class="header-section-number">3.1</span> Benchmark datasets</h2>
+<p>Computational methods are evaluated on a set of reference benchmark datasets. We generated 8 benchmark datasets enabling a comprehensive evaluation of the methods.</p>
 <p><img src="fig/dataset.png" alt="Benchmark datasets" />.</p>
-<p>We assume a reference dataset is composed of :</p>
-<ul>
-<li>a data_test <strong>D</strong> matrix composed of omic value for <span class="math inline">\(N\)</span> samples, for <span class="math inline">\(M\)</span> given features (genes, methylation probes…).</li>
-<li>a data_solution <strong>A</strong> matrix composed of proportion value for <span class="math inline">\(N\)</span> samples, for <span class="math inline">\(K\)</span> cell types given features (genes, methylation probes…).</li>
-</ul>
-<p>For instance:</p>
-<pre class="r"><code>dim(test_data_met)</code></pre>
-<pre><code>## [1] 500   5</code></pre>
-<pre class="r"><code>dim(test_data_rna)</code></pre>
-<pre><code>## [1] 500   5</code></pre>
-<pre class="r"><code>head(test_data_met)</code></pre>
-<pre><code>##                 [,1]      [,2]      [,3]      [,4]      [,5]
-## cg00000029 0.2824851 0.4656137 0.5446347 0.2820870 0.3567818
-## cg00000109 0.7768669 0.8144932 0.8143146 0.6895472 0.7482526
-## cg00000155 0.7316993 0.9585858 0.9717631 0.8410465 0.9583800
-## cg00000158 0.7321741 0.8182967 0.8959911 0.8954138 0.8798266
-## cg00000165 0.5179173 0.6241434 0.3472937 0.3072159 0.5405272
-## cg00000221 0.7147090 0.7006120 0.6280123 0.9319660 0.4827374</code></pre>
-<pre class="r"><code>head(test_data_rna)</code></pre>
-<pre><code>##                [,1]       [,2]       [,3]        [,4]      [,5]
-## TSPAN6   4.53412964 4.64524344 4.46117771 4.693632277 4.7787183
-## TNMD     0.01756076 0.05738122 0.02154218 0.002280051 0.0692128
-## DPM1     5.01491459 5.39509861 5.12859560 5.131644901 5.3757923
-## SCYL3    4.27296046 3.64167946 3.77653212 3.856753286 3.9413723
-## C1orf112 3.47073829 3.10029072 2.92953187 2.655649054 3.4656401
-## FGR      1.22510287 1.94157661 2.31569565 1.395961242 0.5588283</code></pre>
-<pre class="r"><code>dim(test_solution)</code></pre>
-<pre><code>## [1] 5 5</code></pre>
-<pre class="r"><code>head(test_solution)</code></pre>
-<pre><code>##             [,1]        [,2]       [,3]        [,4]       [,5]
-## [1,] 0.079102722 0.077857899 0.14571941 0.464455778 0.07166962
-## [2,] 0.278741721 0.377048646 0.40214293 0.374365927 0.36659346
-## [3,] 0.120638364 0.214034841 0.23976354 0.005731404 0.04557118
-## [4,] 0.517661978 0.001631235 0.12301909 0.122623108 0.24905805
-## [5,] 0.003855216 0.329427378 0.08935503 0.032823782 0.26710770</code></pre>
 </div>
 <div id="scoring-metrics" class="section level2">
 <h2><span class="header-section-number">3.2</span> Scoring metrics</h2>
-<p>The discriminating metrics are computed on the A matrix. The rank of each method correspond to the mean rank of each method based on several metric evaluating the accuracy of the methods :</p>
+<p>The discriminating metrics are computed on the A matrix. The rank of each method corresponds to the mean rank of each method based on several metric evaluating the accuracy of the methods :</p>
 <ul>
 <li><strong>mean absolute error</strong> between the estimate and the groundtruth.</li>
 <li><strong>root mean square error</strong> between the estimate and the groundtruth.</li>
@@ -478,10 +432,10 @@ $(document).ready(function () {
 </div>
 <div id="clinician-datasets" class="section level1">
 <h1><span class="header-section-number">4</span> Clinician datasets</h1>
-<p>At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading to COMETH web app, you should first check your dataset format using the following guidelines.</p>
+<p>At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading it to the COMETH web app, you should first check your dataset format using the following guidelines.</p>
 <div id="dataset-format" class="section level2">
 <h2><span class="header-section-number">4.1</span> Dataset format</h2>
-<p>Your dataset (corresponding to matrix <span class="math inline">\(D\)</span> in our model) should be in .csv format, with ‘;’ as separators.</p>
+<p>Your dataset (corresponding to matrix <span class="math inline">\(D\)</span> in our model) should be in .csv format, with ';' as separators.</p>
 <pre class="r"><code>DT_file_name = &quot;data/dataset_clinician.csv&quot;
 DT_clinician = read.table(DT_file_name, sep =&quot;;&quot;, header=TRUE, row.names = 1)</code></pre>
 <p>You can test that your dataset is at the correct format by using the following R script</p>
@@ -511,21 +465,21 @@ geom_point() +
 stat_smooth(formula = y ~ x,
               method = lm, 
               level=0.9973)</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <div id="gene-expression-data" class="section level3">
 <h3><span class="header-section-number">4.2.1</span> Gene expression data</h3>
 <p>For gene expression data, we suggest the following normalization strategy:</p>
 <ul>
-<li>micro-array : rma function from “affy”package in R</li>
-<li>RNA-seq : DESeq, EdegR, transcripts per million (TPM)…</li>
+<li>micro-array : rma function from &quot;affy&quot;package in R</li>
+<li>RNA-seq : DESeq, EdegR, transcripts per million (TPM)...</li>
 </ul>
-<p>In case ofconfounding factor such as batch effect, we refer you to estimateSizeFactors and sizeFactors functions of the “DESEq2” package</p>
+<p>In case ofconfounding factor such as batch effect, we refer you to estimateSizeFactors and sizeFactors functions of the &quot;DESEq2&quot; package</p>
 </div>
 <div id="methylation-data" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Methylation data</h3>
 <p>For methylation array, we suggest the following normalization strategy:</p>
 <ul>
-<li>lumiMethyN function from Illumina “lumi”package in R</li>
+<li>lumiMethyN function from Illumina &quot;lumi&quot;package in R</li>
 </ul>
 </div>
 </div>
@@ -540,12 +494,12 @@ stat_smooth(formula = y ~ x,
 <p>You can test the transformation of your data using the following R script :</p>
 <pre class="r"><code>#plotting 2 first samples in native space
 plot(DT_raw[,1], DT_raw[,2], cex=.1)</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <pre class="r"><code># log transform 
 logcounts &lt;- logcounts &lt;- log2( DT_raw + 1 )
 #plotting 2 first samples in log space
 plot(logcounts[,1], logcounts[,2], cex=.1)</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-5-2.png" width="672" /></p>
 <p>Working in Log space can improve your analysis.</p>
 <p>You can check with the following code :</p>
 <pre class="r"><code>pc &lt;- prcomp( t(DT_raw)  ) 
@@ -574,18 +528,18 @@ s$importance[,1:2]</code></pre>
 <div id="methylation-data-1" class="section level3">
 <h3><span class="header-section-number">4.3.2</span> Methylation data</h3>
 <p>Methylation data are usually beta-values or m-values.</p>
-<p>M-values can be obtains with beta2m function from Illumina “lumi” package in R.</p>
-<p>you can use beta2m and m2beta functions of Illumina “lumi” package</p>
+<p>M-values can be obtains with beta2m function from Illumina &quot;lumi&quot; package in R.</p>
+<p>you can use beta2m and m2beta functions of Illumina &quot;lumi&quot; package</p>
 <p>You can test the transformation of your data using the following R script</p>
 <pre class="r"><code>#plotting 2 first samples of m-values
 plot(DT_m[,1], DT_m[,2], cex=.1)</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 <pre class="r"><code># m-values to beta-values
 betavals &lt;- 2^DT_m/(2^DT_m + 1)
 
 #plotting 2 first samples of beta-values
 plot(betavals[,1], betavals[,2], cex=.1)</code></pre>
-<p><img src="starting_kit_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p><img src="starting_kit_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -604,7 +558,7 @@ plot(betavals[,1], betavals[,2], cex=.1)</code></pre>
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

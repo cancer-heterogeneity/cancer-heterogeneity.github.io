@@ -19,7 +19,7 @@ Advanced microdissection techniques to isolate a population of interest from het
 
 This variable composition might be associated to difference in treatment response as well as distinct prognosis as shown by our team and others (Blum et al 2019, Nature Communication). It is therefore a high priority to describe as best as possible this “intra tumor” heterogeneity to better predict the more appropriate clinical care for each patient and go even further in personalized medicine.
 
-**The goal of the cometh web application** is to quantify tumor heterogeneity within clinical cancer omic samples (how many cell types are present? In which proportion?).
+**The goal of the COMETH web application** is to quantify tumor heterogeneity within clinical cancer omic samples (how many cell types are present? In which proportion?).
 
 # Computational methods
 
@@ -42,13 +42,13 @@ Two types of deconvolution approaches have been proposed in the literature: eith
 We first based our selection on the outcome of our [HADACA data challenge](https://tinyurl.com/hadaca2019),  gathering a consortium of more than thirty international [experts](https://cancer-heterogeneity.github.io/data_challenges_HADACAconsortium.html) in the field.
 We selected the five best methods among all the ones collectively discovered and implemented during the challenge, that predictde the real cell proportions with the highest accuracy (i.e. lowest Mean Absolute Error between the estimate and the ground truth).
 
- These methods consist in different strategies : 
+ These methods consist in different strategies: 
  
 - Omics type : transcriptome or methylome
 - Feature selections: variance based or ICA based
 - Deconvolution algorithms: Edec, Medecom, snmf, ICA
 
-In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria :
+In addition, we conducted an extensive review of the literature to select reference deconvolution methods based on the following criteria:
 
 -	Associated publication: method published in a high-impact journal and highly cited (relative to the year of publication)
 -	Year of publication: the most recent methods have been prioritized
@@ -62,43 +62,15 @@ We ended up with 13 reference methods including both reference-free and referenc
 
 # Evaluation of methods performances
 
-## Reference datasets
+## Benchmark datasets
 
-Computational methods are evaluated on a set of reference benchmark datasets. We generated 8 benchmarks datasets enabling a comprehensive evaluation of the methods.
+Computational methods are evaluated on a set of reference benchmark datasets. We generated 8 benchmark datasets enabling a comprehensive evaluation of the methods.
 
 ![Benchmark datasets](fig/dataset.png). 
 
-We assume a reference dataset is composed of :
-
-- a data_test **D**  matrix composed of omic value for $N$ samples, for $M$ given features (genes, methylation probes...). 
-- a data_solution **A**  matrix composed of proportion value for $N$ samples, for $K$ cell types given features (genes, methylation probes...). 
-
-For instance:
-
-```{r echo=FALSE}
-test_data_met = readRDS("data/test_data_met.rds")
-test_data_rna =  readRDS("data/test_data_rna.rds")
-```
-
-```{r results="verbatim", echo=TRUE}
-dim(test_data_met)
-dim(test_data_rna)
-head(test_data_met)
-head(test_data_rna)
-```
-
-```{r echo=FALSE}
-test_solution = readRDS("data/test_solution.rds")
-```
-
-```{r results="verbatim", echo=TRUE}
-dim(test_solution)
-head(test_solution)
-```
-
 ## Scoring metrics
 
-The discriminating metrics are computed on the A matrix. The rank of each method correspond to the mean rank of each method based on several metric evaluating the accuracy of the methods :
+The discriminating metrics are computed on the A matrix. The rank of each method corresponds to the mean rank of each method based on several metric evaluating the accuracy of the methods :
 
 - **mean absolute error** between the estimate and the groundtruth.
 - **root mean square error** between the estimate and the groundtruth.
@@ -111,7 +83,7 @@ All evaluation of the methods are accessible through the benchmark leaderboard l
 
 # Clinician datasets
 
-At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading to COMETH web app, you should first check your dataset format using the following guidelines.
+At this point, we assume you have a dataset on which you would like to perform tumor heterogeneity quantification. Before uploading it to the COMETH web app, you should first check your dataset format using the following guidelines.
 
 
 ## Dataset format
