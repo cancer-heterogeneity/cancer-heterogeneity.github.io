@@ -11,7 +11,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="author" content="Magali Richard" />
+<meta name="author" content="Clémentine Descamps &amp; Magali Richard" />
 
 <meta name="date" content="2020-12-10" />
 
@@ -180,8 +180,8 @@ code span.ot { color: #007020; }
 <div class="table cover">
 <div class="cover-card table-cell table-middle">
 <span class="author_name">Dataset Factsheet</span>
-<span class="author_job">DT2 transcriptome pancreas</span>
-<span class="author_bio mbm">Magali Richard</span>
+<span class="author_job">DT6 methylome lung adenocarcinoma</span>
+<span class="author_bio mbm">Clémentine Descamps &amp; Magali Richard</span>
 <span class="author_bio mbm">2020-12-10</span>
 </div>
 </div>
@@ -195,33 +195,30 @@ code span.ot { color: #007020; }
 <article class="post-content">
 <div id="description-of-the-dataset" class="section level2">
 <h2>Description of the dataset</h2>
-<p>5 different cell populations present in <strong>pancreatic tumors</strong> were considered. It has been described in the deconbench project<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> and published in <a href="https://doi.org/10.1101/2020.06.06.131482"><strong>BioRxiv</strong></a></p>
-<p>Raw transcriptome and methylome profiles of these different cell populations were extracted from various sources (PDX model, tissues or isolated cells).</p>
-<p>In silico Dirichlet distribution have been used based on realistic proportions defined by the anatomopathologist expertise (Jerome Cros).</p>
-<p>Transcriptome of in silico mixtures from pancreatic tumors were obtained by considering <span class="math inline">\(D = T A\)</span>, with <span class="math inline">\(T\)</span> the cell-type profiles (matrix of size <span class="math inline">\(M * K\)</span>, with <span class="math inline">\(M\)</span> the number of features and <span class="math inline">\(K=5\)</span> the number of cell types) and <span class="math inline">\(A\)</span> the cell-type proportion per patient (matrix of size <span class="math inline">\(K * N\)</span>, with <span class="math inline">\(N=30\)</span> the number of samples) common between both omics.</p>
-<p><code>Omics_type</code> = trancriptome</p>
-<p><code>Cancer_type</code> = paad</p>
+<p>The dataset in constituted of simulated synthetic DNA methylation mixtures from cell lines and primary cells (27K or 450K DNA methylation). A variety of cell type-specific methylation profiles was used to simulate lung cancer heterogeneity, including cancerous and normal epithelial cells, cancerous mesenchymal cells, normal fibroblast for stromal cells, and T lymphocytes for immune cells.</p>
+<p>Patient metadata were used to apply a series of confounding effects on the simutaled DNA methylation mixtures.</p>
+<p>For each simulated mixture, we associated patients metadata inspired by TCGA-LUAD and TCGA-LUSC cohort. It corresponds to file <code>exp_grp_30p</code>. These metadata can be used to improve the accuracy of deconvolution algorithm by accounting for confounding factors.</p>
+<p>This benchmark dataset has been used to evaluate the <a href="https://github.com/bcm-uga/medepir">medepir</a> deconvolution pipeline and published in <strong>BMC bioinformatics</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p><code>Omics_type</code> = methylome</p>
+<p><code>Cancer_type</code> = Lung adenocarcinoma</p>
 <p><code>Cohort_size</code> = 30</p>
-<p><code>Patient_metadata</code> = No</p>
-<p><code>Sample_type</code> = In silico mixture of cell lines, PDX derived cells and FFPE tissues</p>
+<p><code>Patient_metadata</code> = Yes</p>
+<p><code>Sample_type</code> = In silico mixture of cell lines and primary cells</p>
 </div>
 <div id="preparation-of-the-data" class="section level2">
 <h2>Preparation of the data</h2>
-<p>Raw cell type profile matrices were preprocessed (Feature filtering, normalization, signal transformation, sample aggregation) to avoid any batch effect.</p>
-<p><code>Feature filtering</code> = selection of protein coding genes (hg38)</p>
-<p><code>Normalisation</code> = edgeR</p>
-<p><code>Transformation</code> = none, linear scale</p>
-<p><code>Aggregation</code> = median</p>
-</div>
-<div id="composition-of-the-test-dataset" class="section level2">
-<h2>Composition of the test dataset</h2>
-<div id="transcriptome-dataset" class="section level3">
-<h3>Transcriptome dataset</h3>
+<p>Simulated D matrix were obtained using D = TA model. We assume <span class="math inline">\(D\)</span> is a (<span class="math inline">\(M×N\)</span>) methylation matrix composed of methylation value for N samples, at <span class="math inline">\(M\)</span> CpG methylation sites. Each sample is constituted of K cell types. We assume the following model: <span class="math inline">\(D\)</span> = <span class="math inline">\(TA\)</span>, with <span class="math inline">\(T\)</span> an unknown (<span class="math inline">\(M×K\)</span>) matrix of <span class="math inline">\(K\)</span> cell type-specific methylation reference profiles (composed of <span class="math inline">\(M\)</span> sites), and <span class="math inline">\(A\)</span> an unknown (<span class="math inline">\(K×N\)</span>) proportion matrix composed of <span class="math inline">\(K\)</span> cell type proportions for each sample.</p>
+<p>We selected M = 23,381 probes using the following criteria: (i) intersect between the Illumina infinium 27k and Illumina Infinium 450k DNA methylation array, and (ii) non-null probes in 100% of LUAD and LUSC methylation datasets.</p>
+<p>To simulate the T matrix of cell type-specific methylation profile, we used different study from GEO. Once the initial T matrix is defined, we applied a series of confounding effects</p>
+<p><code>Feature filtering</code> = common probes between 27K and 450K methylation array</p>
+<div id="methylome-dataset" class="section level3">
+<h3>Methylome dataset</h3>
+<p>Algorithm are run against a list of 5 D matrices: <code>test_data.rds</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">test_data =<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;test_data.rds&quot;</span>)</a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">length</span>(test_data)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">dim</span>(test_data[[<span class="dv">1</span>]])</a></code></pre></div>
-<pre><code>## [1] 21566    30</code></pre>
+<pre><code>## [1] 23381    30</code></pre>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">colnames</span>(test_data[[<span class="dv">1</span>]]) =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;sample_&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="kw">dim</span>(test_data[[<span class="dv">1</span>]])[<span class="dv">2</span>])</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">head</span>(test_data[[<span class="dv">1</span>]][,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dv">10</span>))</a></code></pre></div>
 <table>
@@ -237,84 +234,84 @@ code span.ot { color: #007020; }
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">TSPAN6</td>
-<td align="right">25.5428504</td>
-<td align="right">23.8107563</td>
-<td align="right">24.6858019</td>
-<td align="right">24.069288</td>
-<td align="right">28.5945215</td>
+<td align="left">cg00000292</td>
+<td align="right">0.7879806</td>
+<td align="right">0.7378481</td>
+<td align="right">0.9434463</td>
+<td align="right">0.7433567</td>
+<td align="right">1.0000000</td>
 </tr>
 <tr class="even">
-<td align="left">TNMD</td>
-<td align="right">0.0084628</td>
-<td align="right">0.0058332</td>
-<td align="right">0.0046414</td>
-<td align="right">0.006628</td>
-<td align="right">0.0060237</td>
+<td align="left">cg00002426</td>
+<td align="right">0.1055428</td>
+<td align="right">0.1804895</td>
+<td align="right">0.1192382</td>
+<td align="right">0.0468141</td>
+<td align="right">0.1558823</td>
 </tr>
 <tr class="odd">
-<td align="left">DPM1</td>
-<td align="right">43.6701170</td>
-<td align="right">36.8306077</td>
-<td align="right">38.5186138</td>
-<td align="right">38.560100</td>
-<td align="right">46.2323510</td>
+<td align="left">cg00003994</td>
+<td align="right">0.1321981</td>
+<td align="right">0.0938097</td>
+<td align="right">0.3140178</td>
+<td align="right">0.0537516</td>
+<td align="right">0.0501505</td>
 </tr>
 <tr class="even">
-<td align="left">SCYL3</td>
-<td align="right">11.0820191</td>
-<td align="right">13.4562352</td>
-<td align="right">16.2704194</td>
-<td align="right">15.473919</td>
-<td align="right">11.9509177</td>
+<td align="left">cg00005847</td>
+<td align="right">0.8727693</td>
+<td align="right">0.9551014</td>
+<td align="right">0.4372956</td>
+<td align="right">0.8126220</td>
+<td align="right">1.0000000</td>
 </tr>
 <tr class="odd">
-<td align="left">C1orf112</td>
-<td align="right">8.6083792</td>
-<td align="right">7.6278147</td>
-<td align="right">10.4545485</td>
-<td align="right">10.163029</td>
-<td align="right">8.8729509</td>
+<td align="left">cg00007981</td>
+<td align="right">0.0234187</td>
+<td align="right">0.0093697</td>
+<td align="right">0.1402473</td>
+<td align="right">0.0138145</td>
+<td align="right">0.0308144</td>
 </tr>
 <tr class="even">
-<td align="left">FGR</td>
-<td align="right">29.3553811</td>
-<td align="right">19.3349987</td>
-<td align="right">10.9988095</td>
-<td align="right">18.319123</td>
-<td align="right">21.7318955</td>
+<td align="left">cg00008493</td>
+<td align="right">0.8931504</td>
+<td align="right">0.6750665</td>
+<td align="right">0.6018302</td>
+<td align="right">0.8796026</td>
+<td align="right">0.7062166</td>
 </tr>
 <tr class="odd">
-<td align="left">CFH</td>
-<td align="right">49.4560793</td>
-<td align="right">43.5173661</td>
-<td align="right">41.0245146</td>
-<td align="right">43.126309</td>
-<td align="right">39.9683816</td>
+<td align="left">cg00008713</td>
+<td align="right">0.0389201</td>
+<td align="right">0.0034913</td>
+<td align="right">0.3880724</td>
+<td align="right">0.0618210</td>
+<td align="right">0.0520540</td>
 </tr>
 <tr class="even">
-<td align="left">FUCA2</td>
-<td align="right">70.5025889</td>
-<td align="right">64.0591376</td>
-<td align="right">69.3969083</td>
-<td align="right">69.593649</td>
-<td align="right">66.7881289</td>
+<td align="left">cg00009407</td>
+<td align="right">0.0171582</td>
+<td align="right">0.2600380</td>
+<td align="right">0.2455720</td>
+<td align="right">0.1143237</td>
+<td align="right">0.1554771</td>
 </tr>
 <tr class="odd">
-<td align="left">GCLC</td>
-<td align="right">24.8261538</td>
-<td align="right">25.7357443</td>
-<td align="right">25.8552780</td>
-<td align="right">25.899016</td>
-<td align="right">27.0125506</td>
+<td align="left">cg00011459</td>
+<td align="right">1.0000000</td>
+<td align="right">1.0000000</td>
+<td align="right">0.9548367</td>
+<td align="right">1.0000000</td>
+<td align="right">0.8938178</td>
 </tr>
 <tr class="even">
-<td align="left">NFYA</td>
-<td align="right">26.1139828</td>
-<td align="right">25.7320105</td>
-<td align="right">26.5634747</td>
-<td align="right">26.733890</td>
-<td align="right">24.4848352</td>
+<td align="left">cg00012199</td>
+<td align="right">0.0108763</td>
+<td align="right">0.2257883</td>
+<td align="right">0.1890602</td>
+<td align="right">0.0289076</td>
+<td align="right">0.1767931</td>
 </tr>
 </tbody>
 </table>
@@ -327,29 +324,46 @@ code span.ot { color: #007020; }
 <div id="cancer-type" class="section level3">
 <h3>Cancer type</h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">readRDS</span>(<span class="st">&quot;cancer_type.rds&quot;</span>))</a></code></pre></div>
-<pre><code>## [1] &quot;paad&quot;</code></pre>
+<pre><code>## [1] &quot;luad&quot;</code></pre>
 </div>
 </div>
-<div id="composition-of-the-solution-dataset-ground-truth" class="section level2">
-<h2>Composition of the solution dataset (ground truth)</h2>
+<div id="composition-of-the-ground-truth" class="section level2">
+<h2>Composition of the ground truth</h2>
+<p>The cell type proportion A matrix is simulated by a Dirichlet distribution.</p>
+<p>The ground truth is a list of 10 A matrices: <code>test_solution.rds</code>.</p>
 <p><code>Source</code> = in silico simulations</p>
 <p><code>Number of expected cell types</code> = 5</p>
-<p>5 independant proportion matrixces and corresponding complex expression matrices have been generated to score the algorithm performances.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">test_solution =<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;test_solution.rds&quot;</span>)</a>
 <a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">length</span>(test_solution)</a></code></pre></div>
 <pre><code>## [1] 5</code></pre>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">dim</span>(test_solution[[<span class="dv">1</span>]])</a></code></pre></div>
 <pre><code>## [1]  5 30</code></pre>
+</div>
+<div id="contact" class="section level2">
+<h2>Contact</h2>
+<ul>
+<li>Magali Richard: magali.richard [at] univ-grenoble-alpes.fr</li>
+<li>Clémentine Decamps: clementine.decamps [at] univ-grenoble-alpes.fr</li>
+</ul>
 <!-- 
-Private notes on the dataset generation:
+Simulation models
+Simulated D matrix were obtained using D = TA model. 
+Simulation of the A matrix. The cell type proportion A matrix is simulated by a Dirichlet distribution with parameters defined for 10% of fibroblast, 60% of cancerous epithelial, 5% of T lymphocytes, 15% of control epithelial and 10% of cancerous mesenchyme. The mixture proportions are sampled from a Dirichlet distribution with parameters generating sets of proportions more or less variable across the sample population. The parameter α0, which defines the variability across the sample population, is set to 1 by default. For simulation with only three cell types, we used 20% of fibroblast, 70% of cancerous epithelial and 10% of T lymphocytes.
+Simulation of the T matrix. To simulate the T matrix of cell type-specific methylation profile, we used different study from GEO. For the cancerous epithelial line, we used the cell line GSM1560930 and for the cancerous mesenchymal cell line, we used the cell line GSM1560925, from the same study. For the fibroblast cell line, we used the cell line GSM1354676 after conversion from m-value to b-value. For the T lymphocyte cell line, we used the GSM1641099 and for the control epithelial the GSM2743808. These cell lines correspond to the cell line background G1. To simulate the G2, we used different cell line from the same studies. The cell line of cancerous epithelial is GSM1560911, these of the cancer mesenchymal is GSM1560931, the fibroblast cell line is GSM1354675, the T cell line is GSM1641101 and the control epithelial cell line is GSM2743807.
+Once the initial T matrix is defined, we applied a series of confounding effects using parameter extracted from the clinical data associated with LUAD and LUSC cohorts.
+First, we generate an individual-specific T matrix, accounting for two major biological confounders for methylation, which are sex and age.
+To identify effects of sex, we performed linear regression of methylation by sex in the TCGA dataset and detected 1397 probes correlated with sex (p-value < 0.01). Given that the majority of cell lines used to construct the initial T matrix were derived from male individuals, we used the corresponding linear regression coefficients to shift accordingly methylation value of female-associated T matrices. We used the same sex coefficient for each cell type represented in the T matrix.
+To identify effects of age, we performed linear regression of methylation by age in the TCGA dataset and identified 113 probes correlated with age (p-value < 0.05). We used this linear model to generate an individual-specific methylation profile, according to its age. Then, we arbitrarily decided to assign these 113 methylation values to the normal epithelial cell type. For each probe associated with age, we then applied a normalization coefficient (ratio of each cell type to the epithelial cell type computed in the initial T matrix) to modify methylation values of the remaining cell types. Our simulation scheme implicitly assumes that age has the same effect whatever the cell type.
+Simulation of the D matrix. Second, we decided to account for technical confounders. We calculated 22 median plate-effects (TCGA experimental batch effect) using 1000 random probes. For each probe, we modeled plate effects using multiplicative coefficients that measure the ratio of mean methylation values of a plate on mean methylation of the (arbitrarily) 1st plate. Each coefficient is estimated by the median of the 1000 ratios of methylation values. These multiplicative coefficients are then used on all probes to model batch effects on the matrix D of individual convoluted methylation profile. 
+Finally, we added gaussian noise on the matrix of convoluted methylation profiles D. By default, we used the gaussian parameters mean = 0 and sd = 0.2. In case noise generated methylation values larger than 1 or smaller than 0, noise was not added to the methylation value.
+The simulation function is accessible using our R package medepir.
 
-cell types : tumor cell A, Tunmor cells B, Normal pancreatic cells, Immune cells, Fibroblasts
 -->
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://cancer-heterogeneity.github.io/deconbench.html" class="uri">https://cancer-heterogeneity.github.io/deconbench.html</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p>Decamps, C., Privé, F., Bacher, R. et al. Guidelines for cell-type heterogeneity quantification based on a comparative analysis of reference-free DNA methylation deconvolution software. BMC Bioinformatics 21, 16 (2020). <a href="https://doi-org.insb.bib.cnrs.fr/10.1186/s12859-019-3307-2" class="uri">https://doi-org.insb.bib.cnrs.fr/10.1186/s12859-019-3307-2</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 </article>

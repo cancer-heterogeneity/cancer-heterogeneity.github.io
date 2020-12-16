@@ -13,10 +13,49 @@
 
 <meta name="author" content="Magali Richard" />
 
-<meta name="date" content="2020-10-15" />
+<meta name="date" content="2020-12-10" />
 
 <title>Dataset Factsheet</title>
 
+<style type="text/css">
+a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
+a.anchor-section::before {content: '#';}
+.hasAnchor:hover a.anchor-section {visibility: visible;}
+</style>
+<script>// Anchor sections v1.0 written by Atsushi Yasumoto on Oct 3rd, 2020.
+document.addEventListener('DOMContentLoaded', function() {
+  // Do nothing if AnchorJS is used
+  if (typeof window.anchors === 'object' && anchors.hasOwnProperty('hasAnchorJSLink')) {
+    return;
+  }
+
+  const h = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+  // Do nothing if sections are already anchored
+  if (Array.from(h).some(x => x.classList.contains('hasAnchor'))) {
+    return null;
+  }
+
+  // Use section id when pandoc runs with --section-divs
+  const section_id = function(x) {
+    return ((x.classList.contains('section') || (x.tagName === 'SECTION'))
+            ? x.id : '');
+  };
+
+  // Add anchors
+  h.forEach(function(x) {
+    const id = x.id || section_id(x.parentElement);
+    if (id === '') {
+      return null;
+    }
+    let anchor = document.createElement('a');
+    anchor.href = '#' + id;
+    anchor.classList = ['anchor-section'];
+    x.classList.add('hasAnchor');
+    x.appendChild(anchor);
+  });
+});
+</script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -141,9 +180,9 @@ code span.ot { color: #007020; }
 <div class="table cover">
 <div class="cover-card table-cell table-middle">
 <span class="author_name">Dataset Factsheet</span>
-<span class="author_job">DT#1 transcriptome pancreas</span>
+<span class="author_job">DT1 transcriptome pancreas</span>
 <span class="author_bio mbm">Magali Richard</span>
-<span class="author_bio mbm">2020-10-15</span>
+<span class="author_bio mbm">2020-12-10</span>
 </div>
 </div>
 </div>
@@ -159,9 +198,9 @@ code span.ot { color: #007020; }
 <p>5 different cell populations present in <strong>pancreatic tumors</strong> were considered. It has been described in the deconbench project<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> and published in <a href="https://doi.org/10.1101/2020.06.06.131482"><strong>BioRxiv</strong></a></p>
 <p>Raw transcriptome and methylome profiles of these different cell populations were extracted from various sources (PDX model, tissues or isolated cells).</p>
 <p>In silico Dirichlet distribution have been used based on realistic proportions defined by the anatomopathologist expertise (Jerome Cros).</p>
-<p>Transcriptome of in silico mixtures from pancreatic tumors were obtained by considering <span class="math inline">\(D = T A\)</span>, with <span class="math inline">\(T\)</span>~ the cell-type profiles (matrix of size <span class="math inline">\(M * K\)</span>, with <span class="math inline">\(M\)</span> the number of features and <span class="math inline">\(K=5\)</span> the number of cell types) and <span class="math inline">\(A\)</span> the cell-type proportion per patient (matrix of size <span class="math inline">\(K * N\)</span>, with <span class="math inline">\(N=30\)</span> the number of samples) common between both omics.</p>
+<p>Transcriptome of in silico mixtures from pancreatic tumors were obtained by considering <span class="math inline">\(D = T A\)</span>, with <span class="math inline">\(T\)</span> the cell-type profiles (matrix of size <span class="math inline">\(M * K\)</span>, with <span class="math inline">\(M\)</span> the number of features and <span class="math inline">\(K=5\)</span> the number of cell types) and <span class="math inline">\(A\)</span> the cell-type proportion per patient (matrix of size <span class="math inline">\(K * N\)</span>, with <span class="math inline">\(N=30\)</span> the number of samples) common between both omics.</p>
 <p><code>Omics_type</code> = trancriptome</p>
-<p><code>Cancer_type</code> = pancreas</p>
+<p><code>Cancer_type</code> = paad</p>
 <p><code>Cohort_size</code> = 30</p>
 <p><code>Patient_metadata</code> = No</p>
 <p><code>Sample_type</code> = In silico mixture of cell lines, PDX derived cells and FFPE tissues</p>
@@ -171,16 +210,20 @@ code span.ot { color: #007020; }
 <p>Raw cell type profile matrices were preprocessed (Feature filtering, normalization, signal transformation, sample aggregation) to avoid any batch effect.</p>
 <p><code>Feature filtering</code> = selection of protein coding genes (hg38)</p>
 <p><code>Normalisation</code> = edgeR</p>
-<p><code>Transformation</code> = Log2 + 1</p>
+<p><code>Transformation</code> = Log2 + 1 (pseudo-log2)</p>
 <p><code>Aggregation</code> = median</p>
 </div>
-<div id="composition-of-the-public-data" class="section level2">
-<h2>Composition of the public data</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">public_data =<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;public_data.rds&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">dim</span>(public_data)</a></code></pre></div>
+<div id="composition-of-the-test-dataset" class="section level2">
+<h2>Composition of the test dataset</h2>
+<div id="transcriptome-dataset" class="section level3">
+<h3>Transcriptome dataset</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">test_data =<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;test_data.rds&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">length</span>(test_data)</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">dim</span>(test_data[[<span class="dv">1</span>]])</a></code></pre></div>
 <pre><code>## [1] 21566    30</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">colnames</span>(public_data) =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;sample_&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="kw">dim</span>(public_data)[<span class="dv">2</span>])</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">head</span>(public_data[,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dv">10</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">colnames</span>(test_data[[<span class="dv">1</span>]]) =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;sample_&quot;</span>,<span class="dv">1</span><span class="op">:</span><span class="kw">dim</span>(test_data[[<span class="dv">1</span>]])[<span class="dv">2</span>])</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">knitr<span class="op">::</span><span class="kw">kable</span>(<span class="kw">head</span>(test_data[[<span class="dv">1</span>]][,<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dv">10</span>))</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -195,92 +238,108 @@ code span.ot { color: #007020; }
 <tbody>
 <tr class="odd">
 <td align="left">TSPAN6</td>
-<td align="right">4.5233608</td>
-<td align="right">4.4735369</td>
-<td align="right">4.6026660</td>
-<td align="right">4.5745104</td>
-<td align="right">4.4300311</td>
+<td align="right">4.5341296</td>
+<td align="right">4.6452434</td>
+<td align="right">4.4611777</td>
+<td align="right">4.6936323</td>
+<td align="right">4.7787183</td>
 </tr>
 <tr class="even">
 <td align="left">TNMD</td>
-<td align="right">0.0079302</td>
-<td align="right">0.0685657</td>
-<td align="right">0.0107345</td>
-<td align="right">0.0168899</td>
-<td align="right">0.0509615</td>
+<td align="right">0.0175608</td>
+<td align="right">0.0573812</td>
+<td align="right">0.0215422</td>
+<td align="right">0.0022801</td>
+<td align="right">0.0692128</td>
 </tr>
 <tr class="odd">
 <td align="left">DPM1</td>
-<td align="right">4.9233895</td>
-<td align="right">4.8862498</td>
-<td align="right">5.2698599</td>
-<td align="right">5.1348682</td>
-<td align="right">5.0505963</td>
+<td align="right">5.0149146</td>
+<td align="right">5.3950986</td>
+<td align="right">5.1285956</td>
+<td align="right">5.1316449</td>
+<td align="right">5.3757923</td>
 </tr>
 <tr class="even">
 <td align="left">SCYL3</td>
-<td align="right">4.2604362</td>
-<td align="right">4.4326830</td>
-<td align="right">3.8168587</td>
-<td align="right">4.0853582</td>
-<td align="right">3.6751926</td>
+<td align="right">4.2729605</td>
+<td align="right">3.6416795</td>
+<td align="right">3.7765321</td>
+<td align="right">3.8567533</td>
+<td align="right">3.9413723</td>
 </tr>
 <tr class="odd">
 <td align="left">C1orf112</td>
-<td align="right">3.2420161</td>
-<td align="right">3.8138567</td>
-<td align="right">3.3448606</td>
-<td align="right">3.2494563</td>
-<td align="right">3.0789553</td>
+<td align="right">3.4707383</td>
+<td align="right">3.1002907</td>
+<td align="right">2.9295319</td>
+<td align="right">2.6556491</td>
+<td align="right">3.4656401</td>
 </tr>
 <tr class="even">
 <td align="left">FGR</td>
-<td align="right">1.1687739</td>
-<td align="right">0.5087619</td>
-<td align="right">0.7569665</td>
-<td align="right">1.1943590</td>
-<td align="right">1.2723019</td>
+<td align="right">1.2251029</td>
+<td align="right">1.9415766</td>
+<td align="right">2.3156956</td>
+<td align="right">1.3959612</td>
+<td align="right">0.5588283</td>
 </tr>
 <tr class="odd">
 <td align="left">CFH</td>
-<td align="right">4.8563111</td>
-<td align="right">4.6900769</td>
-<td align="right">5.3797108</td>
-<td align="right">5.2052387</td>
-<td align="right">5.5412291</td>
+<td align="right">4.6528447</td>
+<td align="right">5.1692813</td>
+<td align="right">5.0425851</td>
+<td align="right">4.9694335</td>
+<td align="right">5.0464563</td>
 </tr>
 <tr class="even">
 <td align="left">FUCA2</td>
-<td align="right">6.1503785</td>
-<td align="right">5.9798967</td>
-<td align="right">6.3354688</td>
-<td align="right">5.9473501</td>
-<td align="right">6.0377367</td>
+<td align="right">5.9950538</td>
+<td align="right">5.9406127</td>
+<td align="right">5.8277486</td>
+<td align="right">5.8282870</td>
+<td align="right">6.1412137</td>
 </tr>
 <tr class="odd">
 <td align="left">GCLC</td>
-<td align="right">4.7643002</td>
-<td align="right">4.8305856</td>
-<td align="right">4.4457790</td>
-<td align="right">4.6897605</td>
-<td align="right">4.5046970</td>
+<td align="right">4.9321188</td>
+<td align="right">4.7676211</td>
+<td align="right">4.8162724</td>
+<td align="right">4.6943392</td>
+<td align="right">4.7133185</td>
 </tr>
 <tr class="even">
 <td align="left">NFYA</td>
-<td align="right">4.7529455</td>
-<td align="right">4.7686222</td>
-<td align="right">4.8163178</td>
-<td align="right">4.7599394</td>
-<td align="right">4.7116512</td>
+<td align="right">4.7740554</td>
+<td align="right">4.6811932</td>
+<td align="right">4.7117780</td>
+<td align="right">4.6565642</td>
+<td align="right">4.7368636</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="composition-of-the-ground-truth" class="section level2">
-<h2>Composition of the ground truth</h2>
+<div id="expected-number-of-cell-types" class="section level3">
+<h3>Expected number of cell types</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">readRDS</span>(<span class="st">&quot;input_k_value.rds&quot;</span>))</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+</div>
+<div id="cancer-type" class="section level3">
+<h3>Cancer type</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">print</span>(<span class="kw">readRDS</span>(<span class="st">&quot;cancer_type.rds&quot;</span>))</a></code></pre></div>
+<pre><code>## [1] &quot;paad&quot;</code></pre>
+</div>
+</div>
+<div id="composition-of-the-solution-dataset-ground-truth" class="section level2">
+<h2>Composition of the solution dataset (ground truth)</h2>
 <p><code>Source</code> = in silico simulations</p>
 <p><code>Number of expected cell types</code> = 5</p>
-<p>10 independant proportion matrixces and corresponding complex expression matrices have been generated to score the algorithm performances.</p>
+<p>5 independant proportion matrices and corresponding complex expression matrices have been generated to score the algorithm performances.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">test_solution =<span class="st"> </span><span class="kw">readRDS</span>(<span class="st">&quot;test_solution.rds&quot;</span>)</a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"><span class="kw">length</span>(test_solution)</a></code></pre></div>
+<pre><code>## [1] 5</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">dim</span>(test_solution[[<span class="dv">1</span>]])</a></code></pre></div>
+<pre><code>## [1]  5 30</code></pre>
 <!-- 
 Private notes on the dataset generation:
 

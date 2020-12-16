@@ -33,13 +33,14 @@ output:
 - [dataset_factsheet_DT5.html](meteor_files/dataset_factsheet_DT5.html)
 - [dataset_factsheet_DT7.html](meteor_files/dataset_factsheet_DT7.html)
 - [dataset_factsheet_DT8.html](meteor_files/dataset_factsheet_DT8.html)
-- [dataset_factsheet_magrichardtest.html](meteor_files/dataset_factsheet_magrichardtest.html)
-- [dataset_factsheet_Yuna.Blum@ligue-cancer.net.html](meteor_fdataset_factsheet_Yuna.Blum@ligue-cancer.net.html)
+- [dataset_factsheet_DT9.html](meteor_files/dataset_factsheet_DT9.html)
+- [dataset_factsheet_DT10.html](meteor_files/dataset_factsheet_DT10.html)
+- [dataset_factsheet_DT11.html](meteor_files/dataset_factsheet_DT11.html)
+- [dataset_factsheet_DT12.html](meteor_files/dataset_factsheet_DT12.html)
 
 ## Algorithm Factsheets
 
-- [algorithm_factsheet_MT#3.html](meteor_files/algorithm_factsheet_MT#3.html)
-- [algorithm_factsheet_MT#4.html](meteor_files/algorithm_factsheet_MT#4.html)
+
 
 - [algorithm_factsheet_MT1.html](meteor_files/algorithm_factsheet_MT1.html)
 - [algorithm_factsheet_MT2.html](meteor_files/algorithm_factsheet_MT2.html)
@@ -56,9 +57,6 @@ output:
 - [algorithm_factsheet_MT13.html](meteor_files/algorithm_factsheet_MT13.html)
 
 ## Algorithm source code
-
-- [algorithm_449.R](meteor_files/algorithm_449.R)
-- [algorithm_450.R](meteor_files/algorithm_440.R)
 
 - [algorithm_MT1.R](meteor_files/algorithm_MT1.R)
 - [algorithm_MT2.R](meteor_files/algorithm_MT2.R)
