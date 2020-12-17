@@ -1,13 +1,13 @@
-﻿dataset_id;codabench_id;type_of_query;omic_type;cancer_type;cohort_size;normalization;transformation;Sample_type;Technology;patient_metadata;ground_truth;nb_of_cell_types;nb_of_gt_matrices;comments
-DT1;1787;All cell types;Transcriptome;paad;30;edgeR_cpm;count_pseudo_log2;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;5;First release
-DT2;1859;All cell types;Transcriptome;paad;30;edgeR_cpm;count_linear_scale;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;5;First release
-DT3;NA;All cell types;Methylome;paad;30;?;beta_value;Mixed + in silico mixture;MethEPIC 850K;No;simulation;5;5;First release
-DT4;NA;Immune cell types;Transcriptome;coad;12;fRMA;expr_log2;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;1;First release
-DT5;1840;Immune cell types;Transcriptome;coad;12;fRMA;expr_linear_scale;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;1;First release
-DT6;NA;All cell types;Methylome;luad;30;BMIQ_correction;beta_value;Mixed + in silico mixture;27K and 450K infinium array;Yes;simulation;5;5;First release
-DT7;NA;All cell types;Methylome;luad;100;BMIQ_correction;beta_value;Mixed + in silico mixture;27K and 450K infinium array;Yes;simulation;5;5;First release
-DT8;1812;All cell types;Transcriptome;brca;32;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;in vitro mixture;4;1;First release
-DT9;1792;All cell types;Transcriptome;brca;32;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;in vitro mixture;4;1;First release
-DT10;NA;All cell types;Transcriptome;brca;30;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;simulation;4;5;First release
-DT11;NA;All cell types;Transcriptome;brca;30;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;simulation;4;5;First release
-DT12;1806;All cell types;Methylome;brca;30;edgeR_cpm;beta_value;cell lines;27K and 450K infinium array;No;simulation;4;5;First release
+﻿dataset_id;codabench_id;type_of_query;omic_type;cancer_type;cohort_size;normalized;Log_transformed;Sample_type;Technology;Patients metadata;Ground Truth;number_of_cell_types;comments
+DT1;1787;All cell types;Transcriptome;paad;30;Yes;Yes;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
+DT2;1859;All cell types;Transcriptome;paad;30;Yes;Yes;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
+DT3;NA;All cell types;Methylome;paad;30;Yes;Yes;Mixed + in silico mixture;MethEPIC 850K;No;simulation;5;First release
+DT4;NA;Immune cell types;Transcriptome;coad;12;Yes;Yes;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
+DT5;1840;Immune cell types;Transcriptome;coad;12;Yes;Yes;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
+DT6;NA;All cell types;Methylome;luad;30;Yes;Yes;Mixed + in silico mixture;27K and 450K infinium array;Yes;simulation;5;First release
+DT7;NA;All cell types;Methylome;luad;100;Yes;Yes;Mixed + in silico mixture;27K and 450K infinium array;Yes;simulation;5;First release
+DT8;1812;All cell types;Transcriptome;brca;32;Yes;Yes;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
+DT9;1792;All cell types;Transcriptome;brca;32;Yes;Yes;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
+DT10;NA;All cell types;Transcriptome;brca;30;Yes;Yes;cell lines;Bulk RNA-seq;No;simulation;4;First release
+DT11;NA;All cell types;Transcriptome;brca;30;Yes;Yes;cell lines;Bulk RNA-seq;No;simulation;4;First release
+DT12;1806;All cell types;Methylome;brca;30;Yes;Yes;cell lines;27K and 450K infinium array;No;simulation;4;First release
