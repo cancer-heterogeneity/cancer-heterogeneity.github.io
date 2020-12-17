@@ -21,7 +21,8 @@ output:
 <input type="submit" id="search" value="🎓 Register now"  style="height:50px; width:150px" />
 </form>
 
-  
+<font size="4"><span style="color: red;">Registration deadline extension: 10 January 2021</span></font>  
+
 &nbsp; 
 
 ![](pictures/posterCOMETH.png){width=40%}
@@ -67,12 +68,11 @@ General lectures will cover:
 
 ## Registration
  
-<font size="4"><span style="color: red;">Registration deadline: 17 dec.2020</span></font>  
 
  
-Registration is free of charge but mandatory.
+Registration is free of charge but mandatory. 
 
-
+Deadline: 10 January 2021
 
 <form action="https://comteh-winter21.sciencesconf.org/">
 <input type="submit" value="🎓Register now" />
