@@ -7,7 +7,7 @@ MT5;563;No;m_WIC;All cell types;Methylome;All;Bulk array
 MT6;564;Yes;EpiDISH;All cell types;Methylome;All;Bulk array
 MT7;573;Yes;CIBERSORT_abs;Immune cell types;Transcriptome;All;Bulk array
 MT8;574;Yes;CIBERSORT;Immune cell types;Transcriptome;All;Bulk array
-MT9;567;Yes;EPIC;Immune cell types;Transcriptome;All;Bulk array
+MT9;582;Yes;EPIC;Immune cell types;Transcriptome;All;Bulk array
 MT10;568;Yes;MCP_Counter;Immune cell types;Transcriptome;All;Bulk array
 MT11;569;Yes;QuantiSeq;Immune cell types;Transcriptome;All;Bulk array
-MT13;670;Yes;Xcell;Immune cell types;Transcriptome;All;Bulk array
+MT13;570;Yes;Xcell;Immune cell types;Transcriptome;All;Bulk array
