@@ -12,6 +12,8 @@ output:
 
 Deconbench will be available on Codalab [here]( https://competitions.codalab.org/competitions/23660). 
 
+![](pictures/codalab.png)
+
 <br>
 
 ##Demo

@@ -7,10 +7,10 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "Data Challenges"
+    - text: "HADACA"
       icon: fa-universal-access 
       href: data_challenges.html
-    - text: "Cometh"
+    - text: "COMETH"
       icon: fa-cogs
       href: cometh.html
     - text: "Deconbench"

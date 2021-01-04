@@ -22,10 +22,21 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <div><img src="pictures/cover.png" width="100%" align="center"></div>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -286,14 +297,14 @@ $(document).ready(function () {
   <a href="data_challenges.html">
     <span class="fa fa-universal-access"></span>
      
-    Data Challenges
+    HADACA
   </a>
 </li>
 <li>
   <a href="cometh.html">
     <span class="fa fa-cogs"></span>
      
-    Cometh
+    COMETH
   </a>
 </li>
 <li>
@@ -341,34 +352,25 @@ $(document).ready(function () {
 
 
 <p><br></p>
-<div id="deconbench-plateform" class="section level2">
-<h2>Deconbench plateform</h2>
+<p>##Deconbench plateform</p>
 <p>Deconbench will be available on Codalab <a href="https://competitions.codalab.org/competitions/23660">here</a>.</p>
+<p><img src="pictures/codalab.png" /></p>
 <p><br></p>
-</div>
-<div id="demo" class="section level2">
-<h2>Demo</h2>
+<p>##Demo</p>
 <video width="320" height="240" controls>
 <source src="Demo_with_subtitles.mp4" type="video/mp4">
 </video>
 <p><br></p>
-</div>
-<div id="r-environment" class="section level2">
-<h2>R environment</h2>
+<p>##R environment</p>
 <p>DECONbench is designed to execute methods developed in R environment, using a docker image provided <a href="https://hub.docker.com/r/a2alexis/codalab2019">here</a>.</p>
 <p>A list of R packages installed on the docker image is provided <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/codalab/docker-recipes/tree/master/Hadaca_2019">here</a> (more can be installed upon request).</p>
 <p><br></p>
-</div>
-<div id="supplementary-information" class="section level2">
-<h2>Supplementary information</h2>
+<p>##Supplementary information</p>
 <p><br></p>
-<div id="reference-methods" class="section level3">
-<h3>Reference methods</h3>
+<p>###Reference methods</p>
 <p>The 8 reference methods are detailed on <a href="benchmarking_reference_methods.html">this page</a>.</p>
 <p><br></p>
-</div>
-<div id="benchmark-dataset-construction" class="section level3">
-<h3>Benchmark dataset construction</h3>
+<p>###Benchmark dataset construction</p>
 <div class="figure">
 <img src="pictures/supp_fig1.png" alt="Referred as Supplementary Figure 1 in the paper." />
 <p class="caption">Referred as Supplementary Figure 1 in the paper.</p>
@@ -381,9 +383,7 @@ $(document).ready(function () {
 <li>Paired methylome and transcriptome of in silico mixtures from pancreatic tumors were obtained by considering D = T A, with T the cell-type profiles (matrix of size M * K, with M the number of features and K=5 the number of cell types) and A the cell-type proportion per patient (matrix of size K * N, with N=30 the number of samples) common between both omics.</li>
 </ol>
 <p><br></p>
-</div>
-<div id="deconbench-graphical-outputs" class="section level3">
-<h3>DECONBench graphical outputs</h3>
+<p>###DECONBench graphical outputs</p>
 <div class="figure">
 <img src="pictures/supp_fig2.png" alt="Referred as Supplementary Figure 2 in the paper." />
 <p class="caption">Referred as Supplementary Figure 2 in the paper.</p>
@@ -392,8 +392,6 @@ $(document).ready(function () {
 <li>Boxplots of the Mean Absolute Errors (MAE) of the estimations of the A matrices (i.e. proportion matrices) obtained for each method that uses the transcriptome only (yellow), the methylome only (blue) or both omics (green). Boxplots of the reference methods and other existing methods are shown in grey, whereas the user’s method is shown in red.</li>
 <li>Heatmaps of each A-matrix estimate are generated. The cell populations are in rows and the samples in columns.</li>
 </ol>
-</div>
-</div>
 
 
 
@@ -404,7 +402,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

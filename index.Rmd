@@ -1,5 +1,5 @@
 ---
-title: "Welcome to our website on Cancer Heterogeneity!"
+title: "Welcome!"
 output:
   html_document:
     includes:
@@ -8,17 +8,19 @@ output:
 
 ## HADACA project
 
-[Challenge information (2nd edition)](data_challenges.html)
+This project aims to organize health data challenges in various forms (within master programs, embedded in scientific conferences, winter or summer schools...).
 
-Data challenges about computional methods to quantify cancer heterogeneity.
-[HADACA Consortium](data_challenges_HADACAconsortium.html)
+The interdisciplinary challenges are dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on mutliomic data.
+
+[Challenge information](data_challenges.html)
 
 ## COMETH project
 
+COMETH is a program dedicated to big data integration in Health. This program targets the current critical need to evaluate novel computational methods and to apply them directly on real health datasets, daily faced by health data scientist and health professionals. As a proof of concept, our project will generate a benchmarking framework and apply it to the quantification of cell heterogeneity in cancer, though our design will lend itself to a variety of other applications. We will provide a digital platform containing statistical methods to be benchmarked and datasets developed by health data scientists, and a web application dedicated to the direct use of these methods on novel clinical datasets provided by health professionals. A 2-day course on the use of the web application will be organised for health professionals.
+
 [Follow our project](cometh.html)
 
-Benchmarking platform of computional methods to quantify cancer heterogeneity.  
-[Deconbench](deconbench.html): our first benchmarking platform 
+[Deconbench](deconbench.html): our first benchmarking platform (a pilot program)
 
 ## Misc about cancer heterogeneity
 

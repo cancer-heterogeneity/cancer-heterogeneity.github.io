@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -22,10 +22,21 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="site_libs/anchor-sections-1.0/anchor-sections.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <div><img src="pictures/cover.png" width="100%" align="center"></div>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -73,9 +84,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -89,7 +98,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -194,8 +202,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -240,6 +246,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -252,20 +259,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -293,14 +297,14 @@ $(document).ready(function () {
   <a href="data_challenges.html">
     <span class="fa fa-universal-access"></span>
      
-    Data Challenges
+    HADACA
   </a>
 </li>
 <li>
   <a href="cometh.html">
     <span class="fa fa-cogs"></span>
      
-    Cometh
+    COMETH
   </a>
 </li>
 <li>
@@ -347,54 +351,23 @@ $(document).ready(function () {
 </div>
 
 
-<div id="health-data-challenge-2nd-edition-matrix-factorization-and-deconvolution-methods-to-quantify-tumor-heterogeneity-in-cancer-research" class="section level2">
-<h2>Health Data Challenge (2nd edition): Matrix factorization and deconvolution methods to quantify tumor heterogeneity in cancer research</h2>
-<p><em>from November 25, 2019 to November 29, 2019</em></p>
-<p>This interdisciplinary challenge is dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on transcriptomic and methylation data.</p>
-<p><a href="data_challenges_program.html">PROGRAM</a></p>
-<p><a href="data_challenges_practicals.html">TECHNICAL DETAILS AND FAQ</a></p>
-<p><a href="data_challenges_where_when.html">WHERE AND WHEN?</a></p>
-<p><a href="data_challenges_tools.html">DECONVOLUTION TOOLS</a></p>
-<p><a href="data_challenges_presentation.html">PRESENTATIONS AND RESTITUTIONS</a></p>
-<div id="invited-speakers" class="section level3">
-<h3>Invited speakers</h3>
+<p>We organize Health Data Challenge (HADACA) dedicated to big data integration in Health.</p>
+<p>Up to now, our topic of interest is the quantification of <strong>tumor heterogeneity</strong>.</p>
+<p>Main collaborators:</p>
 <ul>
-<li><strong>Michael Scherer</strong> from Max-Planck-Institut fur Informatik, Saarbrucken, Germany <a href="data_challenges_abtract_M.html">[Abstract]</a></li>
-<li><strong>Francisco Avila Cobos</strong> from Ghent University, Gand, Belgium <a href="data_challenges_abstract_F.html">[Abstract]</a></li>
-<li><strong>Jerome Cros</strong> from AP-HP, Paris, France <a href="data_challenges_abstract_J.html">[Abstract]</a></li>
+<li>Yuna Blum (La ligue contre le cancer, programme CIT) : researcher in bioinformatics</li>
+<li>Jerome Cros (AP-HP, Hopital Beaujon) : cancer pathologist</li>
+<li>Sergio Escalera (University of Barcelona) : coordinator of the codalab digital platform project</li>
+<li>Isabelle Guyon (INRIA) : coordinator of the codalab digital platform project</li>
+<li>Magali Richard (CNRS) : researcher in bioinformatics</li>
 </ul>
-</div>
-<div id="organizers" class="section level3">
-<h3>Organizers</h3>
-<ul>
-<li>Yuna Blum &amp; Florent Petitprez (Programme CIT, LNCC, Paris, France)</li>
-<li>Magali Richard , Clémentine Décamps &amp; Alexis Arnaud (CNRS, UGA, Grenoble, France)</li>
-</ul>
-</div>
-<div id="scientific-challenge" class="section level3">
-<h3>Scientific challenge</h3>
-<p>Successful treatment of cancer is still a challenge and this is partly due to a wide heterogeneity of cancer composition across patient population. Unfortunately, accounting for such heterogeneity is very difficult. Clinical evaluation of tumor heterogeneity often requires the expertise of anatomical pathologists and radiologists. This challenge will be dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on (DNA) methylome and transcriptomic data in cancer. In particular, it will focus on estimating cell types and proportion in biological samples (in vivo and in silico mixtures) for which transcriptome and/or methylome profiles have been generated. The goal is to explore various statistical methods for source separation/deconvolution analysis (Non-negative Matrix Factorization, Surrogate Variable Analysis, Principal component Analysis, Latent Factor Models, …). Participants will be made aware of several pitfalls when analyzing omics data (large datasets, missing data, different type of technologies/omics…). This challenge will also be a unique opportunity to compare the performance of deconvolution methods between transcriptome and methylome data, which might have a great impact on clinical practice. Participants will work in interdisciplinary teams.</p>
-</div>
-<div id="who-can-attend" class="section level3">
-<h3>Who can attend?</h3>
-<p>Undergrads, PhD students, postdoc, researchers, professors, clinicians and employees from the private sector are welcome. We look for interdisciplinary expertise in biology, computer science, statistics, bioinformatics or medical sciences. We expect that participants are familiar with R programming language (or equivalent) and with basic statistical notions. No prior knowledge in omics data is required.</p>
-<p>Participants should bring their personal laptops.</p>
-</div>
-<div id="general-context" class="section level3">
-<h3>General context</h3>
-<p>Health data challenge is part of a program dedicated to innovation in education. The aim of this program is to provide (i) analytical frameworks to bridge the gap between large dataset and personalized medicine in disease treatments and (ii) innovative pedagogical methods to train students and health professionals to big data analysis in health science. Integrating a large amount of data from different sources and using this knowledge to better characterize specificities of each individual will provide significant opportunities to improve disease diagnosis and to adapt accordingly patients’ treatment and care.</p>
-</div>
-</div>
-<div id="health-data-challenge-1st-edition" class="section level2">
-<h2>Health Data Challenge (1st edition)</h2>
-<div class="figure">
-<img src="pictures/first_edition.png" alt="Health data challenge 1st edition, in 2018, at Aussois ski ressort, 40 participants" />
-<p class="caption">Health data challenge 1st edition, in 2018, at Aussois ski ressort, 40 participants</p>
-</div>
-<div class="figure">
-<img src="pictures/fundings2.png" />
-
-</div>
+<p>Digital plateform hosting the challenges : CODALAB</p>
+<p><img src="pictures/codalab.png" /></p>
+<div id="health-data-challenge" class="section level2">
+<h2>Health Data Challenge</h2>
+<p><a href="data_challenges_2019.html">HADACA challenge 2nd edition (2019)</a></p>
+<p><a href="data_challenges_2018.html">HADACA challenge 1sr edition (2018)</a></p>
+<p><img src="pictures/fundings2.png" /></p>
 </div>
 
 
@@ -406,7 +379,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -414,6 +387,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

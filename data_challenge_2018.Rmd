@@ -1,0 +1,46 @@
+---
+title: "Data Challenge 2019"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+
+![Health data challenge 1st edition, in 2018, at Aussois ski ressort, 40 participants](pictures/first_edition.png)
+
+
+### Invited speakers
+
+- **Pavlo Lutsik** Division of Cancer Epigenomics, German Cancer Research Center (DKFZ), Heidelberg, Germany
+- **Eugene Andres Houseman** Independent Statistical Consultant, La Center, WA, USA.
+- **Eugene Lurie** Bioinformatics Research Laboratory, Molecular and Human Genetics Department, Baylor College of Medicine, Houston, TX, USA
+
+### Organizers
+
+- Magali Richard, Michael Blum, Florian Privé, Clémentine Décamps & Raphael Bacher (CNRS, UGA, Grenoble, France)
+
+
+### Who could attend?
+
+Undergrads, PhD students, postdoc, researchers, professors, clinicians and employees from the private sector are welcome.
+We look for interdisciplinary expertise in biology, computer science, statistics, bioinformatics or medical sciences.
+We expect that participants are familiar with R programming language (or equivalent) and with basic statistical notions. No prior knowledge in omics data is required.
+
+Participants should bring their personal laptops.
+
+
+[blog posts](https://cancer-heterogeneity.github.io/blog/)  
+
+### Digital platform
+
+
+![](pictures/codalab.png)
+
+Digital platform coordination :
+
+- Isabelle Guyon (INRIA)
+- Sergio Escalera (University of Barcelona)
+
+![](pictures/fundings2.png)
+

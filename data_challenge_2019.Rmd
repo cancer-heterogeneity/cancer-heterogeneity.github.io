@@ -1,0 +1,81 @@
+---
+title: "Data Challenge 2019"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+
+
+# Health Data Challenge (2nd edition): Matrix factorization and deconvolution methods to quantify tumor heterogeneity in cancer research
+
+*from November 25, 2019 to November 29, 2019*
+
+This interdisciplinary challenge is dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on transcriptomic and methylation data.
+
+[PROGRAM](data_challenges_program.html)
+
+[TECHNICAL DETAILS AND FAQ](data_challenges_practicals.html)
+
+[WHERE AND WHEN?](data_challenges_where_when.html)
+
+[DECONVOLUTION TOOLS](data_challenges_tools.html)
+
+[PRESENTATIONS AND RESTITUTIONS](data_challenges_presentation.html)
+
+### Invited speakers
+
+- **Michael Scherer** from Max-Planck-Institut fur Informatik, Saarbrucken, Germany
+  [[Abstract]](data_challenges_abtract_M.html)
+- **Francisco Avila Cobos** from Ghent University, Gand, Belgium [[Abstract]](data_challenges_abstract_F.html)
+- **Jerome Cros** from AP-HP, Paris, France [[Abstract]](data_challenges_abstract_J.html)
+
+### Organizers
+
+- Yuna Blum & Florent Petitprez (Programme CIT, LNCC, Paris, France)
+- Magali Richard , Clémentine Décamps & Alexis Arnaud (CNRS, UGA, Grenoble, France)
+
+### Scientific challenge
+
+Successful treatment of cancer is still a challenge and this is partly due to a wide heterogeneity of cancer composition across patient population.
+Unfortunately, accounting for such heterogeneity is very difficult. Clinical evaluation of tumor heterogeneity often requires the expertise of anatomical pathologists and radiologists.
+This challenge will be dedicated to the quantification of intra-tumor heterogeneity using appropriate statistical methods on (DNA) methylome and transcriptomic data in cancer.
+In particular, it will focus on estimating cell types and proportion in biological samples (in vivo and in silico mixtures) for which transcriptome and/or methylome profiles have been generated.
+The goal is to explore various statistical methods for source separation/deconvolution analysis (Non-negative Matrix Factorization, Surrogate Variable Analysis, Principal component Analysis, Latent Factor Models, …).
+Participants will be made aware of several pitfalls when analyzing omics data (large datasets, missing data, different type of technologies/omics…).
+This challenge will also be a unique opportunity to compare the performance of deconvolution methods between transcriptome and methylome data, which might have a great impact on clinical practice.
+Participants will work in interdisciplinary teams.
+
+
+### Who can attend?
+
+Undergrads, PhD students, postdoc, researchers, professors, clinicians and employees from the private sector are welcome.
+We look for interdisciplinary expertise in biology, computer science, statistics, bioinformatics or medical sciences.
+We expect that participants are familiar with R programming language (or equivalent) and with basic statistical notions. No prior knowledge in omics data is required.
+
+Participants should bring their personal laptops.
+
+
+### General context
+
+Health data challenge is part of a program dedicated to innovation in education. The aim of this program is to provide (i) analytical frameworks to bridge the gap between large dataset and personalized medicine in disease treatments and (ii) innovative pedagogical methods to train students and health professionals to big data analysis in health science. Integrating a large amount of data from different sources and using this knowledge to better characterize specificities of each individual will provide significant opportunities to improve disease diagnosis and to adapt accordingly patients’ treatment and care.
+
+
+### Digital platform
+
+![](pictures/codalab.png)
+
+Digital platform coordination :
+
+- Isabelle Guyon (INRIA)
+- Sergio Escalera (University of Barcelona)
+
+
+### Pedagogic evaluation
+
+- Margareta Krabbe (University of Uppsala)
+
+![](pictures/fundings2.png)
+
+
