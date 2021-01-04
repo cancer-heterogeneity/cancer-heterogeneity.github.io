@@ -27,9 +27,9 @@ Digital plateform hosting the challenges : CODALAB
 
 ## Health Data Challenge 
 
-[HADACA challenge 2nd edition (2019)](data_challenges_2019.html)
+[HADACA challenge 2nd edition - 2019](data_challenge_2019.html)
 
-[HADACA challenge 1sr edition (2018)](data_challenges_2018.html)
+[HADACA challenge 1sr edition - 2018](data_challenge_2018.html)
 
 
 ![](pictures/fundings2.png)
