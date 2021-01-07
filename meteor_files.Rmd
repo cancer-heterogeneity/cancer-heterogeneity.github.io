@@ -22,6 +22,8 @@ output:
 -	[combinaison_dataset_algorithm.csv](meteor_files/combinaison_dataset_algorithm.csv)
 -	[omic_type.csv](meteor_files/omic_type.csv)
 -	[cancer_type.csv](meteor_files/cancer_type.csv) 
+-	[normalization.csv](meteor_files/normalization.csv) 
+-	[transformation.csv](meteor_files/transformation.csv) 
 
 
 ## Dataset Factsheets
