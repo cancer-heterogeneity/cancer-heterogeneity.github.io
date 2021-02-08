@@ -1,8 +1,10 @@
 ﻿dataset_id;codabench_id;type_of_query;omic_type;cancer_type;cohort_size;normalized;Log_transformed;Sample_type;Technology;Patients metadata;Ground Truth;number_of_cell_types;comments
-DT1;2224;All cell types;Transcriptome;paad;30;edgeR_cpm;count_pseudo_log2;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
-DT2;2227;All cell types;Transcriptome;paad;30;edgeR_cpm;count_linear_scale;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
-DT4;2235;Immune cell types;Transcriptome;coad;12;fRMA;expr_log2;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
-DT5;2242;Immune cell types;Transcriptome;coad;12;fRMA;expr_linear_scale;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
-DT8;2230;All cell types;Transcriptome;brca;32;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
-DT9;2233;All cell types;Transcriptome;brca;32;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
-DT12;2234;All cell types;Methylome;brca;30;methylumi;beta_value;cell lines;27K and 450K infinium array;No;simulation;4;First release
+DT1;2719;All cell types;Transcriptome;paad;30;edgeR_cpm;count_pseudo_log2;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
+DT2;2726;All cell types;Transcriptome;paad;30;edgeR_cpm;count_linear_scale;Mixed + in silico mixture;Bulk RNA-seq;No;simulation;5;First release
+DT4;2747;Immune cell types;Transcriptome;coad;12;fRMA;expr_log2;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
+DT5;2754;Immune cell types;Transcriptome;coad;12;fRMA;expr_linear_scale;Mixed + in silico mixture;Affymetrix microarray;No;simulation;6;First release
+DT8;2733;All cell types;Transcriptome;brca;32;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
+DT9;2739;All cell types;Transcriptome;brca;32;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
+DT10;2761;All cell types;Transcriptome;brca;30;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;simulation;4;First release
+DT11;2768;All cell types;Transcriptome;brca;30;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;simulation;4;First release
+DT12;2702;All cell types;Methylome;brca;30;methylumi;beta_value;cell lines;27K and 450K infinium array;No;simulation;4;First release
