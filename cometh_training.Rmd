@@ -64,19 +64,39 @@ For clinician participants:
 
 To come
 
-***
+*<br>
+
+**
 
 ## Material to downlad 
 
 ### Datasets
 
-### R packages
+#We have prepared toy datasets from  TCGA public cancer database. 
 
-<br>
+Format : .cvs, samples in column, genes in row. If you want to use your own dataset during the course, please use the same format.
+
+Omic type : transcriptome.
+
+- [Breast cancer - brca](data/selected-BRCA.htseq_fpkm.csv)
+- [Glioblastome - gbm](data/selected-GBM.htseq_fpkm.csv)
+- [Lund adenocarcinoma - luad](data/selected-LUAD.htseq_fpkm.csv)
+- [Pancreatic adenocarcinoma - paad](data/selected-PAAD.htseq_fpkm.csv)
+- [Skin cutaneous melanoma - skcm](data/selected-SKCM.htseq_fpkm.csv)
+
+## R packages
+
+<The following R packages migth be of interest
+
+- Edec
+- Cellmix
+
+
+br>
 
 ***
 
-## Presentation supports
+# Presentation supports
 
 ### DAY1
 
