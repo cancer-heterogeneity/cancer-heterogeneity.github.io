@@ -2,7 +2,6 @@
 title: "COMETH Training course"
 output:
   html_document:
-    toc: true
     includes:
       in_header: cover.html
 ---
@@ -10,9 +9,9 @@ output:
 <br>
 
 ***
-## COMETH training course : objectives
+## Winter course   &nbsp;  <font size="5"><span style="color: darkblue;">15-16 Feb.2021, ONLINE</span></font>  
 
- &nbsp;  <font size="5"><span style="color: darkblue;">15-16 Feb.2021, ONLINE</span></font>
+
  
 <font size="4">This 2-day online course aims to train clinicians to the use of cutting edge computational methods to quantify tumor heterogeneity through a dedicated user-friendly web interface.</font>
 &nbsp; 
@@ -27,86 +26,12 @@ output:
 &nbsp; 
 
 ![](pictures/posterCOMETHlight.jpg){width=40%}
-<br>
+
+
 
 ***
 
-## Digital platforms
-
-### Zoom plenary sessions
-
-To come
-
-### Discord discussion platform
-
-For all participants:
-
-- Create an account on discord
-- Download discord application (highly recommanded to ease the exchanges between participants)
-- Join the [cometh challenge](https://discord.gg/ZPxszeQxnT)
-
-### Codabench
-
-For computational participants:
-
-- Go to the application : [Codabench platform for data challenges](https://www.codabench.org/competitions/237/?secret_key=b164d1c1-07ca-4d0c-b55f-99e68af3a343)
-- create an account on the platform
-- register to the *COMETH deconvolution data challenge*
-- [Tutorial](cometh_training_2021/cometh_training_codabench.html) on the use of the codabench platform
-
-### COMETH web application
-
-For clinician participants:
-
-- Go to the application: [COMETH user-friendly web application](https://staging-cometh.meteorlab.st/login)
-- create an account on the platform
-- [Tutorial](cometh_training_2021/cometh_training_webapp.html) on the use of the comth web application
-
-### COMETH shiny application
-
-To come
-
-<br>
-
-***
-
-## Material to downlad 
-
-### Datasets
-
-We have prepared toy datasets from  TCGA public cancer database. 
-
-Format : .cvs, samples in column, genes in row. If you want to use your own dataset during the course, please use the same format.
-
-Omic type : transcriptome.
-
-- [Breast cancer - brca](data/selected-BRCA.htseq_fpkm.csv)
-- [Glioblastome - gbm](data/selected-GBM.htseq_fpkm.csv)
-- [Lund adenocarcinoma - luad](data/selected-LUAD.htseq_fpkm.csv)
-- [Pancreatic adenocarcinoma - paad](data/selected-PAAD.htseq_fpkm.csv)
-- [Skin cutaneous melanoma - skcm](data/selected-SKCM.htseq_fpkm.csv)
-
-### R packages
-
-The following R packages migth be of interest
-
-- Edec
-- Cellmix
-
-
-<br>
-
-***
-## Presentation supports
-
-### DAY1
-
-### DAY2
-
-<br>
-
-***
-## Course format and program
+## Course Format
 
 <font size="4"> 2-day online sessions with general lectures and practical training. </font> 
 

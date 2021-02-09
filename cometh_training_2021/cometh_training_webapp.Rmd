@@ -1,0 +1,53 @@
+---
+title: "COMETH web application"
+output:
+  html_document:
+    toc: true
+    includes:
+      in_header: cover.html
+---
+
+## General view
+
+![](../pictures/cometh/cometh_webapp_1.png)
+
+- 1: Add a new dataset
+- 2: For a given dataset: details on method run on the dataset (run status, run id...)
+- 3: For a given dataset: View leaderboard of computational methods apply on similar datasets
+- 4: For a given dataset: View the results of the methods applied on the dataset
+- 5: For a given dataset: Delete the dataset
+
+## Submit a dataset
+
+![](../pictures/cometh/cometh_webapp_2.png)
+
+- 1: Name your dataset
+- 2: Specify your type of query: do you want to quantify all cell type or only immune cell types?
+- 3: Give information of your dataset and upload it
+
+## View the leaderboard and run method on your dataset
+
+![](../pictures/cometh/cometh_webapp_3.png)
+
+- 1: In columns: benchmark dataset similar to your clinical dataset according to the descriptors you entered while submitting your dataset. You can retreive more detailed information on each datase by clicking on the html link
+- 2: Computational methods (MT) that have been applied to quantify heterogeneity of these benchmark dataset on codabench. You can retreive more detailed information on each datase by clicking on the "i" button (including the R code of the algorithm)
+- 3: Accurary score (mean, standart deviation and computation time) given by the codabench platform. You can sort the scores by clicking on the column names
+- 4: You can choose which method you want to run on your dataset by clicking on this button
+
+## View results
+
+![](../pictures/cometh/cometh_webapp_4.png)
+
+- 1: Get more information on the method
+- 2: Download all results, including algorithm code, estimated proportion matrix and estimated cell-type specific profiles
+- 3: Dowload only the estimated proportions in a .csv format
+
+## Check status of methods run
+
+![](../pictures/cometh/cometh_webapp_5.png)
+
+- 1: Click on the arrow to view the Methoods run agains the dataset
+- 2: Date of the run
+- 3: Status of the run
+
+![](../pictures/fundings2.png)
