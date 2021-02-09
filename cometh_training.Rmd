@@ -60,19 +60,27 @@ For clinician participants:
 
 - Go to the application: [COMETH user-friendly web application](https://staging-cometh.meteorlab.st/login)
 - create an account on the platform
-- [Tutorial](cometh_training_2021/cometh_training_webapp.html) on the use of the comth web application
+- [Tutorial](cometh_training_2021/cometh_training_webapp.html) on the use of the cometh web application
 
 ### COMETH shiny application
 
-To come
+- [Shiny app comExplorer](https://app.gebican.fr/compExplore/)
+- **TO UPDATE**
 
 <br>
 
 ***
 
-## Material to downlad 
+## Material to download 
 
-### Datasets
+Practictal work will differ according to your affectation (medical or bioinformatic group). Please check your affectation and download the corresponding material.
+
+![](pictures/med_grop.png)
+![](pictures/comp_group.png)
+
+### For medical group
+
+#### Datasets
 
 We have prepared toy datasets from  TCGA public cancer database. 
 
@@ -86,12 +94,19 @@ Omic type : transcriptome.
 - [Pancreatic adenocarcinoma - paad](data/selected-PAAD.htseq_fpkm.csv)
 - [Skin cutaneous melanoma - skcm](data/selected-SKCM.htseq_fpkm.csv)
 
-### R packages
+#### Practical work sheet
+
+TO UPDATE
+
+### For bioinformatic group
 
 The following R packages migth be of interest
 
-- Edec
-- Cellmix
+- [Edec](https://github.com/BRL-BCM/EDec)
+- [Cellmix](http://web.cbio.uct.ac.za/~renaud/CRAN/web/CellMix/)
+- [NMF](https://cran.r-project.org/web/packages/NMF/index.html)
+- [ICA](https://cran.r-project.org/web/packages/fastICA/index.html)
+- [Timer](http://cistrome.org/TIMER/)
 
 
 <br>
@@ -118,7 +133,7 @@ General lectures will cover:
 
 &nbsp; • Interpretation and visualization of the results   
 
-[<font size="4"><span style="color: darkblue;">DOWNLOAD THE PROGRAM</span></font>](pictures/COMETH_program.pdf)
+![](pictures/program.png)
 
 
 
