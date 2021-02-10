@@ -1,61 +1,21 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <meta name="author" content="Magali Richard" />
 
-<meta name="date" content="2020-12-14" />
+<meta name="date" content="2021-02-10" />
 
 <title>Dataset Factsheet</title>
 
-<style type="text/css">
-a.anchor-section {margin-left: 10px; visibility: hidden; color: inherit;}
-a.anchor-section::before {content: '#';}
-.hasAnchor:hover a.anchor-section {visibility: visible;}
-</style>
-<script>// Anchor sections v1.0 written by Atsushi Yasumoto on Oct 3rd, 2020.
-document.addEventListener('DOMContentLoaded', function() {
-  // Do nothing if AnchorJS is used
-  if (typeof window.anchors === 'object' && anchors.hasOwnProperty('hasAnchorJSLink')) {
-    return;
-  }
-
-  const h = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-
-  // Do nothing if sections are already anchored
-  if (Array.from(h).some(x => x.classList.contains('hasAnchor'))) {
-    return null;
-  }
-
-  // Use section id when pandoc runs with --section-divs
-  const section_id = function(x) {
-    return ((x.classList.contains('section') || (x.tagName === 'SECTION'))
-            ? x.id : '');
-  };
-
-  // Add anchors
-  h.forEach(function(x) {
-    const id = x.id || section_id(x.parentElement);
-    if (id === '') {
-      return null;
-    }
-    let anchor = document.createElement('a');
-    anchor.href = '#' + id;
-    anchor.classList = ['anchor-section'];
-    x.classList.add('hasAnchor');
-    x.appendChild(anchor);
-  });
-});
-</script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -180,9 +140,9 @@ code span.ot { color: #007020; }
 <div class="table cover">
 <div class="cover-card table-cell table-middle">
 <span class="author_name">Dataset Factsheet</span>
-<span class="author_job">DT12 transcriptome breast</span>
+<span class="author_job">DT12 methylome breast</span>
 <span class="author_bio mbm">Magali Richard</span>
-<span class="author_bio mbm">2020-12-14</span>
+<span class="author_bio mbm">2021-02-10</span>
 </div>
 </div>
 </div>
@@ -196,8 +156,14 @@ code span.ot { color: #007020; }
 <div id="description-of-the-dataset" class="section level2">
 <h2>Description of the dataset</h2>
 <p>The cell lines methylation profiles was published<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> by Onuchic et al in <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5115176/"><strong>Cell reports</strong></a>.</p>
-<p>Estimated methylation profiles of different breast cell types were generated using either the Infinium HumanMethylation450 BeadChip (450K array) or the Infinium HumanMethylation27 BeadChip (27K array): breast cancer cell line, CD8+ T-cell, HMEC cell line, and cancer associated fibroblast cell line.</p>
-<p><code>Omics_type</code> = transcriptome</p>
+<p>A set of 4 methylation profiles of cell lines generated using the targeted bisulfite sequencing assay (in the Onuchic et al. paper) was used to build simulated mixtures. The methylation profiles are coming from:</p>
+<ul>
+<li>a breast cancer cell lines (MCF-7),</li>
+<li>a normal breast cell line (HMEC),</li>
+<li>a CAF cell line,</li>
+<li>and purified T-cells.</li>
+</ul>
+<p><code>Omics_type</code> = methylome (targeted bisulfite sequencing)</p>
 <p><code>Cancer_type</code> = brca</p>
 <p><code>Cohort_size</code> = 30</p>
 <p><code>Patient_metadata</code> = No</p>
@@ -205,9 +171,18 @@ code span.ot { color: #007020; }
 </div>
 <div id="preparation-of-the-data" class="section level2">
 <h2>Preparation of the data</h2>
-<p>Expression data from array were collected, normalized together using fRMA and transformed using log2.</p>
-<p><code>Normalisation</code> = tcga assembler</p>
-<p><code>Transformation</code> = none, linear scale</p>
+<p>We use the following dataset:</p>
+<ul>
+<li>GSM2327390</li>
+<li>GSM2327392</li>
+<li>GSM2327393</li>
+<li>GSM2327397</li>
+</ul>
+<p>Here is the information retrieved on corresponding GEO portal:</p>
+<p>Frozen samples were pulverized with mortar and pestle under liquid nitrogen conditions. DNA from cell culture, tumor tissue, normal tissue, and buffy coat was isolated using Qiagen’s DNeasy Blood and Tissue kit and bisulfite converted with the EpiTect Bisulfite Kit (Qiagen). A set of 1000 target regions of around 300bp in length were preselected for targeted bisulfite sequencing. Primer pairs designed to specifically amplify each selected target region were designed by RainDance Technologies. The ThunderStorm BS-seq assay using that set of primer pairs was performed at RainDance Technologies according to the manufacturer’s specification. That assay uses a microfluidic chip to perform multiplex amplification of bisulfite treated DNA using the set of primers designed to amplify the selected set of genomic regions. This step is followed by sequencing of PCR product. Target regions were sequenced on average to 200X coverage.</p>
+<p>Read mapping and methylation level calling was performed using Bismark (Krueger and Andrews, 2011). Average level of methylation over each targeted region was computed (Genome_build: hg19)</p>
+<p><code>Normalisation</code> = none</p>
+<p><code>Transformation</code> = beta_value</p>
 <p><code>Aggregation</code> = median</p>
 </div>
 <div id="composition-of-the-test-dataset" class="section level2">
@@ -354,6 +329,9 @@ code span.ot { color: #007020; }
 </div>
 </div>
 
+
+
+<!-- code folding -->
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

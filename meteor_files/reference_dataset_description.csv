@@ -7,4 +7,4 @@ DT8;2733;All cell types;Transcriptome;brca;32;edgeR_cpm;count_pseudo_log2;cell l
 DT9;2739;All cell types;Transcriptome;brca;32;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;in vitro mixture;4;First release
 DT10;2761;All cell types;Transcriptome;brca;30;edgeR_cpm;count_pseudo_log2;cell lines;Bulk RNA-seq;No;simulation;4;First release
 DT11;2768;All cell types;Transcriptome;brca;30;edgeR_cpm;count_linear_scale;cell lines;Bulk RNA-seq;No;simulation;4;First release
-DT12;2702;All cell types;Methylome;brca;30;methylumi;beta_value;cell lines;27K and 450K infinium array;No;simulation;4;First release
+DT12;2702;All cell types;Methylome;brca;30;none;beta_value;cell lines;targeted bisulfite sequencing;No;simulation;4;First release
