@@ -121,7 +121,7 @@ DT11: Breast invasive cancer
   
 DT12: Breast invasive cancer
  
-  - omic type: methylome targeteed bisulfite sequencing (beta_value)
+  - omic type: methylome targeted bisulfite sequencing (beta_value)
   - cohort size : 30
   - Ground Truth :  in silico simulations  of all cell types
   - More informations at [dataset_factsheet_DT12.html](../meteor_files/dataset_factsheet_DT12.html)
@@ -129,6 +129,8 @@ DT12: Breast invasive cancer
 ## Methods contained in the benchmark
 
 ### Unsupervised
+
+Unsupervised methods do not use biological references.
 
 MT1_ICA_fs: ICA with ICA-based feature selection
 
@@ -148,14 +150,70 @@ MT3_edec: Edec method
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: methylome
-  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT3.html)
+  - More informations at [algorithm_factsheet_MT3.html](../meteor_files/algorithm_factsheet_MT3.html)
   - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_MT3.R)
   
-MT3_edec: Edec method
+MT14_ICA: ICA without feature selection
 
   - Type of query: estimation of all cell types or immune cell types
-  - omic type: methylome
-  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT3.html)
-  - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_MT3.R)
+  - omic type: transcriptome and methylome
+  - More informations at [algorithm_factsheet_MT14.html](../meteor_files/algorithm_factsheet_MT14.html)
+  - Get the R code here: [algorithm_MT14.R](meteor_files/algorithm_MT14.R)
+  
+MT19_NMF: NMF without feature selection
 
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: transcriptome and methylome
+  - More informations at [algorithm_factsheet_MT19.html](../meteor_files/algorithm_factsheet_MT19.html)
+  - Get the R code here: [algorithm_MT19.R](meteor_files/algorithm_MT19.R)
+
+### Semi-supervised
+
+Semi-supervised methods use a gene marker list as input of the deconvolution.
+  
+MT16_cellmix_ssKL: CellMix semi-supervised NMF using KL divergence
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT16.html](../meteor_files/algorithm_factsheet_MT16.html)
+  - Get the R code here: [algorithm_MT16.R](meteor_files/algorithm_MT16.R)
+  
+MT17_cellmix_DSA: CellMix digital sorting algorithm
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT17.html](../meteor_files/algorithm_factsheet_MT17.html)
+  - Get the R code here: [algorithm_MT17.R](meteor_files/algorithm_MT17.R)
+  
+MT18_cellmix_ssFrobenius: CellMix semi-supervised NMF using eucideann distance
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT18.html](../meteor_files/algorithm_factsheet_MT18.html)
+  - Get the R code here: [algorithm_MT18.R](meteor_files/algorithm_MT18.R)
+  
+### Supervised
+
+Supervised method use a cell-type specific expression matrix as input of the deconvolution.
+
+MT16_cibersort: Cibersort method
+
+  - Type of query: estimation of immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT8.html](../meteor_files/algorithm_factsheet_MT8.html)
+  - Get the R code here: [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
+  
+MT9_epic: EPIC method
+
+  - Type of query: estimation of immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT9.html](../meteor_files/algorithm_factsheet_MT9.html)
+  - Get the R code here: [algorithm_MT9.R](meteor_files/algorithm_MT9.R)
+
+MT11_epic: EPIC method
+
+  - Type of query: estimation of immune cell types
+  - omic type: transcriptome
+  - More informations at [algorithm_factsheet_MT11.html](../meteor_files/algorithm_factsheet_MT11.html)
+  - Get the R code here: [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
 ![](../pictures/fundings2.png)

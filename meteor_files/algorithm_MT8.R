@@ -1,5 +1,5 @@
 program <-
-function(D_matrix, k=NULL, simcan=NULL) {
+function(D_matrix, k=NULL, simcan=NULL, cancer_type) {
   ##
   ## YOUR CODE BEGINS HERE
   ##
@@ -13,8 +13,8 @@ function(D_matrix, k=NULL, simcan=NULL) {
   library(immunedeconv)
   
   # Provide CIBERSORT files
-  set_cibersort_binary("/input/CIBERSORT.R")
-  set_cibersort_mat("/input/LM22.txt")
+  set_cibersort_binary(paste0(input,"/input/CIBERSORT.R"))
+  set_cibersort_mat(paste0(input,"/input/LM22.txt"))
   
   ## we compute the estimation of A for the data set :
   A_matrix <- NULL
@@ -28,10 +28,12 @@ function(D_matrix, k=NULL, simcan=NULL) {
                                      method = "cibersort",
                                      arrays = FALSE)
     res = data.frame(res, row.names = 1)
-    rownames(res) = paste0(rownames(res),"|","CIBERSORT")
+    #rownames(res) = paste0(rownames(res),"|","CIBERSORT")
     
     A_matrix = res
-    T_matrix = NULL
+    
+    ref = read.csv2(paste0(input,"/input/LM22.txt"), sep="\t")
+    T_matrix = data.frame(ref, row.names=1)
   }
   
   ##

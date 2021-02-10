@@ -1,5 +1,5 @@
 program <-
-function(D_matrix, k=NULL, simcan=NULL) {
+function(D_matrix, k=NULL, simcan=NULL, cancer_type) {
   ##
   ## YOUR CODE BEGINS HERE
   ##
@@ -16,9 +16,12 @@ function(D_matrix, k=NULL, simcan=NULL) {
   A_matrix <- NULL
   if ( !is.null(x = D_matrix) ) {
     ## temporary hack : we keep only the 10 000 first lines in order to save time for the baseline
-    if ( nrow(x = D_matrix) > 1e4 ) {
-      D_matrix[seq_len(length.out = 1e4), ]
-    }
+    # if ( nrow(x = D_matrix) > 1e4 ) {
+    #    D_matrix[seq_len(length.out = 1e4), ]
+    #  }
+    
+    
+    D_matrix = as.data.frame(D_matrix)
     
     res <- immunedeconv::deconvolute(gene_expression = D_matrix, 
                                      method = "quantiseq",
@@ -27,10 +30,10 @@ function(D_matrix, k=NULL, simcan=NULL) {
                                      scale_mrna = TRUE)
     
     res = data.frame(res, row.names = 1)
-    rownames(res) = paste0(rownames(res),"|","quanTIseq")
+    #rownames(res) = paste0(rownames(res),"|","quanTIseq")
     
     A_matrix = res
-    T_matrix = NULL
+    T_matrix = readRDS(paste0(input,"/input/reference_T.rds"))
   }
   
   ##

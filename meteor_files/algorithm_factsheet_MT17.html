@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="author" content="immunedeconv" />
+<meta name="author" content="CellMix" />
 
 <meta name="date" content="2021-02-10" />
 
@@ -49,8 +49,8 @@ code span.ot { color: #007020; }
 <div class="table cover">
 <div class="cover-card table-cell table-middle">
 <span class="author_name">Method Factsheet</span>
-<span class="author_job">MT9 EPIC</span>
-<span class="author_bio mbm">immunedeconv</span>
+<span class="author_job">MT17 CellMix DSA</span>
+<span class="author_bio mbm">CellMix</span>
 <span class="author_bio mbm">2021-02-10</span>
 </div>
 </div>
@@ -64,27 +64,30 @@ code span.ot { color: #007020; }
 <article class="post-content">
 <div id="description-of-the-method" class="section level2">
 <h2>Description of the Method</h2>
-<p>The method Estimating the Proportion of Immune and Cancer cells (EPIC) was published in <a href="https://doi.org/10.7554/eLife.26476.002"><strong>eLife</strong></a> and the original method is described <a href="https://github.com/GfellerLab/EPIC">here</a>. We have used the method implementation from <a href="https://github.com/icbi-lab/immunedeconv">immunedeconv</a>, which is a systematic benchmarking <a href="https://doi.org/10.1093/bioinformatics/btz363">study</a> of widely used supervised cell type deconvolution algorithms. We have made the method available in the Docker image<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
-<p>EPIC is a supervised method which uses curated gene expression signature matrix <span class="math inline">\((S)\)</span> of 5 immune cell types (B cell, CD4+/CD8+ T cell, Macrophage, NK cell) and 2 stromal cell types (Cancer associated fibroblast and Endothelial cells) to estimate the relative abundances <span class="math inline">\((P)\)</span> of these cell types in given transcriptomic profiles <span class="math inline">\((E)\)</span>.</p>
-<p>Essentially, the following equation is solved using constrained least square regression where <span class="math inline">\(g\)</span> is genes, <span class="math inline">\(s\)</span> is samples and <span class="math inline">\(c\)</span> is cell types</p>
-<p><span class="math display">\[E_{gs} = S_{gc}.P_{cs}\]</span></p>
+<p>This method originates from CellMix, a comprehensive toolbox for gene expression deconvolution<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>As a gene marker list input, it uses the CEllmatch<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> database included in the scCATCH tool Science 2020).</p>
+<div id="deconvolution" class="section level3">
+<h3>Deconvolution</h3>
+<p>The algorithm consists in a deconvolution using digital sorting algorithm (DSA).</p>
+<p>We use the CellMix::ged function using the parameters: <code>method = &quot;DSA&quot;</code>, <code>sscale = FALSE</code>, <code>maxIter=500</code>, <code>log = FALSE</code>.</p>
+</div>
 <div id="results" class="section level3">
 <h3>Results</h3>
-<p>The program returns an estimated proportion matrix and the corresponding reference cell-type specific profiles matrix.</p>
-<p>The cell type estimates are comparable across samples and also within a sample for different cell types.</p>
+<p>The program returns an estimated proportion matrix and the corresponding estimated cell-type specific profiles matrix for selected gene markers.</p>
 </div>
 <div id="descriptors" class="section level3">
 <h3>Descriptors</h3>
 <p><code>Omics_type</code> = trancriptome</p>
 <p><code>Cancer_type</code> = all</p>
-<p><code>Method_type</code> = supervised</p>
-<p><code>Cell_type</code> = immune</p>
+<p><code>Method_type</code> = semi-supervised</p>
+<p><code>Cell_type</code> = estimation of all cell types or immune cell types</p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://hub.docker.com/r/ashwinikrsharma/cell-deconv-base" class="uri">https://hub.docker.com/r/ashwinikrsharma/cell-deconv-base</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn1"><p><a href="https://pubmed.ncbi.nlm.nih.gov/23825367/" class="uri">https://pubmed.ncbi.nlm.nih.gov/23825367/</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://github.com/ZJUFanLab/scCATCH" class="uri">https://github.com/ZJUFanLab/scCATCH</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
 </ol>
 </div>
 </article>
