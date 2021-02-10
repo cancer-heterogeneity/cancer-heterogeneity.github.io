@@ -1,5 +1,5 @@
 program <-
-  function(D_matrix, k=5) {
+  function(D_matrix, k=5, cancer_type = cancer_type) {
     ##
     ## YOUR CODE BEGINS HERE
     ##
@@ -7,7 +7,7 @@ program <-
     if ( !{ "NMF" %in% installed.packages( ) } ) {
       install.packages(pkgs = "NMF")
     }
-    source(file = "http://sablab.net/scripts/LibICA.r")
+     source(paste0(input,"/input/LibICA.R"))
     
     
     ## we compute the estimation of A for the data set :

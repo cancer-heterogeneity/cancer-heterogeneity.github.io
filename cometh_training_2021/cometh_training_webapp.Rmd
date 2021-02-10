@@ -130,8 +130,32 @@ DT12: Breast invasive cancer
 
 ### Unsupervised
 
-- MT1: ICA
+MT1_ICA_fs: ICA with ICA-based feature selection
+
   - Type of query: estimation of all cell types or immune cell types
+  - omic type: trasncriptome
   - More informations at [algorithm_factsheet_MT1.html](../meteor_files/algorithm_factsheet_MT1.html)
+  - Get the R code here: [algorithm_MT1.R](meteor_files/algorithm_MT1.R)
+
+MT2_NMF_fs: NMF with ICA-based feature selection
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: trasncriptome
+  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT2.html)
+  - Get the R code here: [algorithm_MT2.R](meteor_files/algorithm_MT2.R)
+  
+MT3_edec: Edec method
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: methylome
+  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT3.html)
+  - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_MT3.R)
+  
+MT3_edec: Edec method
+
+  - Type of query: estimation of all cell types or immune cell types
+  - omic type: methylome
+  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT3.html)
+  - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_MT3.R)
 
 ![](../pictures/fundings2.png)
