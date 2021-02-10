@@ -210,7 +210,7 @@ MT9_epic: EPIC method
   - More informations at [algorithm_factsheet_MT9.html](../meteor_files/algorithm_factsheet_MT9.html)
   - Get the R code here: [algorithm_MT9.R](meteor_files/algorithm_MT9.R)
 
-MT11_epic: EPIC method
+MT11_quantiseq: Quantiseq method
 
   - Type of query: estimation of immune cell types
   - omic type: transcriptome
