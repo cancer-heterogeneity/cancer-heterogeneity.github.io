@@ -87,17 +87,16 @@ Practictal work will differ according to your affectation (medical or bioinforma
 
 #### Datasets
 
-We have prepared toy datasets from  TCGA public cancer database. 
+We have prepared toy dexpression atasets from  TCGA public cancer database. (including phenotype tables) 
 
 Format : .cvs, samples in column, genes in row. If you want to use your own dataset during the course, please use the same format.
 
-Omic type : transcriptome.
-
-- [Breast cancer - brca](data/selected-BRCA.htseq_fpkm.csv)
-- [Glioblastome - gbm](data/selected-GBM.htseq_fpkm.csv)
-- [Lund adenocarcinoma - luad](data/selected-LUAD.htseq_fpkm.csv)
-- [Pancreatic adenocarcinoma - paad](data/selected-PAAD.htseq_fpkm.csv)
-- [Skin cutaneous melanoma - skcm](data/selected-SKCM.htseq_fpkm.csv)
+Omic type : transcriptome (fpkm from RNA-seq, linear scale)
+- [Breast cancer - brca](data/brca.zip)
+- [Glioblastome - gbm](data/gbm.zip)
+- [Lund adenocarcinoma - luad](data/luad.zip)
+- [Pancreatic adenocarcinoma - paad](data/paad.zip)
+- [Skin cutaneous melanoma - skcm](data/sskcm.zip)
 
 #### Practical work sheet
 
