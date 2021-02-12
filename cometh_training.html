@@ -27,15 +27,6 @@
 
 <div><img src="pictures/cover.png" width="100%" align="center"></div>
 
-<style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
-
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
   pre:not([class]) {
@@ -80,7 +71,6 @@ h6 {
   text-align: left;
 }
 </style>
-
 
 
 
@@ -287,35 +277,35 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fas fa-home"></span>
+    <span class="fa fa-home"></span>
      
     Home
   </a>
 </li>
 <li>
   <a href="data_challenges.html">
-    <span class="fas fa-universal-access"></span>
+    <span class="fa fa-universal-access"></span>
      
     HADACA
   </a>
 </li>
 <li>
   <a href="cometh.html">
-    <span class="fas fa-cogs"></span>
+    <span class="fa fa-cogs"></span>
      
     COMETH
   </a>
 </li>
 <li>
   <a href="deconbench.html">
-    <span class="fas fa-code-fork"></span>
+    <span class="fa fa-code-fork"></span>
      
     Deconbench
   </a>
 </li>
 <li>
   <a href="https://cancer-heterogeneity.github.io/blog/">
-    <span class="fas fa-rss"></span>
+    <span class="fa fa-rss"></span>
      
     Blog
   </a>
@@ -324,14 +314,14 @@ $(document).ready(function () {
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="mailto:magali.richard@univ-grenoble-alpes.fr, yuna.blum@ligue-cancer.net">
-    <span class="fas fa-envelope-o"></span>
+    <span class="fa fa-envelope-o"></span>
      
     Contact us
   </a>
 </li>
 <li>
   <a href="https://github.com/cancer-heterogeneity">
-    <span class="fas fa-github"></span>
+    <span class="fa fa-github"></span>
      
     GitHub
   </a>
@@ -357,6 +347,7 @@ $(document).ready(function () {
 <li><a href="#discord-discussion-platform">Discord discussion platform</a></li>
 <li><a href="#codabench">Codabench</a></li>
 <li><a href="#cometh-web-application">COMETH web application</a></li>
+<li><a href="#cometh-docker-image-deconexplorer">COMETH Docker image deconExplorer</a></li>
 <li><a href="#cometh-shiny-application">COMETH shiny application</a></li>
 </ul></li>
 <li><a href="#material-to-download">Material to download</a><ul>
@@ -425,6 +416,22 @@ $(document).ready(function () {
 <li>create an account on the platform</li>
 <li><a href="cometh_training_2021/cometh_training_webapp.html">Tutorial</a> on the use of the cometh web application</li>
 </ul>
+</div>
+<div id="cometh-docker-image-deconexplorer" class="section level3">
+<h3>COMETH Docker image deconExplorer</h3>
+<p>For those who want to run the deconvolution and interpretation app locally, we provide a <strong>docker image</strong> allowing to run all steps of the analysis locally, through your web browser. We provide the instructions for uses running a macOS or linux operating system!</p>
+<ol style="list-style-type: decimal">
+<li>download and install the <a href="https://www.docker.com/products/docker-desktop">docker Dektop software</a> for your OS</li>
+<li>open a terminal and type the following commands:</li>
+</ol>
+<pre class="r"><code>cd ~
+docker pull ashwinikrsharma/mrna_meth_decon:latest
+git clone https://github.com/ashwini-kr-sharma/ShinyCompExplore.git
+docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwinikrsharma/mrna_meth_decon</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>open a web browser, and type <code>localhost:3838</code> in the address bar</li>
+</ol>
+<p>Good to go!</p>
 </div>
 <div id="cometh-shiny-application" class="section level3">
 <h3>COMETH shiny application</h3>
@@ -592,7 +599,7 @@ Medical Faculty Heidelberg, Germany<br />
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();

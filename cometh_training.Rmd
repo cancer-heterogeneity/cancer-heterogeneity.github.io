@@ -67,6 +67,24 @@ For clinician participants:
 - create an account on the platform
 - [Tutorial](cometh_training_2021/cometh_training_webapp.html) on the use of the cometh web application
 
+### COMETH  Docker image deconExplorer
+
+For those who want to run the deconvolution and interpretation app locally, we provide a **docker image** allowing  to run  all steps of the analysis locally, through your web browser. We provide the instructions for uses running a macOS or linux operating system!
+
+1. download and install the [docker Dektop software](https://www.docker.com/products/docker-desktop) for your OS
+2. open a terminal and type the following commands:
+
+```{r eval=FALSE}
+cd ~
+docker pull ashwinikrsharma/mrna_meth_decon:latest
+git clone https://github.com/ashwini-kr-sharma/ShinyCompExplore.git
+docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwinikrsharma/mrna_meth_decon
+```
+
+3. open a web browser, and type `localhost:3838` in the address bar
+
+Good to go!
+
 ### COMETH shiny application
 
 - [Shiny app comExplorer](https://app.gebican.fr/compExplore/)
