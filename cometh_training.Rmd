@@ -96,7 +96,7 @@ Good to go!
 
 ## Material to download 
 
-Practictal work will differ according to your affectation (medical or bioinformatic group). Please check your affectation and download the corresponding material.
+Practical work will differ according to your affectation (medical or bioinformatic group). Please check your affectation and download the corresponding material [here](https://docs.google.com/spreadsheets/d/1-pV-wSTH1P8VDZDdmm-cgZ5FmqY_2t5JoSuKQW7g7aE/edit?usp=sharing).
 
 ![](pictures/med_grop.png)
 ![](pictures/comp_group.png)
@@ -105,9 +105,9 @@ Practictal work will differ according to your affectation (medical or bioinforma
 
 #### Datasets
 
-We have prepared toy dexpression atasets from  TCGA public cancer database. (including phenotype tables) 
+We have prepared toy expression datasets from the TCGA public cancer database (including clinical annotation tables). 
 
-Format : .cvs, samples in column, genes in row. If you want to use your own dataset during the course, please use the same format.
+!!Format!!  .cvs with separator = ";" and decimal = "." Samples in column, genes in row (use Gene Symbol as gene ID). If you want to use your own dataset during the course, please use the same csv format (separator = ";" and decimal = ".").
 
 Omic type : transcriptome (fpkm from RNA-seq, linear scale)
 - [Breast cancer - brca](data/brca.zip)
@@ -118,7 +118,7 @@ Omic type : transcriptome (fpkm from RNA-seq, linear scale)
 
 #### Practical work sheet
 
-TO UPDATE
+[Link to the 'Practical work sheet'](https://docs.google.com/document/d/1Wbe1qxUJd62ei8zc6reP_ljKVAhK7XQgJQpxH_nnY60/edit?usp=sharing)
 
 ### For bioinformatic group
 
