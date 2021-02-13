@@ -64,7 +64,6 @@ output:
 
 ## Algorithm source code
 
-<<<<<<< HEAD
 - [algorithm_735.R](meteor_files/algorithm_735.r)
 - [algorithm_736.R](meteor_files/algorithm_736.r)
 - [algorithm_745.R](meteor_files/algorithm_745.r)
@@ -82,24 +81,7 @@ output:
 - [algorithm_743.R](meteor_files/algorithm_743.r)
 - [algorithm_744.R](meteor_files/algorithm_744.r)
 - [algorithm_741.R](meteor_files/algorithm_741.r)
-=======
-- [algorithm_735.R](meteor_files/algorithm_735.R)
-- [algorithm_736.R](meteor_files/algorithm_736.R)
-- [algorithm_745.R](meteor_files/algorithm_745R)
-- [algorithm_MT4.R](meteor_files/algorithm_MT4.R)
-- [algorithm_MT5.R](meteor_files/algorithm_MT5.R)
-- [algorithm_746.R](meteor_files/algorithm_746.R)
-- [algorithm_737.R](meteor_files/algorithm_737.R)
-- [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
-- [algorithm_738.R](meteor_files/algorithm_738.R)
-- [algorithm_739.R](meteor_files/algorithm_739.R)
-- [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
-- [algorithm_MT12.R](meteor_files/algorithm_MT12.R)
-- [algorithm_740.R](meteor_files/algorithm_740.R)
-- [algorithm_742.R](meteor_files/algorithm_743.R)
-- [algorithm_743.R](meteor_files/algorithm_743.R)
-- [algorithm_744.R](meteor_files/algorithm_744.R)
-- [algorithm_741.R](meteor_files/algorithm_741.R)
->>>>>>> 3870f619b6f102fefd2e593b471aed0ee522d65c
+
+
 
 
