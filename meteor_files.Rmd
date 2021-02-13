@@ -1,0 +1,105 @@
+---
+title: "Meteor files"
+output:
+  html_document:
+    includes:
+      in_header: cover.html
+---
+
+## Codabench competition
+
+- [competition_reference.csv](meteor_files/competition_reference.csv)
+
+## Leaderboard
+
+-	[results.json](meteor_files/results.json)  
+
+## Summary tables 
+
+
+-	[reference_dataset_description.csv](meteor_files/reference_dataset_description.csv)  
+-	[algorithm_description.csv](meteor_files/algorithm_description.csv)
+-	[combinaison_dataset_algorithm.csv](meteor_files/combinaison_dataset_algorithm.csv)
+-	[omic_type.csv](meteor_files/omic_type.csv)
+-	[cancer_type.csv](meteor_files/cancer_type.csv) 
+-	[normalization.csv](meteor_files/normalization.csv) 
+-	[transformation.csv](meteor_files/transformation.csv) 
+
+
+## Dataset Factsheets
+
+- [dataset_factsheet_DT1.html](meteor_files/dataset_factsheet_DT1.html)
+- [dataset_factsheet_DT2.html](meteor_files/dataset_factsheet_DT2.html)
+- [dataset_factsheet_DT3.html](meteor_files/dataset_factsheet_DT3.html)
+- [dataset_factsheet_DT4.html](meteor_files/dataset_factsheet_DT4.html)
+- [dataset_factsheet_DT5.html](meteor_files/dataset_factsheet_DT5.html)
+- [dataset_factsheet_DT7.html](meteor_files/dataset_factsheet_DT7.html)
+- [dataset_factsheet_DT8.html](meteor_files/dataset_factsheet_DT8.html)
+- [dataset_factsheet_DT9.html](meteor_files/dataset_factsheet_DT9.html)
+- [dataset_factsheet_DT10.html](meteor_files/dataset_factsheet_DT10.html)
+- [dataset_factsheet_DT11.html](meteor_files/dataset_factsheet_DT11.html)
+- [dataset_factsheet_DT12.html](meteor_files/dataset_factsheet_DT12.html)
+
+## Algorithm Factsheets
+
+
+
+- [algorithm_factsheet_MT1_ICA_fs.html](meteor_files/algorithm_factsheet_MT1_ICA_fs.html)
+- [algorithm_factsheet_MT2_NMF_fs.html](meteor_files/algorithm_factsheet_cc.html)
+- [algorithm_factsheet_MT3_edec.html](meteor_files/algorithm_factsheet_c.html)
+- [algorithm_factsheet_MT4.html](meteor_files/algorithm_factsheet_MT4.html)
+- [algorithm_factsheet_MT5.html](meteor_files/algorithm_factsheet_MT5.html)
+- [algorithm_factsheet_MT6.html](meteor_files/algorithm_factsheet_MT6.html)
+- [algorithm_factsheet_MT7.html](meteor_files/algorithm_factsheet_M7.html)
+- [algorithm_factsheet_MT18_cellmix_ssFrobenius.html](meteor_files/algorithm_factsheet_MT18_cellmix_ssFrobenius.html)
+- [algorithm_factsheet_MT9_epic.html](meteor_files/algorithm_factsheet_MT9_epic.html)
+- [algorithm_factsheet_MT10.html](meteor_files/algorithm_factsheet_MT10.html)
+- [algorithm_factsheet_MT11_quantiseq.html](meteor_files/algorithm_factsheet_MT11_quantiseq.html)
+- [algorithm_factsheet_MT12.html](meteor_files/algorithm_factsheet_MT12.html)
+- [algorithm_factsheet_MT14_ICA.html](meteor_files/algorithm_factsheet_MT14_ICA.html)
+- [algorithm_factsheet_MT16_cellmix_ssKL.html](meteor_files/algorithm_factsheet_MT16_cellmix_ssKL.html)
+- [algorithm_factsheet_MT17_cellmix_DSA.html](meteor_files/algorithm_factsheet_MT17_cellmix_DSA.html)
+- [algorithm_factsheet_MT18_cellmix_ssFrobenius.html](meteor_files/algorithm_factsheet_MT18_cellmix_ssFrobenius.html)
+- [algorithm_factsheet_MT19_NMF.html](meteor_files/algorithm_factsheet_MT19_NMF.html)
+
+## Algorithm source code
+
+<<<<<<< HEAD
+- [algorithm_735.R](meteor_files/algorithm_735.r)
+- [algorithm_736.R](meteor_files/algorithm_736.r)
+- [algorithm_745.R](meteor_files/algorithm_745.r)
+- [algorithm_MT4.R](meteor_files/algorithm_MT4.r)
+- [algorithm_MT5.R](meteor_files/algorithm_MT5.R)
+- [algorithm_746.R](meteor_files/algorithm_746.r)
+- [algorithm_737.R](meteor_files/algorithm_737.r)
+- [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
+- [algorithm_738.R](meteor_files/algorithm_738.r)
+- [algorithm_739.R](meteor_files/algorithm_739.r)
+- [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
+- [algorithm_MT12.R](meteor_files/algorithm_MT12.R)
+- [algorithm_740.R](meteor_files/algorithm_740.r)
+- [algorithm_742.R](meteor_files/algorithm_743.r)
+- [algorithm_743.R](meteor_files/algorithm_743.r)
+- [algorithm_744.R](meteor_files/algorithm_744.r)
+- [algorithm_741.R](meteor_files/algorithm_741.r)
+=======
+- [algorithm_735.R](meteor_files/algorithm_735.R)
+- [algorithm_736.R](meteor_files/algorithm_736.R)
+- [algorithm_745.R](meteor_files/algorithm_745R)
+- [algorithm_MT4.R](meteor_files/algorithm_MT4.R)
+- [algorithm_MT5.R](meteor_files/algorithm_MT5.R)
+- [algorithm_746.R](meteor_files/algorithm_746.R)
+- [algorithm_737.R](meteor_files/algorithm_737.R)
+- [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
+- [algorithm_738.R](meteor_files/algorithm_738.R)
+- [algorithm_739.R](meteor_files/algorithm_739.R)
+- [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
+- [algorithm_MT12.R](meteor_files/algorithm_MT12.R)
+- [algorithm_740.R](meteor_files/algorithm_740.R)
+- [algorithm_742.R](meteor_files/algorithm_743.R)
+- [algorithm_743.R](meteor_files/algorithm_743.R)
+- [algorithm_744.R](meteor_files/algorithm_744.R)
+- [algorithm_741.R](meteor_files/algorithm_741.R)
+>>>>>>> 3870f619b6f102fefd2e593b471aed0ee522d65c
+
+
