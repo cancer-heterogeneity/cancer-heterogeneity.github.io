@@ -136,36 +136,36 @@ MT1_ICA_fs: ICA with ICA-based feature selection
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: trasncriptome
-  - More informations at [algorithm_factsheet_MT1.html](../meteor_files/algorithm_factsheet_MT1.html)
-  - Get the R code here: [algorithm_MT1.R](meteor_files/algorithm_MT1.R)
+  - More informations at [algorithm_factsheet_MT1.html](../meteor_falgorithm_factsheet_MT1_ICA_fs.html)
+  - Get the R code here: [algorithm_MT1.R](meteor_files/algorithm_735.R)
 
 MT2_NMF_fs: NMF with ICA-based feature selection
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: trasncriptome
-  - More informations at [algorithm_factsheet_MT2.html](../meteor_files/algorithm_factsheet_MT2.html)
-  - Get the R code here: [algorithm_MT2.R](meteor_files/algorithm_MT2.R)
+  - More informations at [algorithm_factsheet_MT2.html](../meteor_falgorithm_factsheet_MT2_NMF_fs.html)
+  - Get the R code here: [algorithm_MT2.R](meteor_files/algorithm_736.R)
   
 MT3_edec: Edec method
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: methylome
-  - More informations at [algorithm_factsheet_MT3.html](../meteor_files/algorithm_factsheet_MT3.html)
-  - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_MT3.R)
+  - More informations at [algorithm_factsheet_MT3.html](../meteor_files/algorithm_factsheet_MT3_edec.html)
+  - Get the R code here: [algorithm_MT3.R](meteor_files/algorithm_745.R)
   
 MT14_ICA: ICA without feature selection
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: transcriptome and methylome
-  - More informations at [algorithm_factsheet_MT14.html](../meteor_files/algorithm_factsheet_MT14.html)
-  - Get the R code here: [algorithm_MT14.R](meteor_files/algorithm_MT14.R)
+  - More informations at [algorithm_factsheet_MT14.html](../meteor_files/algorithm_factsheet_MT14_ICA.html)
+  - Get the R code here: [algorithm_MT14.R](meteor_files/algorithm_740.R)
   
 MT19_NMF: NMF without feature selection
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: transcriptome and methylome
-  - More informations at [algorithm_factsheet_MT19.html](../meteor_files/algorithm_factsheet_MT19.html)
-  - Get the R code here: [algorithm_MT19.R](meteor_files/algorithm_MT19.R)
+  - More informations at [algorithm_factsheet_MT19.html](../meteor_files/algorithm_factsheet_MT19_NMF.html)
+  - Get the R code here: [algorithm_MT19.R](meteor_files/algorithm_741.R)
 
 ### Semi-supervised
 
@@ -175,45 +175,45 @@ MT16_cellmix_ssKL: CellMix semi-supervised NMF using KL divergence
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT16.html](../meteor_files/algorithm_factsheet_MT16.html)
-  - Get the R code here: [algorithm_MT16.R](meteor_files/algorithm_MT16.R)
+  - More informations at [algorithm_factsheet_MT16.html](../meteor_files/algorithm_factsheet_MT16_cellmix_ssKL.html)
+  - Get the R code here: [algorithm_MT16.R](meteor_files/algorithm_742.R)
   
 MT17_cellmix_DSA: CellMix digital sorting algorithm
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT17.html](../meteor_files/algorithm_factsheet_MT17.html)
-  - Get the R code here: [algorithm_MT17.R](meteor_files/algorithm_MT17.R)
+  - More informations at [algorithm_factsheet_MT17.html](../meteor_files/algorithm_factsheet_MT17_cellmix_DSA.html)
+  - Get the R code here: [algorithm_MT17.R](meteor_files/algorithm_743.R)
   
 MT18_cellmix_ssFrobenius: CellMix semi-supervised NMF using eucideann distance
 
   - Type of query: estimation of all cell types or immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT18.html](../meteor_files/algorithm_factsheet_MT18.html)
-  - Get the R code here: [algorithm_MT18.R](meteor_files/algorithm_MT18.R)
+  - More informations at [algorithm_factsheet_MT18.html](../meteor_files/algorithm_factsheet_MT18_cellmix_ssFrobenius.html)
+  - Get the R code here: [algorithm_MT18.R](meteor_files/algorithm_744.R)
   
 ### Supervised
 
 Supervised method use a cell-type specific expression matrix as input of the deconvolution.
 
-MT16_cibersort: Cibersort method
+MT8_cibersort: Cibersort method
 
   - Type of query: estimation of immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT8.html](../meteor_files/algorithm_factsheet_MT8.html)
-  - Get the R code here: [algorithm_MT8.R](meteor_files/algorithm_MT8.R)
+  - More informations at [algorithm_factsheet_MT8.html](../meteor_files/algorithm_factsheet_MT8_cibersort.html)
+  - Get the R code here: [algorithm_MT8.R](meteor_files/algorithm_737.R)
   
 MT9_epic: EPIC method
 
   - Type of query: estimation of immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT9.html](../meteor_files/algorithm_factsheet_MT9.html)
-  - Get the R code here: [algorithm_MT9.R](meteor_files/algorithm_MT9.R)
+  - More informations at [algorithm_factsheet_MT9.html](../meteor_files/algorithm_factsheet_MT9_epic.html)
+  - Get the R code here: [algorithm_MT9.R](meteor_files/algorithm_738.R)
 
 MT11_quantiseq: Quantiseq method
 
   - Type of query: estimation of immune cell types
   - omic type: transcriptome
-  - More informations at [algorithm_factsheet_MT11.html](../meteor_files/algorithm_factsheet_MT11.html)
-  - Get the R code here: [algorithm_MT11.R](meteor_files/algorithm_MT11.R)
+  - More informations at [algorithm_factsheet_MT11.html](../meteor_files/algorithm_factsheet_MT11_quantiseq.html)
+  - Get the R code here: [algorithm_MT11.R](meteor_files/algorithm_739.R)
 ![](../pictures/fundings2.png)
