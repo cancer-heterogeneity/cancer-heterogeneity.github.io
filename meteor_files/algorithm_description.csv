@@ -7,7 +7,7 @@ MT8;737;Yes;CIBERSORT;Immune cell types;Transcriptome;All;Bulk array
 MT9;738;Yes;EPIC;Immune cell types;Transcriptome;All;Bulk array
 MT11;739;Yes;QuantiSeq;Immune cell types;Transcriptome;All;Bulk array
 MT14;740;No;ICA;All cell types;Transcriptome;All;Bulk array
-MT16;741;Yes;ssKL;All cell types;Transcriptome;All;Bulk array
-MT17;742;Yes;DSA;All cell types;Transcriptome;All;Bulk array
-MT18;743;Yes;ssFrobenius;All cell types;Transcriptome;All;Bulk array
-MT19;744;No;NMF_var;All cell types;Transcriptome;All;Bulk array
+MT16;742;Yes;ssKL;All cell types;Transcriptome;All;Bulk array
+MT17;743;Yes;DSA;All cell types;Transcriptome;All;Bulk array
+MT18;744;Yes;ssFrobenius;All cell types;Transcriptome;All;Bulk array
+MT19;741;No;NMF_var;All cell types;Transcriptome;All;Bulk array
