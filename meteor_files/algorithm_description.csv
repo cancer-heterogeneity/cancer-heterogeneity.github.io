@@ -11,3 +11,15 @@ MT16_cellmix_ssKL;742;Yes;ssKL;All cell types;Transcriptome;All;Bulk array
 MT17_cellmix_DSA;743;Yes;DSA;All cell types;Transcriptome;All;Bulk array
 MT18_cellmix_ssFrobenius;744;Yes;ssFrobenius;All cell types;Transcriptome;All;Bulk array
 MT19_NMF;741;No;NMF_var;All cell types;Transcriptome;All;Bulk array
+MT1;0;;;;;;
+MT2;0;;;;;;
+MT3;0;;;;;;
+MT6;0;;;;;;
+MT8;0;;;;;;
+MT9;0;;;;;;
+MT11;0;;;;;;
+MT14;0;;;;;;
+MT16;0;;;;;;
+MT17;0;;;;;;
+MT18;0;;;;;;
+MT19;0;;;;;;
