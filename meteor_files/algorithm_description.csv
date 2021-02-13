@@ -1,5 +1,5 @@
 ﻿algorithm_id;codabench_id;reference_based;algorithm_details;type_of_query;omic_type;cancer_type;Technology
-MT1_ICA_fs:;735;No;r_WIC;All cell types;Transcriptome;All;Bulk array
+MT1_ICA_fs;735;No;r_WIC;All cell types;Transcriptome;All;Bulk array
 MT2_NMF_fs;736;No;r_WNM;All cell types;Transcriptome;All;Bulk array
 MT3_edec;745;No;m_EDEC;All cell types;Methylome;All;Bulk array
 MT6_epidish;746;Yes;EpiDISH;All cell types;Methylome;All;Bulk array
