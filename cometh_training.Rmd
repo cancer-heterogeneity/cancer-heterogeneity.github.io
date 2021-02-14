@@ -131,6 +131,7 @@ The following R packages migth be of interest
 - [ICA](https://cran.r-project.org/web/packages/fastICA/index.html)
 - [Timer](http://cistrome.org/TIMER/)
 
+Data challenge general [information](data/data_challenge_general_info.zip)
 
 <br>
 
@@ -139,8 +140,19 @@ The following R packages migth be of interest
 
 ### DAY1
 
+- [Introduction](cometh_training_2021/presentations/COMETH_DAY1_introduction_final.pptx.pdf)
+- [Clinician point of view](cometh_training_2021/presentations/COMETH_DAY1_Tum_heterogeneity.pptx.pdf)
+- [Bioinformatician point of view](cometh_training_2021/presentations/COMETH_DAY1_bioinformatician_pointofview_FINAL.pptx.pdf)
+
+- [How do I start?](cometh_training_2021/presentations/COMETH_DAY1_how_do_I_start_final.pptx.pdf)
+- [Digital tools](cometh_training_2021/presentations/COMETH_DAY1_digital_tools.pptx.pdf)
+
+- [Introduction to practical work for medical group](cometh_training_2021/presentations/COMETH_DAY1_MedicalGroup_intro_comethapp.pptx.pdf)
+- [Using cBio Portal](cometh_training_2021/presentations/Using cBioPortal.pdf)
+
 ### DAY2
 
+- [Visualisation and biological interpretation](cometh_training_2021/presentations/COMETH_DAY2_biological_interpretation_YB.pptx.pdf)
 <br>
 
 ***
