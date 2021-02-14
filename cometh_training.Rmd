@@ -170,7 +170,11 @@ General lectures will cover:
 
 &nbsp; • Interpretation and visualization of the results   
 
-![](pictures/program.png)
+![](pictures/program_COMETH_final.png)
+
+&nbsp; • [Detailed program DAY1](pictures/program_DAY1_details.png) 
+
+&nbsp; • [Detailed program DAY2](pictures/program_DAY2_details.png)
 
 
 
