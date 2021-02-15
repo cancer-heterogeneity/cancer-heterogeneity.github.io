@@ -109,13 +109,24 @@ We have prepared toy expression datasets from the TCGA public cancer database (i
 
 !!Format!!  .cvs with separator = ";" and decimal = "." Samples in column, genes in row (use Gene Symbol as gene ID). If you want to use your own dataset during the course, please use the same csv format (separator = ";" and decimal = ".").
 
-Omic type : transcriptome (fpkm from RNA-seq, linear scale)
+Omic type : transcriptome 
+
+Normalized counts (linear scale)
 
 - [Breast cancer - brca](data/brca.zip)
 - [Glioblastome - gbm](data/gbm.zip)
 - [Lund adenocarcinoma - luad](data/luad.zip)
 - [Pancreatic adenocarcinoma - paad](data/paad.zip)
 - [Skin cutaneous melanoma - skcm](data/skcm.zip)
+
+
+FPKM  (linear scale)
+
+- [Breast cancer - brca](https://www.dropbox.com/s/yu49yfm47erlb1v/TCGA_GDC_BRCA_fpkm.csv?dl=1)
+- [Glioblastome - gbm](https://www.dropbox.com/s/h9dprje4s7o5qi6/TCGA_GDC_GBM_fpkm.csv?dl=1)
+- [Lund adenocarcinoma - luad](https://www.dropbox.com/s/q47jww2z7w9untv/TCGA_GDC_LUAD_fpkm.csv?dl=1)
+- [Pancreatic adenocarcinoma - paad](https://www.dropbox.com/s/2u3vqd4ypq4oy79/TCGA_GDC_PAAD_fpkm.csv?dl=1)
+- [Skin cutaneous melanoma - skcm](https://www.dropbox.com/s/bmw33me3rrnsf46/TCGA_GDC_SKCM_fpkm.csv?dl=1)
 
 #### Practical work sheet
 

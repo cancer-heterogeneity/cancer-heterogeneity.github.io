@@ -452,8 +452,9 @@ docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwin
 <div id="datasets" class="section level4">
 <h4>Datasets</h4>
 <p>We have prepared toy expression datasets from the TCGA public cancer database (including clinical annotation tables).</p>
-<p>!!Format!! .cvs with separator = &quot;;&quot; and decimal = &quot;.&quot; Samples in column, genes in row (use Gene Symbol as gene ID). If you want to use your own dataset during the course, please use the same csv format (separator = &quot;;&quot; and decimal = &quot;.&quot;).</p>
-<p>Omic type : transcriptome (fpkm from RNA-seq, linear scale)</p>
+<p>!!Format!! .cvs with separator = “;” and decimal = “.” Samples in column, genes in row (use Gene Symbol as gene ID). If you want to use your own dataset during the course, please use the same csv format (separator = “;” and decimal = “.”).</p>
+<p>Omic type : transcriptome</p>
+<p>Normalized counts (linear scale</p>
 <ul>
 <li><a href="data/brca.zip">Breast cancer - brca</a></li>
 <li><a href="data/gbm.zip">Glioblastome - gbm</a></li>
@@ -461,10 +462,18 @@ docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwin
 <li><a href="data/paad.zip">Pancreatic adenocarcinoma - paad</a></li>
 <li><a href="data/skcm.zip">Skin cutaneous melanoma - skcm</a></li>
 </ul>
+<p>FPKM (linear scale)</p>
+<ul>
+<li><a href="https://www.dropbox.com/s/yu49yfm47erlb1v/TCGA_GDC_BRCA_fpkm.csv?dl=1">Breast cancer - brca</a></li>
+<li><a href="https://www.dropbox.com/s/h9dprje4s7o5qi6/TCGA_GDC_GBM_fpkm.csv?dl=1">Glioblastome - gbm</a></li>
+<li><a href="https://www.dropbox.com/s/q47jww2z7w9untv/TCGA_GDC_LUAD_fpkm.csv?dl=1">Lund adenocarcinoma - luad</a></li>
+<li><a href="https://www.dropbox.com/s/2u3vqd4ypq4oy79/TCGA_GDC_PAAD_fpkm.csv?dl=1">Pancreatic adenocarcinoma - paad</a></li>
+<li><a href="https://www.dropbox.com/s/bmw33me3rrnsf46/TCGA_GDC_SKCM_fpkm.csv?dl=1">Skin cutaneous melanoma - skcm</a></li>
+</ul>
 </div>
 <div id="practical-work-sheet" class="section level4">
 <h4>Practical work sheet</h4>
-<p><a href="https://docs.google.com/document/d/1Wbe1qxUJd62ei8zc6reP_ljKVAhK7XQgJQpxH_nnY60/edit?usp=sharing">Link to the 'Practical work sheet'</a></p>
+<p><a href="https://docs.google.com/document/d/1Wbe1qxUJd62ei8zc6reP_ljKVAhK7XQgJQpxH_nnY60/edit?usp=sharing">Link to the ‘Practical work sheet’</a></p>
 </div>
 </div>
 <div id="for-bioinformatic-group" class="section level3">
@@ -512,10 +521,7 @@ docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwin
 <p>  • Introduction to cancer heterogeneity</p>
 <p>  • Introduction to computational methods</p>
 <p>  • Interpretation and visualization of the results</p>
-<div class="figure">
-<img src="pictures/program_COMETH_final.png" />
-
-</div>
+<p><img src="pictures/program_COMETH_final.png" /></p>
 <p>  • <a href="pictures/program_DAY1_details.png">Detailed program DAY1</a></p>
 <p>  • <a href="pictures/program_DAY2_details.png">Detailed program DAY2</a></p>
 <p><br></p>
@@ -547,10 +553,7 @@ docker run --rm -it -p 3838:3838 -v ~/ShinyCompExplore:/srv/shiny-server/ ashwin
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/yuna.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/yuna.png" style="width:50.0%" /></p>
 <strong>Yuna Blum</strong><br />
 Research scientist,<br />
 Ligue Contre le Cancer Paris, France<br />
@@ -560,10 +563,7 @@ Ligue Contre le Cancer Paris, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/jerome.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/jerome.png" style="width:50.0%" /></p>
 <p><strong>Jérôme Cros</strong><br />
 Clinician<br />
 APHP, Paris, France<br />
@@ -573,10 +573,7 @@ APHP, Paris, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/Carl.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/Carl.png" style="width:50.0%" /></p>
 <p><strong>Carl Herrmann</strong><br />
 Assistant-professor,<br />
 Medical Faculty Heidelberg, Germany<br />
@@ -588,10 +585,7 @@ Medical Faculty Heidelberg, Germany<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/slim.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/slim.png" style="width:50.0%" /></p>
 <strong>Slim Karkar</strong><br />
 Research scientist,<br />
 Uni. Grenoble Alpes, France<br />
@@ -601,10 +595,7 @@ Uni. Grenoble Alpes, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/magali.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/magali.png" style="width:50.0%" /></p>
 <p><strong>Magali Richard</strong><br />
 Research scientist,<br />
 Uni. Grenoble Alpes, France<br />
@@ -614,10 +605,7 @@ Uni. Grenoble Alpes, France<br />
 <div class="col-md-4">
 <br><br>
 <center>
-<div class="figure">
-<img src="pictures/ashwin.png" style="width:50.0%" />
-
-</div>
+<p><img src="pictures/ashwin.png" style="width:50.0%" /></p>
 <p><strong>Ashwini Sharma</strong><br />
 Research scientist,<br />
 Medical Faculty Heidelberg, Germany<br />
@@ -630,10 +618,7 @@ Medical Faculty Heidelberg, Germany<br />
 <p><strong>Clémentine Decamps</strong>, Phd Student, Uni. Grenoble Alpes, France<br />
 <strong>Yasmina Kermezli</strong>, Postdoctoral fellow, Uni. Grenoble Alpes, France</p>
 <p><br></p>
-<div class="figure">
-<img src="pictures/fundings2.png" />
-
-</div>
+<p><img src="pictures/fundings2.png" /></p>
 </div>
 
 
