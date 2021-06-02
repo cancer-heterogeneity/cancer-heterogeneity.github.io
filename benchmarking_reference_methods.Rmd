@@ -38,16 +38,16 @@ For the ICA-based deconvolution step, the function deconica::run_fastica is run 
 * The method **DNAm_wICA (m_WIC)** analyzes DNA methylation data. It does not provide feature selection. The deconvolution step is based on ICA, similarly to what was described for the second step of RNA_wICA, but applied on the DNA methylation matrix.
 
 
-* The method **DNAm_EDec (m_EDC)**, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter. 
+* The method **DNAm_EDec (m_EDC)**, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the 5000 most variable probes. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter. 
 
 
-* The method **DNAm_MeDeCom (m_MDC)**, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.
+* The method **DNAm_MeDeCom (m_MDC)**, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the 5000 most variable probes. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.
 
 
 * The method **both_wICA (b_WIC)** combines the input of both transcriptomics and DNA methylation. It has no feature selection step. The deconvolution is in two steps, one on each data type. The transcriptomics and DNA methylation are separately deconvoluted with the same deconvolution step as in r_WIC and m_WIC respectively. Finally, the mean of both deconvolution matrices is computed as the final method output. To compute the average, the cell types of the both deconvolution matrices are matched by iteration. The cell types of the methylation result matrix are reordered 1,000 times, and the one that best correlates with the transcriptomic result matrix is kept. 
 
 
-* The method **both_wNMFMeDeCom (b_COM)**, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of probes with a variance higher than 0.02. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA. 
+* The method **both_wNMFMeDeCom (b_COM)**, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of the 5000 most variable. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA. 
 
 
 * The method **both_meanwNMFMeDeCom (b_MEA)**, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.

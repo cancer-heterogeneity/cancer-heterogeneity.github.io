@@ -1,6 +1,6 @@
 Name,RNA_wICA,RNA_wNMF,DNAm_Edec,DNAm_MeDeCom,DNAm_wICA,both_wICA,both_wNMFMeDeCom,both_meanwNMFMeDeCom
 **Data type**,RNA,RNA,DNAm,DNAm,DNAm,both,both,both
-**FS DNAm**,/,/,Var > 0.02,Var > 0.02,/,/,Var > 0.02,Var > 0.02
+**FS DNAm**,/,/,5000 highest var,5000 highest var,/,/,5000 highest var,5000 highest var
 **FS RNA**,"ICA, most important genes of most stable components, removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes",/,/,/,/,"ICA, most important genes of most stable components, not removing of duplicated genes","ICA, most important genes of most stable components, not removing of duplicated genes"
 **Deconvolution DNAm**,/,/,Edec,MeDeCom,ICA weighted on 30 most important genes,ICA weighted on 30 most important genes,MeDeCom with the A matrix computed on RNA as startA parameter,MeDeCom
 **Deconvolution RNA**,ICA weighted on 30 most important genes,NMF with snmf/r method,/,/,,ICA weighted on 30 most important genes,NMF with snmf/r method,NMF with snmf/r method

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -73,9 +73,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -89,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -194,8 +191,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -240,6 +235,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -252,20 +248,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -293,14 +286,14 @@ $(document).ready(function () {
   <a href="data_challenges.html">
     <span class="fa fa-universal-access"></span>
      
-    Data Challenges
+    HADACA
   </a>
 </li>
 <li>
   <a href="cometh.html">
     <span class="fa fa-cogs"></span>
      
-    Cometh
+    COMETH
   </a>
 </li>
 <li>
@@ -352,9 +345,20 @@ $(document).ready(function () {
 <p>This table is a overview of all the methods and their specificity.</p>
 <p>For a detail of each method, please read the paragraphs below.</p>
 <table>
+<colgroup>
+<col width="4%" />
+<col width="17%" />
+<col width="17%" />
+<col width="3%" />
+<col width="3%" />
+<col width="8%" />
+<col width="8%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th></th>
+<th align="left"></th>
 <th align="center">RNA_wICA</th>
 <th align="center">RNA_wNMF</th>
 <th align="center">DNAm_Edec</th>
@@ -367,7 +371,7 @@ $(document).ready(function () {
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Data type</strong></td>
+<td align="left"><strong>Data type</strong></td>
 <td align="center">RNA</td>
 <td align="center">RNA</td>
 <td align="center">DNAm</td>
@@ -378,18 +382,18 @@ $(document).ready(function () {
 <td align="center">both</td>
 </tr>
 <tr class="even">
-<td><strong>FS DNAm</strong></td>
+<td align="left"><strong>FS DNAm</strong></td>
 <td align="center">/</td>
 <td align="center">/</td>
-<td align="center">Var &gt; 0.02</td>
-<td align="center">Var &gt; 0.02</td>
+<td align="center">5000 greater var</td>
+<td align="center">5000 greater var</td>
 <td align="center">/</td>
 <td align="center">/</td>
-<td align="center">Var &gt; 0.02</td>
-<td align="center">Var &gt; 0.02</td>
+<td align="center">5000 greater var</td>
+<td align="center">5000 greater var</td>
 </tr>
 <tr class="odd">
-<td><strong>FS RNA</strong></td>
+<td align="left"><strong>FS RNA</strong></td>
 <td align="center">ICA, most important genes of most stable components, removing of duplicated genes</td>
 <td align="center">ICA, most important genes of most stable components, not removing of duplicated genes</td>
 <td align="center">/</td>
@@ -400,7 +404,7 @@ $(document).ready(function () {
 <td align="center">ICA, most important genes of most stable components, not removing of duplicated genes</td>
 </tr>
 <tr class="even">
-<td><strong>Deconvolution DNAm</strong></td>
+<td align="left"><strong>Deconvolution DNAm</strong></td>
 <td align="center">/</td>
 <td align="center">/</td>
 <td align="center">Edec</td>
@@ -411,7 +415,7 @@ $(document).ready(function () {
 <td align="center">MeDeCom</td>
 </tr>
 <tr class="odd">
-<td><strong>Deconvolution RNA</strong></td>
+<td align="left"><strong>Deconvolution RNA</strong></td>
 <td align="center">ICA weighted on 30 most important genes</td>
 <td align="center">NMF with snmf/r method</td>
 <td align="center">/</td>
@@ -422,7 +426,7 @@ $(document).ready(function () {
 <td align="center">NMF with snmf/r method</td>
 </tr>
 <tr class="even">
-<td><strong>Time 10 A</strong></td>
+<td align="left"><strong>Time 10 A</strong></td>
 <td align="center">~10mn</td>
 <td align="center">~20mn</td>
 <td align="center">~3h</td>
@@ -433,7 +437,7 @@ $(document).ready(function () {
 <td align="center">~17h30</td>
 </tr>
 <tr class="odd">
-<td><strong>Time 1 A</strong></td>
+<td align="left"><strong>Time 1 A</strong></td>
 <td align="center">~1mn</td>
 <td align="center">~2mn</td>
 <td align="center">~20mn</td>
@@ -451,17 +455,17 @@ $(document).ready(function () {
 <h2>Detail of the methods</h2>
 <p>Eight methods have been included in the benchmark as reference to be compared with the accuracy of new methods.</p>
 <ul>
-<li><p>The method <strong>RNA_wICA (r_WIC)</strong> relies on transcriptomic data and uses Independent Component Analysis (ICA) for both feature selection and deconvolution. It relies on the use of the functions “runICA” and “getGenesICA” by P. Nazarov <a href="sablab.net/scripts/LibICA.r">(available here)</a> and the deconica R package <a href="https://urszulaczerwinska.github.io/DeconICA/">(available here)</a>. For the ICA-based feature selection, the function “runICA” is run for the first time with the parameters ncomp = 10 and ntry = 50. Then, the function “getGenesICA” selects top-contributing genes with a FDR of 0.2, the feature selection is done on these contributing genes belonging to a component having an average stability greater than 0.8. Finally, duplicated genes are removed. For the ICA-based deconvolution step, the function deconica::run_fastica is run with parameters overdecompose = FALSE and n.comp = 5, remaining parameters set to default. The 30 most important genes of each ICA components are extracted by the function deconica::generate_markers with the parameter return = “gene.ranked”. These genes are used to weight the components score with the function deconica::get_scores, with the log counts of the ICA as “df” parameter, the list of 30 genes as “markers.list” parameter, and the parameter summary = “weighted.mean”. Finally, the proportions are extracted with the function deconica::stacked_proportions_plot on the transpose.</p></li>
-<li><p>The method <strong>RNA_wNMF (r_WNM)</strong>, using transcriptomic data, is in two steps. The first step uses ICA to perform a feature selection as described for RNA_wICA, although duplicated genes are kept. This step, therefore, allows a gene which contributes to several components to be present several times in the data. The deconvolution is based on Non-negative Matrix Factorization (NMF) called by the NMF::nmf function <a href="https://CRAN.R-project.org/package=NMF">(package available here)</a>, with the parameter method = “snmf/r”.</p></li>
+<li><p>The method <strong>RNA_wICA (r_WIC)</strong> relies on transcriptomic data and uses Independent Component Analysis (ICA) for both feature selection and deconvolution. It relies on the use of the functions “runICA” and “getGenesICA” by P. Nazarov <a href="sablab.net/scripts/LibICA.r">(available here)</a> and the deconica R package <a href="https://urszulaczerwinska.github.io/DeconICA/">(available here)</a>. For the ICA-based feature selection, the function “runICA” is run for the first time with the parameters ncomp = 10 and ntry = 50. Then, the function “getGenesICA” selects top-contributing genes with a FDR of 0.2, the feature selection is done on these contributing genes belonging to a component having an average stability greater than 0.8. Finally, duplicated genes are removed. For the ICA-based deconvolution step, the function deconica::run_fastica is run with parameters overdecompose = FALSE and n.comp = 5, remaining parameters set to default. The 30 most important genes of each ICA components are extracted by the function deconica::generate_markers with the parameter return = &quot;gene.ranked&quot;. These genes are used to weight the components score with the function deconica::get_scores, with the log counts of the ICA as “df” parameter, the list of 30 genes as “markers.list” parameter, and the parameter summary = &quot;weighted.mean&quot;. Finally, the proportions are extracted with the function deconica::stacked_proportions_plot on the transpose.</p></li>
+<li><p>The method <strong>RNA_wNMF (r_WNM)</strong>, using transcriptomic data, is in two steps. The first step uses ICA to perform a feature selection as described for RNA_wICA, although duplicated genes are kept. This step, therefore, allows a gene which contributes to several components to be present several times in the data. The deconvolution is based on Non-negative Matrix Factorization (NMF) called by the NMF::nmf function <a href="https://CRAN.R-project.org/package=NMF">(package available here)</a>, with the parameter method = &quot;snmf/r&quot;.</p></li>
 <li><p>The method <strong>DNAm_wICA (m_WIC)</strong> analyzes DNA methylation data. It does not provide feature selection. The deconvolution step is based on ICA, similarly to what was described for the second step of RNA_wICA, but applied on the DNA methylation matrix.</p></li>
-<li><p>The method <strong>DNAm_EDec (m_EDC)</strong>, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the probes with a variance higher than 0.02. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter.</p></li>
-<li><p>The method <strong>DNAm_MeDeCom (m_MDC)</strong>, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the probes with a variance higher than 0.02. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.</p></li>
+<li><p>The method <strong>DNAm_EDec (m_EDC)</strong>, which estimates sample composition from DNA methylation data, follows the pipeline implemented in the R package medepir [1]. The feature selection is made with medepir::feature_selection to keep the 5000 most variable probes. The method EDec [2] is used for the deconvolution part, with the function medepir::Edec and all the selected probes as “infloci” parameter.</p></li>
+<li><p>The method <strong>DNAm_MeDeCom (m_MDC)</strong>, also using DNA methylation, is similarly based on the pipeline of the R package medepir. The feature selection is made as for DNAm_EDec above, on the 5000 most variable probes. The deconvolution step, however, is from the MeDeCom R package [3]. It is run with the function MeDeCom::runMeDeCom, with the lambda parameter set to 0.01.</p></li>
 <li><p>The method <strong>both_wICA (b_WIC)</strong> combines the input of both transcriptomics and DNA methylation. It has no feature selection step. The deconvolution is in two steps, one on each data type. The transcriptomics and DNA methylation are separately deconvoluted with the same deconvolution step as in r_WIC and m_WIC respectively. Finally, the mean of both deconvolution matrices is computed as the final method output. To compute the average, the cell types of the both deconvolution matrices are matched by iteration. The cell types of the methylation result matrix are reordered 1,000 times, and the one that best correlates with the transcriptomic result matrix is kept.</p></li>
-<li><p>The method <strong>both_wNMFMeDeCom (b_COM)</strong>, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of probes with a variance higher than 0.02. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA.</p></li>
+<li><p>The method <strong>both_wNMFMeDeCom (b_COM)</strong>, also combining transcriptomics and DNA methylation, is the combination of the two methods RNA_wNMF and DNAm_MeDeCom. The method r_WNM is first applied on the RNAseq matrix. The DNA methylation matrix is pre-treated as described in the m_MDC method, with the selection of the 5000 most variable. Finally, the method MeDeCom is run on the DNAm data, with the result of r_WNM as initialization parameter startA.</p></li>
 <li><p>The method <strong>both_meanwNMFMeDeCom (b_MEA)</strong>, which integrates transcriptomics and DNA methylation, applies r_WNM to the transcriptomics matrix, m_MDC to the DNA methylation matrix, and returns the mean of the two results matrices, similarly to what we explained for b_WIC.</p></li>
 </ul>
 <p>[1] Decamps, C., Privé, F., Bacher, R. et al. Guidelines for cell-type heterogeneity quantification based on a comparative analysis of reference-free DNA methylation deconvolution software. BMC Bioinformatics. 2020;21, 16.</p>
-<p>[2] Onuchic V, Hartmaier RJ, Boone DN, Samuels ML, Patel RY, White WM, et al. Epigenomic Deconvolution of breast tumors reveals metabolic coupling between constituent cell types. Cell Rep. 2016;17:2075–86.</p>
+<p>[2] Onuchic V, Hartmaier RJ, Boone DN, Samuels ML, Patel RY, White WM, et al. Epigenomic Deconvolution of breast tumors reveals metabolic coupling between constituent cell types. Cell Rep. 2016;17:2075–86.</p>
 <p>[3] Lutsik P, Slawski M, Gasparoni G, Vedeneev N, Hein M, Walter J. MeDeCom: discovery and quantification of latent components of heterogeneous methylomes. Genome Biol. BioMed Central. 2017;18:55.</p>
 </div>
 
@@ -482,6 +486,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
